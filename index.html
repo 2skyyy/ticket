@@ -5,8 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/basic.css">
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="slick/slick/slick.css">
+  <link rel="stylesheet" href="slick/slick/slick-theme.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
   <script src="js/prefixfree.min.js"></script>
   <script defer src="js/main.js"></script>
 </head>
@@ -58,10 +61,93 @@
       </div>
     </header>
 
+    <div class="openLeft">
+      <div class="innerLeft">
+        <header>
+          <div class="navBar">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </header>
+        
+
+        <ul class="leftNav">
+          <li class="leftNavItem"><a href="#">콘서트</a></li>
+          <li class="leftNavItem"><a href="#">뮤지컬</a></li>
+          <li class="leftNavItem"><a href="#">연극</a></li>
+          <li class="leftNavItem"><a href="#">클래식/국악/무용</a></li>
+          <li class="leftNavItem"><a href="#">전시/행사</a></li>
+          <li class="leftNavItem"><a href="#">아동/가족</a></li>
+        </ul>
+
+        <ul class="mini">
+          <li><a href="#">랭킹</a></li>
+          <li><a href="#">지역별</a></li>
+          <li><a href="#">공연장</a></li>
+        </ul>
+
+        <ul>
+          <li><a href="#">공지사항</a></li>
+          <li><a href="#">이벤트</a></li>
+          <li><a href="#">읽을거리</a></li>
+          <li><a href="#">이용안내</a></li>
+        </ul>
+
+        <ul>
+          <li><a href="#"></a>
+            <ul>
+              <li><a href="#">-예매확인/취소</a></li>
+            </ul>
+          </li>
+          <li><a href="#">최근 본 상품</a>
+            <ul>
+              <li><a href="#"></a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <div>
+          <a href="#">MD#</a>
+          <a href="#">GLOBAL</a>
+        </div>
+      </div>
+    </div>
+
 
 
     <main>
-      <section class="mainSlider"></section>
+      <section class="mainSlider">
+
+        <div class="slider">
+            <div class="item item1">
+                <img src="img/slideImg1.jpg" alt="slideImg1">
+            </div>
+            <div class="item item2">
+              <img src="img/slideImg2.jpg" alt="slideImg2">
+            </div>
+            <div class="item item3">
+              <img src="img/slideImg3.jpg" alt="slideImg3">
+            </div>
+            <div class="item item4">
+              <img src="img/slideImg4.jpg" alt="slideImg4">
+            </div>
+            <div class="item item5">
+              <img src="img/slideImg5.jpg" alt="slideImg5">
+            </div>
+            <div class="item item6">
+              <img src="img/slideImg6.jpg" alt="slideImg6">
+            </div>
+        </div>
+
+
+
+        <div class="prevBtn"><i class="fa-solid fa-chevron-left" style="color: #d3d3d3;"></i></div>
+        <div class="nextBtn"><i class="fa-solid fa-chevron-right" style="color: #d3d3d3;"></i></div>
+
+
+
+      </section>
 
       <section class="hot">
         <div class="inner">
@@ -305,5 +391,9 @@
     </footer>
 
   </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script src="slick/slick/slick.js"></script>
+  <script src="slick/slick/slick.min.js"></script>
 </body>
 </html>
