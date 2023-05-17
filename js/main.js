@@ -2,5 +2,6 @@ $('.slider').slick({
     dots: true,
     arrows: true,
     prevArrow: $('.prevBtn'),
-    nextArrow: $('.nextBtn')
+    nextArrow: $('.nextBtn'),
+    autoplay: true
 })
