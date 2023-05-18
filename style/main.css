@@ -11,6 +11,31 @@ body {
   margin: 0 auto;
 }
 
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  align-items: center;
+}
+.text h3,
+.text p {
+  width: 90%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.text h3 {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.text p {
+  font-size: 14px;
+  color: #aaa;
+}
+
 section {
   padding: 30px 0;
 }
@@ -38,17 +63,15 @@ a {
 }
 
 .popUp {
-  /*나중에 지우기*/
   position: fixed;
   width: 380px;
-  height: 500px;
+  height: 490px;
   bottom: 30px;
   left: 30px;
   border: 1px solid #ccc;
   z-index: 999;
   background: #fff;
 }
-
 .popUp ul {
   display: flex;
   justify-content: space-between;
@@ -60,37 +83,32 @@ a {
   box-sizing: border-box;
   border-bottom: 1px solid #ccc;
 }
-
 .popUp li {
   width: 175px;
   height: 212px;
   background-color: yellow;
 }
-
-.closebtn {
+.popUp .closebtn {
   display: block;
   width: 10px;
   height: 10px;
   background: url(../img/delete.png) no-repeat center center/contain;
 }
-
 .popUp img {
   width: 100%;
   height: 100%;
 }
-
-.popClose {
+.popUp .popClose {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 45px;
+  height: 35px;
   padding: 0 10px;
   box-sizing: border-box;
   background: #eee;
 }
-
-.popClose label {
+.popUp .popClose label {
   font-size: 14px;
 }
 
@@ -106,34 +124,29 @@ a {
   z-index: 999;
   /*  확인필   */
 }
-
 .openLeft header {
   display: flex;
   align-items: center;
   width: 100%;
   height: 100px;
 }
-
-.leftNav {
+.openLeft .leftNav {
   width: 100%;
   height: auto;
   margin-bottom: 20px;
 }
-
-.leftNavItem > a {
+.openLeft .leftNavItem > a {
   display: block;
   padding: 8px 0;
 }
-
-.wrapper > header {
+#header {
   position: fixed;
   width: 100%;
   height: 100px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
   z-index: 50;
 }
-
-.innerHeader {
+#header .innerHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -143,8 +156,7 @@ a {
   box-sizing: border-box;
   background: inherit;
 }
-
-.leftHeader {
+#header .leftHeader {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -152,8 +164,7 @@ a {
   width: 150px;
   height: 50px;
 }
-
-.navBar {
+#header .navBar {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -161,57 +172,48 @@ a {
   height: 30px;
   cursor: pointer;
 }
-
-.navBar span {
+#header .navBar span {
   display: block;
   width: 100%;
   height: 4px;
   border-radius: 2px;
   background: #292929;
 }
-
-.logo {
+#header .logo {
   width: 100px;
   height: 40px;
 }
-
-.logo a {
+#header .logo a {
   display: block;
   width: 100%;
   height: 100%;
   background: url("../img/logo.png") no-repeat center center/contain;
 }
-
-nav {
+#header nav {
   width: 500px;
 }
-
-nav ul {
+#header nav ul {
   display: flex;
   width: 100%;
 }
-
-nav a {
+#header nav a {
   display: block;
   padding: 10px;
   font-size: 20px;
   font-weight: bold;
 }
-
-.rightHeader {
+#header .rightHeader {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   width: 400px;
 }
-
-.search {
+#header .rightHeader .search {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-
-.search input {
+#header .rightHeader .search input {
   width: 300px;
   height: 40px;
   padding: 0 5px;
@@ -222,16 +224,14 @@ nav a {
   font-size: 18px;
   background: none;
 }
-
-.goSearch {
+#header .rightHeader .search .goSearch {
   width: 30px;
   height: 30px;
   margin-right: 15px;
   background: url("../img/search.png") no-repeat center center/contain;
   cursor: pointer;
 }
-
-.myPage {
+#header .rightHeader .myPage {
   width: 30px;
   height: 30px;
   background: url("../img/myPage.png") no-repeat center center/contain;
@@ -241,67 +241,34 @@ nav a {
 main {
   box-shadow: 0 0 1px #292929;
 }
-
-.mainSlider {
+main .mainSlider {
   position: relative;
   width: 100%;
   height: 700px;
   padding: 0;
   box-sizing: border-box;
 }
-
-.slider {
+main .mainSlider .s1Slider {
   width: 100%;
 }
-
-.slider .item {
+main .mainSlider .s1Slider .s1item {
   position: relative;
   height: 700px;
 }
-
-.slider .item1 {
-  background: no-repeat center/cover;
+main .mainSlider .s1Slider .s1item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-
-.slider .item2 {
-  background: no-repeat center/cover;
-}
-
-.slider .item3 {
-  background: no-repeat center/cover;
-}
-
-.slider .item4 {
-  background: no-repeat center/cover;
-}
-
-.prevBtn,
-.nextBtn {
-  position: absolute;
-  top: 50%;
-  color: white;
-  font-size: 50px;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-
-.prevBtn {
-  left: 50px;
-}
-
-.nextBtn {
-  right: 50px;
-}
-
-.slider .slick-dots {
+main .mainSlider .s1Slider .slick-dots {
   position: absolute;
   width: auto;
   left: 50%;
   bottom: 30px;
   transform: translate(-50%);
 }
-
-.slider .slick-dots li {
+main .mainSlider .s1Slider .slick-dots li {
   float: left;
   width: 15px;
   height: 15px;
@@ -310,131 +277,161 @@ main {
   cursor: pointer;
   border-radius: 50%;
 }
-
-.slider .slick-dots .slick-active {
-  background: lightgray;
-}
-
-.slider .slick-dots li button {
+main .mainSlider .s1Slider .slick-dots li button {
   display: none;
 }
-
-.hotCon {
+main .mainSlider .s1Slider .slick-dots .slick-active {
+  background: lightgray;
+}
+main .mainSlider .prevBtn,
+main .mainSlider .nextBtn {
+  position: absolute;
+  top: 50%;
+  color: white;
+  font-size: 50px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+main .mainSlider .prevBtn {
+  left: 50px;
+}
+main .mainSlider .nextBtn {
+  right: 50px;
+}
+main .hot .hotCon {
   display: flex;
   justify-content: space-between;
   width: 100%;
   height: 700px;
 }
-
-.hot img {
+main .hot .hotCon img {
   width: 100%;
   height: 100%;
   background: contain;
 }
-
-.best1 {
+main .hot .hotCon .best1 {
   width: 420px;
   height: 700px;
 }
-
-.hotCon ul {
+main .hot ul {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   row-gap: 20px;
   width: 760px;
 }
-
-.hotCon li {
+main .hot ul li {
   width: 240px;
   height: 340px;
   float: left;
 }
-
-.hotCon a {
+main .hot ul li a {
   display: block;
   width: 100%;
   height: 100%;
   border: 1px solid #ddd;
   box-sizing: border-box;
 }
-
-.newCon ul {
+main .newCon ul {
   display: flex;
   justify-content: space-between;
   width: 100%;
   height: 390px;
 }
-
-.newCon li {
+main .newCon ul li {
   width: 224px;
   height: 100%;
 }
-
-.newCon a {
+main .newCon ul li a {
   display: block;
   width: 100%;
   height: 100%;
   border: 1px solid #ddd;
   box-sizing: border-box;
 }
-
-.newCon img {
+main .newCon ul li a img {
   width: 100%;
   height: 310px;
 }
-
-.newTxt {
+main .newCon ul li a .newTxt {
   width: 100%;
   height: 80px;
 }
-
-.adSlider {
+main .ad {
   width: 100%;
-  height: 300px;
-  background: #ccc;
+  height: auto;
 }
-
-.rankNav {
+main .ad .adSlider {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  padding: 0;
+  box-sizing: border-box;
+}
+main .ad .adSlider .aditem {
+  position: relative;
+  height: 400px;
+}
+main .ad .adSlider .aditem img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: translateY(-20px);
+}
+main .ad .adSlider .slick-dots {
+  position: absolute;
+  width: auto;
+  left: 50%;
+  bottom: 30px;
+  transform: translate(-50%);
+}
+main .ad .adSlider .slick-dots li {
+  float: left;
+  width: 10px;
+  height: 10px;
+  background: gray;
+  margin: 0 7px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+main .ad .adSlider .slick-dots li button {
+  display: none;
+}
+main .ad .adSlider .slick-dots .slick-active {
+  background: lightgray;
+}
+main .rank .rankNav {
   border: 1px solid blue;
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
 }
-
-.rankNav a {
+main .rank .rankNav li a {
   display: block;
   margin: 0 5px;
   padding: 10px;
   font-size: 17px;
 }
-
-.rankAll {
+main .rank .rankCon .rankAll {
   position: relative;
   width: 1200px;
   height: 430px;
 }
-
-.rankAll > ul {
+main .rank .rankCon .rankAll ul {
   position: absolute;
   top: 0;
   left: 0;
-  display: flex;
+  display: none;
   justify-content: space-between;
   width: 100%;
   height: 430px;
 }
-
-.rank_concert:hover .rankCon_concert {
-  display: flex;
-}
-
-.rankLi {
+main .rank .rankCon .rankAll ul .rankLi {
   width: 386px;
   height: 100%;
 }
-
-.rankLi a {
+main .rank .rankCon .rankAll ul .rankLi a {
   position: relative;
   display: block;
   width: 100%;
@@ -442,25 +439,23 @@ main {
   border: 1px solid #ddd;
   box-sizing: border-box;
 }
-
-.rankLi a:hover .rankConImg1,
-.rankLi a:hover .rankConImg2,
-.rankLi a:hover .rankConImg3 {
-  width: 130%;
-  height: 130%;
-  transition: 0.7s;
-}
-
-.rankConImg {
+main .rank .rankCon .rankAll ul .rankLi a .rankConImg {
   position: relative;
   width: 100%;
   height: 350PX;
   overflow: hidden;
 }
-
-.rankConImg1,
-.rankConImg2,
-.rankConImg3 {
+main .rank .rankCon .rankAll ul .rankLi a .rankConImg img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 280px;
+}
+main .rank .rankCon .rankAll ul .rankLi a .rankConImg1,
+main .rank .rankCon .rankAll ul .rankLi a .rankConImg2,
+main .rank .rankCon .rankAll ul .rankLi a .rankConImg3 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -469,57 +464,7 @@ main {
   height: 110%;
   filter: blur(7px) brightness(70%);
 }
-
-.rankConImg1 {
-  background: url(../img/rank1.jpg) no-repeat center center/cover;
-}
-
-.rankConImg2 {
-  background: url(../img/rank2.jpg) no-repeat center center/cover;
-}
-
-.rankConImg3 {
-  background: url(../img/rank3.jpg) no-repeat center center/cover;
-}
-
-.rankConImg img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 200px;
-  height: 280px;
-}
-
-.text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 80px;
-  align-items: center;
-}
-
-.text h3,
-.text p {
-  width: 90%;
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.text h3 {
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.text p {
-  font-size: 14px;
-  color: #aaa;
-}
-
-.rankNum {
+main .rank .rankCon .rankAll ul .rankLi a .rankNum {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -533,60 +478,102 @@ main {
   font-size: 20px;
   font-weight: bold;
 }
-
-.interviewSlider {
+main .rank .rankCon .rankAll ul .rankLi a:hover .rankConImg1,
+main .rank .rankCon .rankAll ul .rankLi a:hover .rankConImg2,
+main .rank .rankCon .rankAll ul .rankLi a:hover .rankConImg3 {
+  width: 130%;
+  height: 130%;
+  transition: 0.7s;
+}
+main .rank .rankCon .rankAll .rankCon_musical .rankConImg1 {
+  background: url(../img/rank_musical1.jpg) no-repeat center center/cover;
+}
+main .rank .rankCon .rankAll .rankCon_musical .rankConImg2 {
+  background: url(../img/rank_musical2.jpg) no-repeat center center/cover;
+}
+main .rank .rankCon .rankAll .rankCon_musical .rankConImg3 {
+  background: url(../img/rank_musical3.jpg) no-repeat center center/cover;
+}
+main .rank .rankCon .rankAll .rankCon_concert .rankConImg1 {
+  background: url(../img/rank_concert1.jpg) no-repeat center center/cover;
+}
+main .rank .rankCon .rankAll .rankCon_concert .rankConImg2 {
+  background: url(../img/rank_concert2.jpg) no-repeat center center/cover;
+}
+main .rank .rankCon .rankAll .rankCon_concert .rankConImg3 {
+  background: url(../img/rank_concert3.jpg) no-repeat center center/cover;
+}
+main .rank .rankCon .rankAll .rankCon_theater .rankConImg1 {
+  background: url(../img/rank_theater1.jpg) no-repeat center center/cover;
+}
+main .rank .rankCon .rankAll .rankCon_theater .rankConImg2 {
+  background: url(../img/rank_theater2.jpg) no-repeat center center/cover;
+}
+main .rank .rankCon .rankAll .rankCon_theater .rankConImg3 {
+  background: url(../img/rank_theater3.jpg) no-repeat center center/cover;
+}
+main .rank .rankCon .rankAll .rankCon_classic .rankConImg1 {
+  background: url(../img/rank_classic1.jpg) no-repeat center center/cover;
+}
+main .rank .rankCon .rankAll .rankCon_classic .rankConImg2 {
+  background: url(../img/rank_classic2.jpg) no-repeat center center/cover;
+}
+main .rank .rankCon .rankAll .rankCon_classic .rankConImg3 {
+  background: url(../img/rank_classic3.jpg) no-repeat center center/cover;
+}
+main .rank .rankCon .rankAll .rankCon_ex .rankConImg1 {
+  background: url(../img/rank_ex1.jpg) no-repeat center center/cover;
+}
+main .rank .rankCon .rankAll .rankCon_ex .rankConImg2 {
+  background: url(../img/rank_ex2.jpg) no-repeat center center/cover;
+}
+main .rank .rankCon .rankAll .rankCon_ex .rankConImg3 {
+  background: url(../img/rank_ex3.jpg) no-repeat center center/cover;
+}
+main .interviewSlider {
   width: 100%;
   height: 600px;
   background: #ccc;
 }
-
-.reviewSlider {
+main .reviewSlider {
   width: 100%;
   height: 400px;
   background: #ccc;
 }
-
-.lastSec {
+main .lastSec {
   width: 100%;
 }
-
-.company {
+main .company {
   display: flex;
   justify-content: space-between;
   padding: 20px 0;
   width: 100%;
   height: 130px;
 }
-
-.company > li {
+main .company > li {
   height: 100%;
 }
-
-.company li.tel {
+main .company li.tel {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
   width: 350px;
 }
-
-.tel h3 {
+main .tel h3 {
   margin-bottom: 10px;
   font-size: 35px;
   font-weight: bold;
   color: orange;
 }
-
-.tel p {
+main .tel p {
   font-size: 14px;
 }
-
-.tel span {
+main .tel span {
   font-size: 14px;
   color: #aaa;
 }
-
-.company li.notice {
+main .company li.notice {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -595,70 +582,59 @@ main {
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
 }
-
-.notice ul {
+main .notice ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 500px;
 }
-
-.notice li {
+main .notice li {
   width: 100px;
   height: auto;
 }
-
-.notice a {
+main .notice a {
   display: block;
   width: 100%;
   height: auto;
   text-align: center;
 }
-
-.noticeImg {
+main .noticeImg {
   width: 100%;
   height: 60px;
 }
-
-.notice a span {
+main .notice a span {
   width: 100%;
   height: 40px;
   font-weight: bold;
 }
-
-.company li.social {
+main .company li.social {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: end;
   width: 300px;
 }
-
-.goSocial {
+main .goSocial {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
   width: 150px;
 }
-
-.goSocial a {
+main .goSocial a {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
 }
-
-.appDown {
+main .appDown {
   display: flex;
   justify-content: space-between;
 }
-
-.appDown div {
+main .appDown div {
   width: 100%;
   height: 100%;
 }
-
 .footerNav {
   display: flex;
   justify-content: space-between;
