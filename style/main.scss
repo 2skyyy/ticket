@@ -69,9 +69,10 @@ a {
 }
 
 .popUp {
+    display: none;  //지우기
     position: fixed;
-    width: 380px;
-    height: 490px;
+    width: 460px;
+    height: 450px;
     bottom: 30px;
     left: 30px;
     border: 1px solid #ccc;
@@ -84,16 +85,15 @@ a {
     flex-wrap: wrap;
     row-gap: 10px;
     width: 100%;
-    height: 454px;
+    height: 414px;
     padding: 10px;
     box-sizing: border-box;
     border-bottom: 1px solid #ccc;
     }
 
     li{
-        width: 175px;
-        height: 212px;
-        background-color: yellow;
+        width: 140px;
+        height: 192px;
     }
 
     .closebtn{
@@ -344,8 +344,6 @@ main {
         .nextBtn {
             right: 50px;
         }
-    
-
     }
     
     
@@ -474,12 +472,6 @@ main {
             }
 
 
-
-
-
-
-            
-
     }
     
     .rank {
@@ -553,9 +545,6 @@ main {
                                 height: 110%;
                                 filter: blur(7px) brightness(70%);
                             }
-
-                            
-                            
                             
                             .rankNum {
                                 position: absolute;
@@ -647,9 +636,6 @@ main {
         }
     }
     
-    
-    
-    
     .interview {}
     
     .interviewSlider {
@@ -658,13 +644,122 @@ main {
         background: #ccc;
     }
     
-    .review {}
-    
-    .reviewSlider {
+    .review {
         width: 100%;
-        height: 400px;
-        background: #ccc;
+        height: auto;
+
+        .reviewBoard{
+            width: 100%;
+            height: auto;
+            padding: 10px;
+
+            #reviewSelect{
+                width: 300px;
+                height: 25px;
+                margin-bottom: 10px;
+            }
+            
+            .inputBox{
+                display: flex;
+                width: 100%;
+                height: auto;
+                box-sizing: border-box;
+                margin-bottom: 10px;
+
+                .inputText{
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    max-height: 60px;
+                    margin-right: 10px;
+                    border: 1px solid #ccc;
+                    box-sizing: border-box;
+                    overflow: hidden;
+                }
+
+                .plusBtn{
+                    width: 60px;
+                    background: #fff;
+                    border: 1px solid #ccc;
+                    cursor: pointer;
+                }
+            }
+
+            .listBox{
+
+                .listBoxUl{
+                    border-top: 1px solid #ccc;
+                    border-bottom: 1px solid #ccc;
+
+                    .newLi{
+                        position: relative;
+                        padding: 10px;
+                        background: green;
+
+                        .proflie{
+                            display: flex;
+                            align-items: center;
+                            width: 300px;
+                            height: 30px;
+                            background: pink;
+
+                            .pro{
+                                display: block;
+                                width: 25px;
+                                height: 25px;
+                                float: left;
+                                margin-right: 10px;
+                                border-radius: 50%;
+                                border: 1px solid #bbb;
+                            }
+
+                            .nickName{
+                                float: left;
+                            }
+                        }
+
+                        .likeBtn{
+                            position: absolute;
+                            top: 10px;
+                            right: 10px;
+
+                            .like{}
+
+                            .hate{}
+                        }
+                        
+                        .revTxt{
+                            width: 1000px;
+                            height: auto;
+                            padding-left: 35px;
+                            margin: 10px 0;
+                            box-sizing: border-box;
+                            background: yellow;
+
+                            .conName{
+                                margin-bottom: 5px;
+                            }
+
+                            .conrev{}
+                        }
+
+                        .etc{
+                            width: 300px;
+                            height: auto;
+                            padding-left: 35px;
+                            box-sizing: border-box;
+                            font-size: 13px;
+                            background: navajowhite;
+
+                            .date{}
+                        }
+                    }
+                }
+            }
+        }
+        
     }
+    
     
     .lastSec {
         width: 100%;

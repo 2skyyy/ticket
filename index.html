@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>YES24 티켓</title>
   <link rel="stylesheet" href="style/reset.css">
   <link rel="stylesheet" href="style/main.css">
   <link rel="stylesheet" href="slick/slick/slick.css">
@@ -36,6 +36,16 @@
         <li>
           <a href="#">
             <img src="img/pop4.jpg" alt="pop4">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="img/pop5.jpg" alt="pop4">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="img/pop6.jpg" alt="pop4">
           </a>
         </li>
       </ul>
@@ -264,7 +274,7 @@
                   <img src="img/new5.jpg" alt="new5">
                   <div class="text">
                     <h3>제16회 부산항축제 - 도넛보트</h3>
-                    <p>공연 날짜 공연 장소</p>
+                    <p>2023.05.17(수) 오후 2:00</p>
                   </div>
                 </a>
               </li>
@@ -598,12 +608,51 @@
         <a href="#" class="more">인터뷰 더보기</a>
       </section>
 
-
-      <section calss="review">
-        <h2>Review</h2>
-        <div class="reviewSlider">
-          여러개 슬라이드
+      <section class="review">
+        <div class="inner">
+          <h2>Review</h2>
+          <div class="reviewBoard">
+            <select name="reviewSelect" id="reviewSelect">
+              <option value="0">리뷰 남길 공연을 선택해주세요.</option>
+              <option value="1">DREAMSHOW</option>
+              <option value="2">MAMMAMIA</option>
+              <option value="3">BANILA CO</option>
+              <option value="4">Spicy</option>
+              <option value="5">7DREAM</option>
+            </select>
+            <div class="inputBox">
+              <input type="text" class="inputText" onkeydown="enter()">
+              <button class="plusBtn">등록</button>
+            </div>
+            
+            <div class="listBox">
+              <ul class="listBoxUl">
+                <li class="newLi">
+                  <div class="proflie">
+                    <a href="" class="pro">프</a>
+                    <span class="nickName">JS25</span>
+                  </div>
+                  <div class="likeBtn">
+                    <button class="like">조아</button>
+                    <button class="hate">시러</button>
+                  </div>
+                  <div class="revTxt">
+                    <div class="conName">관람 공연: DREAMSHOW</div>
+                    <div class="conrev">
+                      텍스트<br>텍스트<br>텍스트<br>텍스트<br>
+                    </div>
+                  </div>
+                  <div class="etc">
+                    <span class="date">2023.02.03</span>
+                    <span class="">신고하기</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+        
+          </div>
         </div>
+        
 
         <a href="#" class="more">리뷰 더보기</a>
 

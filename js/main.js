@@ -16,8 +16,6 @@ closebtn.addEventListener('click', (e)=>{
     popUpDelete();
 });
 
-
-
 $('.s1Slider').slick({
     dots: true,
     arrows: true,
@@ -28,7 +26,7 @@ $('.s1Slider').slick({
 
 $('.adSlider').slick({
     dots: true,
-    arrows: true,
+    arrows: false,
     autoplay: true
 })
 
@@ -42,19 +40,30 @@ window.addEventListener('scroll', function () {
     }
 })
 
-const rankAll = document.querySelector('.rankAll');
-const rankCon = document.querySelectorAll('.rankAll > ul');
 
-const rankNavItem = document.querySelectorAll('.rankNavItem');
-const rankMusical = document.querySelector('.rank_musical');
-const rankConcert = document.querySelector('.rank_concert');
-const rankTheater = document.querySelector('.rank_theater');
-const rankClassic = document.querySelector('.rank_classic');
-const rankEx = document.querySelector('.rank_ex');
+const inputText = document.querySelector('.inputText');
+const plusBtn = document.querySelector('.plusBtn');
+const newLi = document.querySelector('.newLi');
+const listBoxUl = document.querySelector('.listBoxUl');
+const newLiEl = document.createElement('li');
 
-const rankNavArr = rankNavItem.forEach((i,v) => {});
 
-rankNavItem.addEventListener('click', (e) => {
-    e.preventDefault();
+
+const newList = () => {
     
+    if(inputText.value.trim() != ""){
+        listBoxUl.appendChild(newLiEl);
+        newLiEl.classList.add('newLi');
+        inputText.value = "";
+    }
+}
+
+plusBtn.addEventListener('click', () => {
+    newList();
 })
+
+const enter = () => {
+    if(event.keyCode == 13){
+        newList();
+    }
+}

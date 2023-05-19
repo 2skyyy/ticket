@@ -63,9 +63,10 @@ a {
 }
 
 .popUp {
+  display: none;
   position: fixed;
-  width: 380px;
-  height: 490px;
+  width: 460px;
+  height: 450px;
   bottom: 30px;
   left: 30px;
   border: 1px solid #ccc;
@@ -78,15 +79,14 @@ a {
   flex-wrap: wrap;
   row-gap: 10px;
   width: 100%;
-  height: 454px;
+  height: 414px;
   padding: 10px;
   box-sizing: border-box;
   border-bottom: 1px solid #ccc;
 }
 .popUp li {
-  width: 175px;
-  height: 212px;
-  background-color: yellow;
+  width: 140px;
+  height: 192px;
 }
 .popUp .closebtn {
   display: block;
@@ -535,10 +535,94 @@ main .interviewSlider {
   height: 600px;
   background: #ccc;
 }
-main .reviewSlider {
+main .review {
   width: 100%;
-  height: 400px;
-  background: #ccc;
+  height: auto;
+}
+main .review .reviewBoard {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+main .review .reviewBoard #reviewSelect {
+  width: 300px;
+  height: 25px;
+  margin-bottom: 10px;
+}
+main .review .reviewBoard .inputBox {
+  display: flex;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+main .review .reviewBoard .inputBox .inputText {
+  display: block;
+  width: 100%;
+  height: 50px;
+  max-height: 60px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+main .review .reviewBoard .inputBox .plusBtn {
+  width: 60px;
+  background: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+main .review .reviewBoard .listBox .listBoxUl {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+main .review .reviewBoard .listBox .listBoxUl .newLi {
+  position: relative;
+  padding: 10px;
+  background: green;
+}
+main .review .reviewBoard .listBox .listBoxUl .newLi .proflie {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  height: 30px;
+  background: pink;
+}
+main .review .reviewBoard .listBox .listBoxUl .newLi .proflie .pro {
+  display: block;
+  width: 25px;
+  height: 25px;
+  float: left;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 1px solid #bbb;
+}
+main .review .reviewBoard .listBox .listBoxUl .newLi .proflie .nickName {
+  float: left;
+}
+main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+main .review .reviewBoard .listBox .listBoxUl .newLi .revTxt {
+  width: 1000px;
+  height: auto;
+  padding-left: 35px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  background: yellow;
+}
+main .review .reviewBoard .listBox .listBoxUl .newLi .revTxt .conName {
+  margin-bottom: 5px;
+}
+main .review .reviewBoard .listBox .listBoxUl .newLi .etc {
+  width: 300px;
+  height: auto;
+  padding-left: 35px;
+  box-sizing: border-box;
+  font-size: 13px;
+  background: navajowhite;
 }
 main .lastSec {
   width: 100%;
