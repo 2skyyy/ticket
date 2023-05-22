@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YES24 - 회원가입</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/join.css">
+    <script defer src="js/join.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="joinBox">
+            <h2>회원가입</h2>
+            <div class="user">
+                <div class="joinId">
+                    <span>ID</span>
+                    <input type="text" class="joinIdInput" placeholder="사용하실 아이디를 입력해주세요(6~12글자)">
+                </div>
+                <div class="joinpw">
+                    <span>PASSWORD</span>
+                    <input type="password" class="joinPwInput" placeholder="사용하실 비밀번호를 입력해주세요(8~12글자)">
+                </div>
+                <div class="joinpw2">
+                    <span>PASSWORD 확인</span>
+                    <input type="password" class="joinPwInput2" placeholder="비밀번호 재입력">
+                </div>
+                <div class="name">
+                    <span>이름</span>
+                    <input type="text" class="userName" placeholder="이름을 입력해주세요">
+                </div>
+                <div class="userImage">
+                    <span>프로필 사진<small> (선택사항)</small></span>
+                    <input type="file" name="userImg" id="userImg">
+                </div>
+            </div>
+
+            <button>회원가입</button>
+            
+        </div>
+    </div>
+</body>
+</html>

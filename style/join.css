@@ -1,0 +1,66 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .joinBox {
+  width: 400px;
+  height: 700px;
+  padding: 50px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.wrapper .joinBox h2 {
+  padding: 10px 0;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+.wrapper .joinBox .user {
+  padding: 20px 0;
+}
+.wrapper .joinBox .user .joinId,
+.wrapper .joinBox .user .joinpw,
+.wrapper .joinBox .user .joinpw2,
+.wrapper .joinBox .user .name,
+.wrapper .joinBox .user .userImage {
+  padding: 8px 0;
+}
+.wrapper .joinBox .user .joinId span,
+.wrapper .joinBox .user .joinpw span,
+.wrapper .joinBox .user .joinpw2 span,
+.wrapper .joinBox .user .name span,
+.wrapper .joinBox .user .userImage span {
+  display: block;
+  font-size: 14px;
+}
+.wrapper .joinBox .user .joinId input,
+.wrapper .joinBox .user .joinpw input,
+.wrapper .joinBox .user .joinpw2 input,
+.wrapper .joinBox .user .name input,
+.wrapper .joinBox .user .userImage input {
+  width: 100%;
+  height: 50px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  font-size: 17px;
+}
+.wrapper .joinBox .user #userImg {
+  margin-top: 10px;
+  font-size: 14px;
+}
+.wrapper .joinBox button {
+  width: 100%;
+  height: 50px;
+  margin: 20px 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  background: #ccc;
+}/*# sourceMappingURL=join.css.map */

@@ -565,6 +565,7 @@ main .review .reviewBoard .inputBox .inputText {
   border: 1px solid #ccc;
   box-sizing: border-box;
   overflow: hidden;
+  outline: none;
 }
 main .review .reviewBoard .inputBox .plusBtn {
   width: 60px;
@@ -605,12 +606,20 @@ main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn {
   top: 10px;
   right: 10px;
 }
-main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .like {
-  margin-right: 7px;
+main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .like,
+main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .hate,
+main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .clickBtn {
+  width: 70px;
+  height: 25px;
+  border: none;
+  border-radius: 3px;
   cursor: pointer;
 }
-main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .hate {
-  cursor: pointer;
+main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .like {
+  margin-right: 7px;
+}
+main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .clickBtn {
+  background: #ff9a9a;
 }
 main .review .reviewBoard .listBox .listBoxUl .newLi .revTxt {
   width: 1000px;

@@ -67,9 +67,18 @@ const newN = () => {
     const like = document.createElement('button');
     like.classList.add('like');
     like.textContent = "좋아요";
+
     const hate = document.createElement('button');
     hate.classList.add('hate');
     hate.textContent = "싫어요";
+    like.addEventListener('click', () => {
+        like.classList.toggle('clickBtn');
+        hate.classList.remove('clickBtn');
+    })
+    hate.addEventListener('click', () => {
+        hate.classList.toggle('clickBtn');
+        like.classList.remove('clickBtn');
+    })
     likeBtn.appendChild(like);
     likeBtn.appendChild(hate);
 
@@ -94,10 +103,15 @@ const newN = () => {
     let year = now.getFullYear();
     let month = now.getMonth()+1;
     let day = now.getDate();
-    date.textContent = (year + "." + month + "." + day);
+    let hour = now.getHours();
+    let min = now.getMinutes();
+    date.textContent = (year + "." + month + "." + day + " " + hour + ":" + min);
     const declaration = document.createElement('span');
     declaration.classList.add('declaration');
     declaration.textContent = "신고하기";
+    declaration.addEventListener('click', ()=>{
+        prompt("신고 사유를 적어주세요")
+    })
     etc.appendChild(date);
     etc.appendChild(declaration);
 
@@ -126,8 +140,4 @@ const enter = () => {
         newList();
     }
 }
-
-declaration.addEventListener('click', ()=>{
-    prompt("신고 사유를 적어주세요")
-})
 //리뷰창 end

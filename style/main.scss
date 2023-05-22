@@ -675,6 +675,7 @@ main {
                     border: 1px solid #ccc;
                     box-sizing: border-box;
                     overflow: hidden;
+                    outline: none;
                 }
 
                 .plusBtn{
@@ -723,13 +724,22 @@ main {
                             top: 10px;
                             right: 10px;
 
-                            .like{
-                                margin-right: 7px;
+                            .like,
+                            .hate,
+                            .clickBtn{
+                                width: 70px;
+                                height: 25px;
+                                border: none;
+                                border-radius: 3px;
                                 cursor: pointer;
                             }
 
-                            .hate{
-                                cursor: pointer;
+                            .like{
+                                margin-right: 7px;
+                            }
+
+                            .clickBtn{
+                                background: #ff9a9a;
                             }
                         }
                         
