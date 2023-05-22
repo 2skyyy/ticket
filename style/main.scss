@@ -689,22 +689,22 @@ main {
 
                 .listBoxUl{
                     border-top: 1px solid #ccc;
-                    border-bottom: 1px solid #ccc;
 
                     .newLi{
                         position: relative;
                         padding: 10px;
-                        background: green;
+                        border-bottom: 1px solid #ccc;
 
                         .proflie{
                             display: flex;
                             align-items: center;
                             width: 300px;
                             height: 30px;
-                            background: pink;
 
                             .pro{
-                                display: block;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
                                 width: 25px;
                                 height: 25px;
                                 float: left;
@@ -723,9 +723,14 @@ main {
                             top: 10px;
                             right: 10px;
 
-                            .like{}
+                            .like{
+                                margin-right: 7px;
+                                cursor: pointer;
+                            }
 
-                            .hate{}
+                            .hate{
+                                cursor: pointer;
+                            }
                         }
                         
                         .revTxt{
@@ -734,7 +739,6 @@ main {
                             padding-left: 35px;
                             margin: 10px 0;
                             box-sizing: border-box;
-                            background: yellow;
 
                             .conName{
                                 margin-bottom: 5px;
@@ -744,14 +748,19 @@ main {
                         }
 
                         .etc{
-                            width: 300px;
+                            width: auto;
                             height: auto;
                             padding-left: 35px;
                             box-sizing: border-box;
                             font-size: 13px;
-                            background: navajowhite;
 
-                            .date{}
+                            .date{
+                                margin-right: 10px;
+                            }
+
+                            .declaration{
+                                cursor: pointer;
+                            }
                         }
                     }
                 }
