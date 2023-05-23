@@ -13,7 +13,7 @@ loginBtn.addEventListener('click', () => {
         const setId = localStorage.getItem('joinIdInput');
         const setPw = localStorage.getItem('joinPwInput');
         if(idInput.value == setId && pwInput.value == setPw){
-            const mainPage = '../index.html';
+            const mainPage = 'index.html';
             location.href = mainPage;
         }else{
             alert('아이디 혹은 비밀번호가 잘못되었습니다.')
