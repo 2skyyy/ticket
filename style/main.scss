@@ -172,7 +172,7 @@ a {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 50px;
+        padding: 0 100px;
         width: 100%;
         height: 100%;
         box-sizing: border-box;
@@ -236,7 +236,7 @@ a {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        width: 400px;
+        width: 450px;
 
         .search {
             display: flex;
@@ -258,17 +258,19 @@ a {
             .goSearch {
                 width: 30px;
                 height: 30px;
-                margin-right: 15px;
+                margin-right: 7px;
                 background: url('../img/search.png') no-repeat center center / contain;
                 cursor: pointer;
             }
         }
 
-        .myPage {
-            width: 30px;
-            height: 30px;
-            background: url('../img/myPage.png') no-repeat center center / contain;
-            cursor: pointer;
+        .myPageActive {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+            height: auto;
+            font-weight: bold;
         }
     }
     
@@ -348,7 +350,6 @@ main {
     
     
     .hot {
-
         .hotCon {
             display: flex;
             justify-content: space-between;
@@ -364,6 +365,40 @@ main {
             .best1 {
                 width: 420px;
                 height: 700px;
+
+                img{
+                    width: 100%;
+                    height: 610PX;
+                }
+                .best1Txt{
+                    width: 100%;
+                    height: 90px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    row-gap: 10px;
+                    border-bottom: 1px solid #ccc;
+
+                    h3,
+                    p{
+                        width: 90%;
+                        text-align: center;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    h3 {
+                        margin-bottom: 5px;
+                        font-weight: bold;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        color: #aaa;
+                    }
+                }
             }
         }
         
@@ -380,11 +415,50 @@ main {
                 float: left;
 
                 a {
+                    position: relative;
                     display: block;
                     width: 100%;
                     height: 100%;
                     border: 1px solid #ddd;
                     box-sizing: border-box;
+                    overflow: hidden;
+
+                    img{
+                        transition: 0.5s;
+                    }
+
+                    .bestTxt{
+                        display: none;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        text-align: center;
+                        color: #f1f1f1;
+                        background-color: rgb(0, 0, 0, 0.7);
+                        
+                    
+                        h3{
+                            font-size: 18px;
+                            font-weight: bold;
+                            margin-bottom: 8px;
+                        }
+                        p{
+                            font-size: 14px;
+                            line-height: 1.2rem;
+                        }
+                    }
+
+                    &:hover .bestTxt{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
+
+                    &:hover img{
+                        transform: scale(1.1);
+                    }
                 }
             }
         }
@@ -407,15 +481,50 @@ main {
                 border: 1px solid #ddd;
                 box-sizing: border-box;
 
-                img {
-                    width: 100%;
-                    height: 310px;
+                .newImg{
+                    position: relative;
+
+                    img {
+                        width: 100%;
+                        height: 310px;
+                    }
+                    .dDay{
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        row-gap: 5px;
+                        align-items: center;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 170px;
+                        height: 100px;
+                        border: 3px solid #EC7D2C;
+                        background-color: rgb(0, 0, 0, 0.7);
+                        color: #f1f1f1;
+
+                        span:first-of-type{
+                            color: #EC7D2C;
+                            font-size: 25px;
+                            font-weight: bold;
+                        }
+
+                        span:last-of-type{
+                            font-size: 20px;
+                        }
+
+                }
                 }
                 
-                .newTxt{
-                    width: 100%;
-                    height: 80px;
+                
+                .text{
+                    p{
+                        color: #EC7D2C;
+                    }
                 }
+
+                
             }
         }
     }
@@ -658,7 +767,6 @@ main {
                 height: 25px;
                 margin-bottom: 10px;
             }
-            
             .inputBox{
                 display: flex;
                 width: 100%;
@@ -672,6 +780,7 @@ main {
                     height: 50px;
                     max-height: 60px;
                     margin-right: 10px;
+                    padding: 0 10px;
                     border: 1px solid #ccc;
                     box-sizing: border-box;
                     overflow: hidden;
@@ -751,7 +860,8 @@ main {
                             box-sizing: border-box;
 
                             .conName{
-                                margin-bottom: 5px;
+                                margin-bottom: 10px;
+                                font-size: 12px;
                             }
 
                             .conrev{}

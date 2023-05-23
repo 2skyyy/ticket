@@ -27,8 +27,7 @@
             .joinId,
             .joinpw,
             .joinpw2,
-            .name,
-            .userImage{
+            .name{
                 padding: 8px 0;
                 span{
                     display: block;
@@ -44,14 +43,16 @@
                     outline: none;
                     font-size: 17px;
                 }
+                .errorJoinId,
+                .errorJoinPw,
+                .errorJoinPw2,
+                .errorJoinName{
+                    background: transparent;
+                    margin-left: 10px;
+                    color: red;
+                    font-weight: bold;
+                }
             }
-
-            #userImg{
-                margin-top: 10px;
-                font-size: 14px;
-            }
-
-            
         }
 
         button{

@@ -1,8 +1,22 @@
+const getName = localStorage.getItem('userName');
+const myPageActive = document.querySelector('.myPageActive');
 const header = document.querySelector('#header');
 const popUp = document.querySelector('.popUp');
 const popCheckBox = document.querySelector('#popCheckBox');
 const closebtn = document.querySelector('.closebtn');
 
+//로그인 시 닉네임 노출 start
+if(getName != null){
+    myPageActive.textContent = getName+"님";
+    myPageActive.addEventListener('click', (e) => {
+        e.preventDefault();
+    })
+}else{
+    myPageActive.textContent = "로그인";
+}
+//로그인 시 닉네임 노출 end
+
+//popUp start
 const popUpDelete = function(){
     popUp.style.display = "none";
 }
@@ -15,20 +29,7 @@ closebtn.addEventListener('click', (e)=>{
     e.preventDefault();
     popUpDelete();
 });
-
-$('.s1Slider').slick({
-    dots: true,
-    arrows: true,
-    prevArrow: $('.prevBtn'),
-    nextArrow: $('.nextBtn'),
-    autoplay: true
-})
-
-$('.adSlider').slick({
-    dots: true,
-    arrows: false,
-    autoplay: true
-})
+//popUp end
 
 window.addEventListener('scroll', function () {
     if (scrollY > 700) {
@@ -39,6 +40,72 @@ window.addEventListener('scroll', function () {
         header.style.boxShadow ="none"
     }
 })
+
+//new start
+//d-day 구하기
+
+// var dday = new Date("May 17, 2024, 14:00:00").getTime();
+
+// setInterval(function () {
+//     var today = new Date().getTime();
+//     var gap = dday - today;
+//     var day = Math.ceil(gap / (1000 * 60 * 60 * 24))-1;
+//     var hour = Math.ceil((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))-1;
+//     var min = Math.ceil((gap % (1000 * 60 * 60)) / (1000 * 60));
+//     var sec = Math.ceil((gap % (1000 * 60)) / 1000);
+
+//     document.querySelector('.dDay').innerHTML = "<span>D-" + day  + "</span><span>" + hour + " : " + min + ": " + sec + "</span>";
+// }, 1000);
+
+    
+setInterval(() =>{
+    const dday1 = new Date("December 20, 2023, 14:00:00").getTime();
+    const dday2 = new Date("December 28, 2023, 18:00:00").getTime();
+    const dday3 = new Date("February 03, 2024, 14:00:00").getTime();
+    const dday4 = new Date("February 05, 2024, 15:00:00").getTime();
+    const dday5 = new Date("May 19, 2024, 14:00:00").getTime();
+
+    const today = new Date().getTime();
+
+    const gap1 = dday1 - today;
+    const gap2 = dday2 - today;
+    const gap3 = dday3 - today;
+    const gap4 = dday4 - today;
+    const gap5 = dday5 - today;
+
+    const day1 = Math.ceil(gap1 / (1000 * 60 * 60 * 24))-1;
+    const day2 = Math.ceil(gap2 / (1000 * 60 * 60 * 24))-1;
+    const day3 = Math.ceil(gap3 / (1000 * 60 * 60 * 24))-1;
+    const day4 = Math.ceil(gap4 / (1000 * 60 * 60 * 24))-1;
+    const day5 = Math.ceil(gap5 / (1000 * 60 * 60 * 24))-1;
+
+    const hour1 = Math.ceil((gap1 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))-1;
+    const hour2 = Math.ceil((gap2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))-1;
+    const hour3 = Math.ceil((gap3 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))-1;
+    const hour4 = Math.ceil((gap4 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))-1;
+    const hour5 = Math.ceil((gap5 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))-1;
+    
+    const min1 = Math.ceil((gap1 % (1000 * 60 * 60)) / (1000 * 60));
+    const min2 = Math.ceil((gap2 % (1000 * 60 * 60)) / (1000 * 60));
+    const min3 = Math.ceil((gap3 % (1000 * 60 * 60)) / (1000 * 60));
+    const min4 = Math.ceil((gap4 % (1000 * 60 * 60)) / (1000 * 60));
+    const min5 = Math.ceil((gap5 % (1000 * 60 * 60)) / (1000 * 60));
+    
+    const sec1 = Math.ceil((gap1 % (1000 * 60)) / 1000);
+    const sec2 = Math.ceil((gap2 % (1000 * 60)) / 1000);
+    const sec3 = Math.ceil((gap3 % (1000 * 60)) / 1000);
+    const sec4 = Math.ceil((gap4 % (1000 * 60)) / 1000);
+    const sec5 = Math.ceil((gap5 % (1000 * 60)) / 1000);
+
+    document.querySelector('.dDay1').innerHTML = "<span>D-" + day1 + "</span><span>" + hour1 + " : " + min1 + ": " + sec1 + "</span>";
+    document.querySelector('.dDay2').innerHTML = "<span>D-" + day2 + "</span><span>" + hour2 + " : " + min2 + ": " + sec2 + "</span>";
+    document.querySelector('.dDay3').innerHTML = "<span>D-" + day3 + "</span><span>" + hour3 + " : " + min3 + ": " + sec3 + "</span>";
+    document.querySelector('.dDay4').innerHTML = "<span>D-" + day4 + "</span><span>" + hour4 + " : " + min4 + ": " + sec4 + "</span>";
+    document.querySelector('.dDay5').innerHTML = "<span>D-" + day5 + "</span><span>" + hour5 + " : " + min5 + ": " + sec5 + "</span>";
+}, 1000);
+
+//new end
+
 
 
 //리뷰창 start
@@ -55,10 +122,13 @@ const newN = () => {
     proflie.classList.add('proflie');
     const pro = document.createElement('a');
     pro.classList.add('pro');
-    pro.textContent = "프"
+    const proAry = ["👻", "🐥", "👾", "🦊"]
+    pro.textContent = proAry[Math.floor(Math.random() * proAry.length)];
+
     const nickName = document.createElement('span');
     nickName.classList.add('nickName');
-    nickName.textContent = "js25"
+    nickName.textContent = getName;
+
     proflie.appendChild(pro);
     proflie.appendChild(nickName);
 
@@ -87,7 +157,7 @@ const newN = () => {
 
     const conName = document.createElement('div');
     conName.classList.add('conName');
-    conName.textContent = "관람 공연: " + reviewSelect.options[reviewSelect.selectedIndex].text;
+    conName.textContent = "관람 공연 : " + reviewSelect.options[reviewSelect.selectedIndex].text;
     const conrev = document.createElement('div');
     conrev.classList.add('conrev');
     conrev.textContent = inputText.value;
@@ -120,13 +190,22 @@ const newN = () => {
     newLi.appendChild(revTxt);
     newLi.appendChild(etc);
     listBoxUl.appendChild(newLi);
+
+    // const setNewLi = document.querySelectorAll('.newLi');
+    // localStorage.setItem('newLi', setNewLi);
+
+    // const getNewLi = localStorage.getItem('newLi');
+    // listBoxUl.appendChild(getNewLi);
 }
 
 const newList = () => {
     if(reviewSelect.options[reviewSelect.selectedIndex].value === ""){
-        alert("리뷰 남기실 공연을 선택해주세요")
+        alert("리뷰 남기실 공연을 선택해주세요.")
     }
-    if(inputText.value.trim() !== "" && reviewSelect.options[reviewSelect.selectedIndex].value != "") {
+    if(getName == null){
+        alert("로그인 후 이용해주세요.")
+    }
+    if(inputText.value.trim() !== "" && reviewSelect.options[reviewSelect.selectedIndex].value != "" && getName != null) {
         newN();
     }
 }
@@ -141,3 +220,5 @@ const enter = () => {
     }
 }
 //리뷰창 end
+
+
