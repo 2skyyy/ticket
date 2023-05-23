@@ -493,7 +493,6 @@ main .ad .adSlider .slick-dots .slick-active {
   background: lightgray;
 }
 main .rank .rankNav {
-  border: 1px solid blue;
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
@@ -576,50 +575,61 @@ main .rank .rankCon .rankAll ul .rankLi a:hover .rankConImg3 {
   height: 130%;
   transition: 0.7s;
 }
-main .rank .rankCon .rankAll .rankCon_musical .rankConImg1 {
+main .rank .rankCon .rankAll .rankConMusical .rankConImg1 {
   background: url(../img/rank_musical1.jpg) no-repeat center center/cover;
 }
-main .rank .rankCon .rankAll .rankCon_musical .rankConImg2 {
+main .rank .rankCon .rankAll .rankConMusical .rankConImg2 {
   background: url(../img/rank_musical2.jpg) no-repeat center center/cover;
 }
-main .rank .rankCon .rankAll .rankCon_musical .rankConImg3 {
+main .rank .rankCon .rankAll .rankConMusical .rankConImg3 {
   background: url(../img/rank_musical3.jpg) no-repeat center center/cover;
 }
-main .rank .rankCon .rankAll .rankCon_concert .rankConImg1 {
+main .rank .rankCon .rankAll .rankConConcert .rankConImg1 {
   background: url(../img/rank_concert1.jpg) no-repeat center center/cover;
 }
-main .rank .rankCon .rankAll .rankCon_concert .rankConImg2 {
+main .rank .rankCon .rankAll .rankConConcert .rankConImg2 {
   background: url(../img/rank_concert2.jpg) no-repeat center center/cover;
 }
-main .rank .rankCon .rankAll .rankCon_concert .rankConImg3 {
+main .rank .rankCon .rankAll .rankConConcert .rankConImg3 {
   background: url(../img/rank_concert3.jpg) no-repeat center center/cover;
 }
-main .rank .rankCon .rankAll .rankCon_theater .rankConImg1 {
+main .rank .rankCon .rankAll .rankConTheater .rankConImg1 {
   background: url(../img/rank_theater1.jpg) no-repeat center center/cover;
 }
-main .rank .rankCon .rankAll .rankCon_theater .rankConImg2 {
+main .rank .rankCon .rankAll .rankConTheater .rankConImg2 {
   background: url(../img/rank_theater2.jpg) no-repeat center center/cover;
 }
-main .rank .rankCon .rankAll .rankCon_theater .rankConImg3 {
+main .rank .rankCon .rankAll .rankConTheater .rankConImg3 {
   background: url(../img/rank_theater3.jpg) no-repeat center center/cover;
 }
-main .rank .rankCon .rankAll .rankCon_classic .rankConImg1 {
+main .rank .rankCon .rankAll .rankConClassic .rankConImg1 {
   background: url(../img/rank_classic1.jpg) no-repeat center center/cover;
 }
-main .rank .rankCon .rankAll .rankCon_classic .rankConImg2 {
+main .rank .rankCon .rankAll .rankConClassic .rankConImg2 {
   background: url(../img/rank_classic2.jpg) no-repeat center center/cover;
 }
-main .rank .rankCon .rankAll .rankCon_classic .rankConImg3 {
+main .rank .rankCon .rankAll .rankConClassic .rankConImg3 {
   background: url(../img/rank_classic3.jpg) no-repeat center center/cover;
 }
-main .rank .rankCon .rankAll .rankCon_ex .rankConImg1 {
+main .rank .rankCon .rankAll .rankConEx .rankConImg1 {
   background: url(../img/rank_ex1.jpg) no-repeat center center/cover;
 }
-main .rank .rankCon .rankAll .rankCon_ex .rankConImg2 {
+main .rank .rankCon .rankAll .rankConEx .rankConImg2 {
   background: url(../img/rank_ex2.jpg) no-repeat center center/cover;
 }
-main .rank .rankCon .rankAll .rankCon_ex .rankConImg3 {
+main .rank .rankCon .rankAll .rankConEx .rankConImg3 {
   background: url(../img/rank_ex3.jpg) no-repeat center center/cover;
+}
+main .interview .interviewSlider .Interviewitem {
+  float: left;
+  width: 840px;
+  height: 440px;
+}
+main .interview .interviewSlider .Interviewitem img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main .interviewSlider {
   width: 100%;

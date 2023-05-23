@@ -31,6 +31,30 @@ closebtn.addEventListener('click', (e)=>{
 });
 //popUp end
 
+//search시 구글 검색창으로 이동
+const searchInput = document.querySelector('.searchInput');
+const goSearch = document.querySelector('.goSearch');
+
+const goGoogle = ()=>{
+    if(searchInput.value.trim() != ""){
+        const googlePage = `https://google.com/search?q=${searchInput.value}`;
+        location.href = googlePage;
+    }
+}
+
+const googleEnter = () => {
+    if(event.keyCode == 13){
+        goGoogle();
+    }
+}
+
+goSearch.addEventListener('click',()=>{
+    goGoogle();
+})
+//
+
+
+
 window.addEventListener('scroll', function () {
     if (scrollY > 700) {
         header.style.background = "#fff";
@@ -41,7 +65,7 @@ window.addEventListener('scroll', function () {
     }
 })
 
-//new start
+//section new start
 //d-day 구하기
 
 // var dday = new Date("May 17, 2024, 14:00:00").getTime();
@@ -85,17 +109,17 @@ setInterval(() =>{
     const hour4 = Math.ceil((gap4 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))-1;
     const hour5 = Math.ceil((gap5 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))-1;
     
-    const min1 = Math.ceil((gap1 % (1000 * 60 * 60)) / (1000 * 60));
-    const min2 = Math.ceil((gap2 % (1000 * 60 * 60)) / (1000 * 60));
-    const min3 = Math.ceil((gap3 % (1000 * 60 * 60)) / (1000 * 60));
-    const min4 = Math.ceil((gap4 % (1000 * 60 * 60)) / (1000 * 60));
-    const min5 = Math.ceil((gap5 % (1000 * 60 * 60)) / (1000 * 60));
+    const min1 = Math.ceil((gap1 % (1000 * 60 * 60)) / (1000 * 60))-1;
+    const min2 = Math.ceil((gap2 % (1000 * 60 * 60)) / (1000 * 60))-1;
+    const min3 = Math.ceil((gap3 % (1000 * 60 * 60)) / (1000 * 60))-1;
+    const min4 = Math.ceil((gap4 % (1000 * 60 * 60)) / (1000 * 60))-1;
+    const min5 = Math.ceil((gap5 % (1000 * 60 * 60)) / (1000 * 60))-1;
     
-    const sec1 = Math.ceil((gap1 % (1000 * 60)) / 1000);
-    const sec2 = Math.ceil((gap2 % (1000 * 60)) / 1000);
-    const sec3 = Math.ceil((gap3 % (1000 * 60)) / 1000);
-    const sec4 = Math.ceil((gap4 % (1000 * 60)) / 1000);
-    const sec5 = Math.ceil((gap5 % (1000 * 60)) / 1000);
+    const sec1 = Math.ceil((gap1 % (1000 * 60)) / 1000)-1;
+    const sec2 = Math.ceil((gap2 % (1000 * 60)) / 1000)-1;
+    const sec3 = Math.ceil((gap3 % (1000 * 60)) / 1000)-1;
+    const sec4 = Math.ceil((gap4 % (1000 * 60)) / 1000)-1;
+    const sec5 = Math.ceil((gap5 % (1000 * 60)) / 1000)-1;
 
     document.querySelector('.dDay1').innerHTML = "<span>D-" + day1 + "</span><span>" + hour1 + " : " + min1 + ": " + sec1 + "</span>";
     document.querySelector('.dDay2').innerHTML = "<span>D-" + day2 + "</span><span>" + hour2 + " : " + min2 + ": " + sec2 + "</span>";
@@ -104,8 +128,27 @@ setInterval(() =>{
     document.querySelector('.dDay5').innerHTML = "<span>D-" + day5 + "</span><span>" + hour5 + " : " + min5 + ": " + sec5 + "</span>";
 }, 1000);
 
-//new end
+//section new end
 
+//section rank start
+
+// const rankNavItem = document.querySelectorAll('.rankNavItem');
+// const rankMusical = document.querySelector('.rankMusical');
+// const rankConcert = document.querySelector('.rankConcert');
+// const rankTheater = document.querySelector('.rankTheater');
+// const rankClassic = document.querySelector('.rankClassic');
+// const rankEx = document.querySelector('.rankEx');
+// const rankNavArr = [rankMusical, rankConcert, rankTheater, rankClassic, rankEx];
+
+// const rankConMusical = document.querySelector('.rankConMusical');
+// const rankConConcert = document.querySelector('.rankConConcert');
+// const rankConTheater = document.querySelector('.rankConTheater');
+// const rankConClassic = document.querySelector('.rankConClassic');
+// const rankConEx = document.querySelector('.rankConEx');
+// const rankConArr = [rankConMusical, rankConConcert, rankConTheater, rankConClassic, rankConEx]
+
+
+//section rank end
 
 
 //리뷰창 start
