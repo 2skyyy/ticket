@@ -260,8 +260,7 @@ main .mainSlider .s1Slider .s1item {
 main .mainSlider .s1Slider .s1item img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 main .mainSlider .s1Slider .slick-dots {
   position: absolute;
@@ -466,8 +465,7 @@ main .ad .adSlider .aditem {
 main .ad .adSlider .aditem img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transform: translateY(-20px);
 }
 main .ad .adSlider .slick-dots {
@@ -501,11 +499,11 @@ main .rank .rankNav li a {
   display: block;
   margin: 0 5px;
   padding: 10px;
-  font-size: 17px;
+  font-size: 18px;
+  font-weight: bold;
 }
 main .rank .rankNav li .clickNav {
   color: #EC7D2C;
-  font-weight: bold;
 }
 main .rank .rankCon .rankAll {
   position: relative;
@@ -641,22 +639,55 @@ main .rank .rankCon .rankAll .rankConEx .rankConImg3 {
 main .interview {
   height: auto;
 }
-main .interview .interviewSlider {
-  width: 100%;
-  height: 450px;
-  background: #ff9a9a;
-  overflow: hidden;
+main .interview .inner {
+  position: relative;
 }
-main .interview .interviewSlider .interviewitem {
-  width: 400px;
-  height: 100%;
-  float: left;
+main .interview .inner .prev,
+main .interview .inner .next {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 77;
 }
-main .interview .interviewSlider .interviewitem img {
+main .interview .inner .prev {
+  left: -70px;
+}
+main .interview .inner .next {
+  right: -70px;
+}
+main .interview .interviewSliderWrap {
+  position: relative;
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+}
+main .interview .interviewSliderWrap .interviewSlider {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 630px;
+  margin: 0 auto;
+  background: pink;
+}
+main .interview .interviewSliderWrap .interviewSlider .interviewitem {
+  flex: 1200px;
+  height: 100%;
+  transition: 0.5s;
+  cursor: pointer;
+}
+main .interview .interviewSliderWrap .interviewSlider .interviewitem img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: contain;
 }
 
 .review {
@@ -885,4 +916,6 @@ footer .footerNav select {
   width: 200px;
   height: 40px;
   outline: none;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */

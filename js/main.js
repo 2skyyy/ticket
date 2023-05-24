@@ -73,11 +73,11 @@ goSearch.addEventListener('click',()=>{
 
 setInterval(() =>{
     const ddays=[
-        new Date("December 20, 2023, 14:00:00").getTime(),
-        new Date("December 28, 2023, 18:00:00").getTime(),
-        new Date("February 03, 2024, 14:00:00").getTime(),
-        new Date("February 05, 2024, 15:00:00").getTime(),
-        new Date("May 19, 2024, 14:00:00").getTime()
+        new Date("December 20, 2023, 10:00:00").getTime(),
+        new Date("December 28, 2023, 14:00:00").getTime(),
+        new Date("February 03, 2024, 17:00:00").getTime(),
+        new Date("February 05, 2024, 19:00:00").getTime(),
+        new Date("May 25, 2024, 20:00:00").getTime()
     ]
     const today = new Date().getTime();
     const gaps = [];
@@ -89,9 +89,23 @@ setInterval(() =>{
     for(let j=0; j<ddays.length; j++){
         gaps.push(ddays[j] - today);
         days.push(Math.ceil(gaps[j] / (1000 * 60 * 60 * 24))-1);
-        hours.push(Math.ceil((gaps[j] % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))-1);
+        hours.push(Math.ceil((gaps[j] % (1000 * 60 * 60 * 24)-2) / (1000 * 60 * 60))-1);
         mins.push(Math.ceil((gaps[j] % (1000 * 60 * 60)) / (1000 * 60))-1);
         secs.push(Math.ceil((gaps[j] % (1000 * 60)) / 1000)-1);
+
+        if(hours[j] >= 24){
+            hours[j] = hours[j]-24;
+            days[j] =days[j]+1;
+        }
+        if(hours[j] <= 10){
+            hours[j] = '0'+ hours[j]
+        }
+        if(mins[j] <= 10){
+            mins[j] = '0'+ mins[j]
+        }
+        if(secs[j] <= 10){
+            secs[j] = '0'+ secs[j]
+        }
         document.querySelector(`.dDay${j+1}`).innerHTML = "<span>D-" + days[j] + "</span><span>" + hours[j] + " : " + mins[j] + ": " + secs[j] + "</span>";
     }
 }, 1000);
@@ -124,11 +138,49 @@ rankNavItem.forEach((item,value)=>{
 
 //=====section interview start=====
 
-// const interviewSlider = document.querySelector('.interviewSlider');
-// const interviewitem = document.querySelectorAll('.interviewitem');
-// const interviewitem1 = document.querySelector('.interviewitem1');
-// const interviewitem2 = document.querySelector('.interviewitem2');
-// const interviewitem3 = document.querySelector('.interviewitem3');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next')
+const interviewSlider = document.querySelector('.interviewSlider');
+const interviewitem = document.querySelectorAll('.interviewitem');
+const interviewitem1 = document.querySelector('.interviewitem1');
+const interviewitem2 = document.querySelector('.interviewitem2');
+const interviewitem3 = document.querySelector('.interviewitem3');
+
+interviewSlider.style.width = `${interviewitem.length * 1200}px`;
+
+let num=0;
+const tr = () => {
+    num++;
+    interviewitem.forEach((i)=>{
+        if(num===interviewitem.length){
+            num=0;
+        }
+        i.style.transform = `translate(-${num}00%)`;
+    })
+}
+
+setInterval(()=>{
+    tr();
+},1000)
+
+
+prev.addEventListener('click',()=>{
+    tr();
+})
+// let num=0;
+// prev.addEventListener('click', ()=>{
+//     num++;
+//     interviewitem.forEach((i) => {
+//         if(num == 3){
+//             num = 0;
+//         }
+//         i.style.transform = `translate(-${num}00%)`;
+        
+//         console.log(i,num)
+//     })
+// })
+
+
 // const interviewitemAry = interviewitem.forEach((v)=>{
 //     setInterval(() => {
 //         v.style.transform = "translate(-100%)"
@@ -141,8 +193,8 @@ rankNavItem.forEach((item,value)=>{
 //     style.transform = "translate(-100%)";
 // }
 // interviewitem1.transform();
-//interviewitem1.style.transform = "translate(-100%)";
-//setInterval(transform,1000);
+// interviewitem1.style.transform = "translate(-100%)";
+// setInterval(transform,1000);
 
 //=====section interview end=====
 
