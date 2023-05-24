@@ -5,56 +5,22 @@ const popUp = document.querySelector('.popUp');
 const popCheckBox = document.querySelector('#popCheckBox');
 const closebtn = document.querySelector('.closebtn');
 
-//로그인 시 닉네임 노출 start
-if(getName != null){
-    myPageActive.textContent = getName+"님";
-    myPageActive.addEventListener('click', (e) => {
-        e.preventDefault();
-    })
-}else{
-    myPageActive.textContent = "로그인";
-}
-//로그인 시 닉네임 노출 end
-
-//popUp start
+//==========popUp start==========
 const popUpDelete = function(){
     popUp.style.display = "none";
 }
-
 popCheckBox.addEventListener('click', ()=>{
     popUpDelete();
 });
-
 closebtn.addEventListener('click', (e)=>{
     e.preventDefault();
     popUpDelete();
 });
-//popUp end
+//==========popUp end==========
 
-//search시 구글 검색창으로 이동
-const searchInput = document.querySelector('.searchInput');
-const goSearch = document.querySelector('.goSearch');
+//==========hearder start==========
 
-const goGoogle = ()=>{
-    if(searchInput.value.trim() != ""){
-        const googlePage = `https://google.com/search?q=${searchInput.value}`;
-        location.href = googlePage;
-    }
-}
-
-const googleEnter = () => {
-    if(event.keyCode == 13){
-        goGoogle();
-    }
-}
-
-goSearch.addEventListener('click',()=>{
-    goGoogle();
-})
-//
-
-
-
+//스크롤 700px이상 내렸을 때 header 효과
 window.addEventListener('scroll', function () {
     if (scrollY > 700) {
         header.style.background = "#fff";
@@ -65,93 +31,124 @@ window.addEventListener('scroll', function () {
     }
 })
 
-//section new start
-//d-day 구하기
+//로그인 시 닉네임 노출
+if(getName != null){
+    myPageActive.textContent = getName+"님";
+    myPageActive.addEventListener('click', (e) => {
+        e.preventDefault();
+    })
+}else{
+    myPageActive.textContent = "로그인";
+}
 
-// var dday = new Date("May 17, 2024, 14:00:00").getTime();
+//search시 구글 검색창으로 이동
+const searchInput = document.querySelector('.searchInput');
+const goSearch = document.querySelector('.goSearch');
+const goGoogle = ()=>{
+    if(searchInput.value.trim() != ""){
+        const googlePage = `https://google.com/search?q=${searchInput.value}`;
+        location.href = googlePage;
+    }
+}
+const googleEnter = () => {
+    if(event.keyCode == 13){
+        goGoogle();
+    }
+}
+goSearch.addEventListener('click',()=>{
+    goGoogle();
+})
 
-// setInterval(function () {
-//     var today = new Date().getTime();
-//     var gap = dday - today;
-//     var day = Math.ceil(gap / (1000 * 60 * 60 * 24))-1;
-//     var hour = Math.ceil((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))-1;
-//     var min = Math.ceil((gap % (1000 * 60 * 60)) / (1000 * 60));
-//     var sec = Math.ceil((gap % (1000 * 60)) / 1000);
+//==========hearder end==========
 
-//     document.querySelector('.dDay').innerHTML = "<span>D-" + day  + "</span><span>" + hour + " : " + min + ": " + sec + "</span>";
-// }, 1000);
 
-    
+
+//==========main start==========
+
+//=====section mainSlider ..........
+
+//=====section hot ..........
+
+//=====section new start=====
+
 setInterval(() =>{
-    const dday1 = new Date("December 20, 2023, 14:00:00").getTime();
-    const dday2 = new Date("December 28, 2023, 18:00:00").getTime();
-    const dday3 = new Date("February 03, 2024, 14:00:00").getTime();
-    const dday4 = new Date("February 05, 2024, 15:00:00").getTime();
-    const dday5 = new Date("May 19, 2024, 14:00:00").getTime();
-
+    const ddays=[
+        new Date("December 20, 2023, 14:00:00").getTime(),
+        new Date("December 28, 2023, 18:00:00").getTime(),
+        new Date("February 03, 2024, 14:00:00").getTime(),
+        new Date("February 05, 2024, 15:00:00").getTime(),
+        new Date("May 19, 2024, 14:00:00").getTime()
+    ]
     const today = new Date().getTime();
+    const gaps = [];
+    const days = [];
+    const hours = [];
+    const mins = [];
+    const secs = [];
 
-    const gap1 = dday1 - today;
-    const gap2 = dday2 - today;
-    const gap3 = dday3 - today;
-    const gap4 = dday4 - today;
-    const gap5 = dday5 - today;
-
-    const day1 = Math.ceil(gap1 / (1000 * 60 * 60 * 24))-1;
-    const day2 = Math.ceil(gap2 / (1000 * 60 * 60 * 24))-1;
-    const day3 = Math.ceil(gap3 / (1000 * 60 * 60 * 24))-1;
-    const day4 = Math.ceil(gap4 / (1000 * 60 * 60 * 24))-1;
-    const day5 = Math.ceil(gap5 / (1000 * 60 * 60 * 24))-1;
-
-    const hour1 = Math.ceil((gap1 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))-1;
-    const hour2 = Math.ceil((gap2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))-1;
-    const hour3 = Math.ceil((gap3 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))-1;
-    const hour4 = Math.ceil((gap4 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))-1;
-    const hour5 = Math.ceil((gap5 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))-1;
-    
-    const min1 = Math.ceil((gap1 % (1000 * 60 * 60)) / (1000 * 60))-1;
-    const min2 = Math.ceil((gap2 % (1000 * 60 * 60)) / (1000 * 60))-1;
-    const min3 = Math.ceil((gap3 % (1000 * 60 * 60)) / (1000 * 60))-1;
-    const min4 = Math.ceil((gap4 % (1000 * 60 * 60)) / (1000 * 60))-1;
-    const min5 = Math.ceil((gap5 % (1000 * 60 * 60)) / (1000 * 60))-1;
-    
-    const sec1 = Math.ceil((gap1 % (1000 * 60)) / 1000)-1;
-    const sec2 = Math.ceil((gap2 % (1000 * 60)) / 1000)-1;
-    const sec3 = Math.ceil((gap3 % (1000 * 60)) / 1000)-1;
-    const sec4 = Math.ceil((gap4 % (1000 * 60)) / 1000)-1;
-    const sec5 = Math.ceil((gap5 % (1000 * 60)) / 1000)-1;
-
-    document.querySelector('.dDay1').innerHTML = "<span>D-" + day1 + "</span><span>" + hour1 + " : " + min1 + ": " + sec1 + "</span>";
-    document.querySelector('.dDay2').innerHTML = "<span>D-" + day2 + "</span><span>" + hour2 + " : " + min2 + ": " + sec2 + "</span>";
-    document.querySelector('.dDay3').innerHTML = "<span>D-" + day3 + "</span><span>" + hour3 + " : " + min3 + ": " + sec3 + "</span>";
-    document.querySelector('.dDay4').innerHTML = "<span>D-" + day4 + "</span><span>" + hour4 + " : " + min4 + ": " + sec4 + "</span>";
-    document.querySelector('.dDay5').innerHTML = "<span>D-" + day5 + "</span><span>" + hour5 + " : " + min5 + ": " + sec5 + "</span>";
+    for(let j=0; j<ddays.length; j++){
+        gaps.push(ddays[j] - today);
+        days.push(Math.ceil(gaps[j] / (1000 * 60 * 60 * 24))-1);
+        hours.push(Math.ceil((gaps[j] % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))-1);
+        mins.push(Math.ceil((gaps[j] % (1000 * 60 * 60)) / (1000 * 60))-1);
+        secs.push(Math.ceil((gaps[j] % (1000 * 60)) / 1000)-1);
+        document.querySelector(`.dDay${j+1}`).innerHTML = "<span>D-" + days[j] + "</span><span>" + hours[j] + " : " + mins[j] + ": " + secs[j] + "</span>";
+    }
 }, 1000);
 
-//section new end
+//=====section new end=====
 
-//section rank start
+//=====section rank start=====
 
-// const rankNavItem = document.querySelectorAll('.rankNavItem');
-// const rankMusical = document.querySelector('.rankMusical');
-// const rankConcert = document.querySelector('.rankConcert');
-// const rankTheater = document.querySelector('.rankTheater');
-// const rankClassic = document.querySelector('.rankClassic');
-// const rankEx = document.querySelector('.rankEx');
-// const rankNavArr = [rankMusical, rankConcert, rankTheater, rankClassic, rankEx];
+const rankNavItem = document.querySelectorAll('.rankNavItem');
+const rankConUl = document.querySelectorAll('.rankConUl');
+rankNavItem.forEach((item,value)=>{
+    item.addEventListener('click', (e)=>{
+        e.preventDefault();
+        for(let j=0; j<rankConUl.length; j++){
+            rankConUl[j].style.display="none";
+        }
+        for(let j=0; j<rankConUl.length; j++){
+            rankNavItem[j].classList.remove('clickNav');
+        }
+        rankConUl.forEach((i,v) =>{
+            if(value===v){
+                item.classList.add('clickNav');
+                i.style.display ="flex"
+            }
+        })
+    })
+})
 
-// const rankConMusical = document.querySelector('.rankConMusical');
-// const rankConConcert = document.querySelector('.rankConConcert');
-// const rankConTheater = document.querySelector('.rankConTheater');
-// const rankConClassic = document.querySelector('.rankConClassic');
-// const rankConEx = document.querySelector('.rankConEx');
-// const rankConArr = [rankConMusical, rankConConcert, rankConTheater, rankConClassic, rankConEx]
+//=====section rank end=====
+
+//=====section interview start=====
+
+// const interviewSlider = document.querySelector('.interviewSlider');
+// const interviewitem = document.querySelectorAll('.interviewitem');
+// const interviewitem1 = document.querySelector('.interviewitem1');
+// const interviewitem2 = document.querySelector('.interviewitem2');
+// const interviewitem3 = document.querySelector('.interviewitem3');
+// const interviewitemAry = interviewitem.forEach((v)=>{
+//     setInterval(() => {
+//         v.style.transform = "translate(-100%)"
+//     }, 1000);
+// });
+// for(let i=0; i<interviewitemAry.length; i++){
+//     console.log(interviewitemAry.value)
+// }
+// const transform = () => {
+//     style.transform = "translate(-100%)";
+// }
+// interviewitem1.transform();
+//interviewitem1.style.transform = "translate(-100%)";
+//setInterval(transform,1000);
+
+//=====section interview end=====
 
 
-//section rank end
+//=====section review start=====
 
-
-//리뷰창 start
 const inputText = document.querySelector('.inputText');
 const plusBtn = document.querySelector('.plusBtn');
 const listBoxUl = document.querySelector('.listBoxUl');
@@ -233,12 +230,6 @@ const newN = () => {
     newLi.appendChild(revTxt);
     newLi.appendChild(etc);
     listBoxUl.appendChild(newLi);
-
-    // const setNewLi = document.querySelectorAll('.newLi');
-    // localStorage.setItem('newLi', setNewLi);
-
-    // const getNewLi = localStorage.getItem('newLi');
-    // listBoxUl.appendChild(getNewLi);
 }
 
 const newList = () => {
@@ -247,6 +238,7 @@ const newList = () => {
     }
     if(getName == null){
         alert("로그인 후 이용해주세요.")
+
     }
     if(inputText.value.trim() !== "" && reviewSelect.options[reviewSelect.selectedIndex].value != "" && getName != null) {
         newN();
@@ -262,6 +254,13 @@ const enter = () => {
         newList();
     }
 }
-//리뷰창 end
+
+//=====section review end=====
+
+//=====section lastSec ..........
+
+
+
+//==========main end==========
 
 

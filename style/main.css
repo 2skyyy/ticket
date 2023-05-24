@@ -503,25 +503,28 @@ main .rank .rankNav li a {
   padding: 10px;
   font-size: 17px;
 }
+main .rank .rankNav li .clickNav {
+  color: #EC7D2C;
+  font-weight: bold;
+}
 main .rank .rankCon .rankAll {
   position: relative;
   width: 1200px;
   height: 430px;
 }
-main .rank .rankCon .rankAll ul {
+main .rank .rankCon .rankAll .rankConUl {
   position: absolute;
   top: 0;
   left: 0;
-  display: none;
   justify-content: space-between;
   width: 100%;
   height: 430px;
 }
-main .rank .rankCon .rankAll ul .rankLi {
+main .rank .rankCon .rankAll .rankConUl .rankLi {
   width: 386px;
   height: 100%;
 }
-main .rank .rankCon .rankAll ul .rankLi a {
+main .rank .rankCon .rankAll .rankConUl .rankLi a {
   position: relative;
   display: block;
   width: 100%;
@@ -529,13 +532,13 @@ main .rank .rankCon .rankAll ul .rankLi a {
   border: 1px solid #ddd;
   box-sizing: border-box;
 }
-main .rank .rankCon .rankAll ul .rankLi a .rankConImg {
+main .rank .rankCon .rankAll .rankConUl .rankLi a .rankConImg {
   position: relative;
   width: 100%;
   height: 350PX;
   overflow: hidden;
 }
-main .rank .rankCon .rankAll ul .rankLi a .rankConImg img {
+main .rank .rankCon .rankAll .rankConUl .rankLi a .rankConImg img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -543,9 +546,9 @@ main .rank .rankCon .rankAll ul .rankLi a .rankConImg img {
   width: 200px;
   height: 280px;
 }
-main .rank .rankCon .rankAll ul .rankLi a .rankConImg1,
-main .rank .rankCon .rankAll ul .rankLi a .rankConImg2,
-main .rank .rankCon .rankAll ul .rankLi a .rankConImg3 {
+main .rank .rankCon .rankAll .rankConUl .rankLi a .rankConImg1,
+main .rank .rankCon .rankAll .rankConUl .rankLi a .rankConImg2,
+main .rank .rankCon .rankAll .rankConUl .rankLi a .rankConImg3 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -554,7 +557,7 @@ main .rank .rankCon .rankAll ul .rankLi a .rankConImg3 {
   height: 110%;
   filter: blur(7px) brightness(70%);
 }
-main .rank .rankCon .rankAll ul .rankLi a .rankNum {
+main .rank .rankCon .rankAll .rankConUl .rankLi a .rankNum {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -568,12 +571,15 @@ main .rank .rankCon .rankAll ul .rankLi a .rankNum {
   font-size: 20px;
   font-weight: bold;
 }
-main .rank .rankCon .rankAll ul .rankLi a:hover .rankConImg1,
-main .rank .rankCon .rankAll ul .rankLi a:hover .rankConImg2,
-main .rank .rankCon .rankAll ul .rankLi a:hover .rankConImg3 {
+main .rank .rankCon .rankAll .rankConUl .rankLi a:hover .rankConImg1,
+main .rank .rankCon .rankAll .rankConUl .rankLi a:hover .rankConImg2,
+main .rank .rankCon .rankAll .rankConUl .rankLi a:hover .rankConImg3 {
   width: 130%;
   height: 130%;
   transition: 0.7s;
+}
+main .rank .rankCon .rankAll .rankConMusical {
+  display: flex;
 }
 main .rank .rankCon .rankAll .rankConMusical .rankConImg1 {
   background: url(../img/rank_musical1.jpg) no-repeat center center/cover;
@@ -584,6 +590,9 @@ main .rank .rankCon .rankAll .rankConMusical .rankConImg2 {
 main .rank .rankCon .rankAll .rankConMusical .rankConImg3 {
   background: url(../img/rank_musical3.jpg) no-repeat center center/cover;
 }
+main .rank .rankCon .rankAll .rankConConcert {
+  display: none;
+}
 main .rank .rankCon .rankAll .rankConConcert .rankConImg1 {
   background: url(../img/rank_concert1.jpg) no-repeat center center/cover;
 }
@@ -592,6 +601,9 @@ main .rank .rankCon .rankAll .rankConConcert .rankConImg2 {
 }
 main .rank .rankCon .rankAll .rankConConcert .rankConImg3 {
   background: url(../img/rank_concert3.jpg) no-repeat center center/cover;
+}
+main .rank .rankCon .rankAll .rankConTheater {
+  display: none;
 }
 main .rank .rankCon .rankAll .rankConTheater .rankConImg1 {
   background: url(../img/rank_theater1.jpg) no-repeat center center/cover;
@@ -602,6 +614,9 @@ main .rank .rankCon .rankAll .rankConTheater .rankConImg2 {
 main .rank .rankCon .rankAll .rankConTheater .rankConImg3 {
   background: url(../img/rank_theater3.jpg) no-repeat center center/cover;
 }
+main .rank .rankCon .rankAll .rankConClassic {
+  display: none;
+}
 main .rank .rankCon .rankAll .rankConClassic .rankConImg1 {
   background: url(../img/rank_classic1.jpg) no-repeat center center/cover;
 }
@@ -610,6 +625,9 @@ main .rank .rankCon .rankAll .rankConClassic .rankConImg2 {
 }
 main .rank .rankCon .rankAll .rankConClassic .rankConImg3 {
   background: url(../img/rank_classic3.jpg) no-repeat center center/cover;
+}
+main .rank .rankCon .rankAll .rankConEx {
+  display: none;
 }
 main .rank .rankCon .rankAll .rankConEx .rankConImg1 {
   background: url(../img/rank_ex1.jpg) no-repeat center center/cover;
@@ -620,44 +638,49 @@ main .rank .rankCon .rankAll .rankConEx .rankConImg2 {
 main .rank .rankCon .rankAll .rankConEx .rankConImg3 {
   background: url(../img/rank_ex3.jpg) no-repeat center center/cover;
 }
-main .interview .interviewSlider .Interviewitem {
-  float: left;
-  width: 840px;
-  height: 440px;
+main .interview {
+  height: auto;
 }
-main .interview .interviewSlider .Interviewitem img {
+main .interview .interviewSlider {
+  width: 100%;
+  height: 450px;
+  background: #ff9a9a;
+  overflow: hidden;
+}
+main .interview .interviewSlider .interviewitem {
+  width: 400px;
+  height: 100%;
+  float: left;
+}
+main .interview .interviewSlider .interviewitem img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .interviewSlider {
-  width: 100%;
-  height: 600px;
-  background: #ccc;
-}
-main .review {
+
+.review {
   width: 100%;
   height: auto;
 }
-main .review .reviewBoard {
+.review .reviewBoard {
   width: 100%;
   height: auto;
   padding: 10px;
 }
-main .review .reviewBoard #reviewSelect {
+.review .reviewBoard #reviewSelect {
   width: 300px;
   height: 25px;
   margin-bottom: 10px;
 }
-main .review .reviewBoard .inputBox {
+.review .reviewBoard .inputBox {
   display: flex;
   width: 100%;
   height: auto;
   box-sizing: border-box;
   margin-bottom: 10px;
 }
-main .review .reviewBoard .inputBox .inputText {
+.review .reviewBoard .inputBox .inputText {
   display: block;
   width: 100%;
   height: 50px;
@@ -669,27 +692,27 @@ main .review .reviewBoard .inputBox .inputText {
   overflow: hidden;
   outline: none;
 }
-main .review .reviewBoard .inputBox .plusBtn {
+.review .reviewBoard .inputBox .plusBtn {
   width: 60px;
   background: #fff;
   border: 1px solid #ccc;
   cursor: pointer;
 }
-main .review .reviewBoard .listBox .listBoxUl {
+.review .reviewBoard .listBox .listBoxUl {
   border-top: 1px solid #ccc;
 }
-main .review .reviewBoard .listBox .listBoxUl .newLi {
+.review .reviewBoard .listBox .listBoxUl .newLi {
   position: relative;
   padding: 10px;
   border-bottom: 1px solid #ccc;
 }
-main .review .reviewBoard .listBox .listBoxUl .newLi .proflie {
+.review .reviewBoard .listBox .listBoxUl .newLi .proflie {
   display: flex;
   align-items: center;
   width: 300px;
   height: 30px;
 }
-main .review .reviewBoard .listBox .listBoxUl .newLi .proflie .pro {
+.review .reviewBoard .listBox .listBoxUl .newLi .proflie .pro {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -700,87 +723,88 @@ main .review .reviewBoard .listBox .listBoxUl .newLi .proflie .pro {
   border-radius: 50%;
   border: 1px solid #bbb;
 }
-main .review .reviewBoard .listBox .listBoxUl .newLi .proflie .nickName {
+.review .reviewBoard .listBox .listBoxUl .newLi .proflie .nickName {
   float: left;
 }
-main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn {
+.review .reviewBoard .listBox .listBoxUl .newLi .likeBtn {
   position: absolute;
   top: 10px;
   right: 10px;
 }
-main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .like,
-main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .hate,
-main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .clickBtn {
+.review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .like,
+.review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .hate,
+.review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .clickBtn {
   width: 70px;
   height: 25px;
   border: none;
   border-radius: 3px;
   cursor: pointer;
 }
-main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .like {
+.review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .like {
   margin-right: 7px;
 }
-main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .clickBtn {
+.review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .clickBtn {
   background: #ff9a9a;
 }
-main .review .reviewBoard .listBox .listBoxUl .newLi .revTxt {
+.review .reviewBoard .listBox .listBoxUl .newLi .revTxt {
   width: 1000px;
   height: auto;
   padding-left: 35px;
   margin: 10px 0;
   box-sizing: border-box;
 }
-main .review .reviewBoard .listBox .listBoxUl .newLi .revTxt .conName {
+.review .reviewBoard .listBox .listBoxUl .newLi .revTxt .conName {
   margin-bottom: 10px;
   font-size: 12px;
 }
-main .review .reviewBoard .listBox .listBoxUl .newLi .etc {
+.review .reviewBoard .listBox .listBoxUl .newLi .etc {
   width: auto;
   height: auto;
   padding-left: 35px;
   box-sizing: border-box;
   font-size: 13px;
 }
-main .review .reviewBoard .listBox .listBoxUl .newLi .etc .date {
+.review .reviewBoard .listBox .listBoxUl .newLi .etc .date {
   margin-right: 10px;
 }
-main .review .reviewBoard .listBox .listBoxUl .newLi .etc .declaration {
+.review .reviewBoard .listBox .listBoxUl .newLi .etc .declaration {
   cursor: pointer;
 }
-main .lastSec {
+
+.lastSec {
   width: 100%;
 }
-main .company {
+.lastSec .company {
   display: flex;
   justify-content: space-between;
   padding: 20px 0;
   width: 100%;
   height: 130px;
 }
-main .company > li {
+.lastSec .company li {
   height: 100%;
 }
-main .company li.tel {
+.lastSec .company .tel {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
   width: 350px;
 }
-main .tel h3 {
+.lastSec .company .tel h3 {
   margin-bottom: 10px;
   font-size: 35px;
   font-weight: bold;
   color: orange;
 }
-main .tel p {
+.lastSec .company .tel p {
   font-size: 14px;
 }
-main .tel span {
+.lastSec .company .tel span {
   font-size: 14px;
   color: #aaa;
 }
-main .company li.notice {
+.lastSec .company .notice {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -789,79 +813,75 @@ main .company li.notice {
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
 }
-main .notice ul {
+.lastSec .company .notice ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 500px;
 }
-main .notice li {
+.lastSec .company .notice ul li {
   width: 100px;
   height: auto;
 }
-main .notice a {
+.lastSec .company .notice ul li a {
   display: block;
   width: 100%;
   height: auto;
   text-align: center;
 }
-main .noticeImg {
+.lastSec .company .notice ul li a .noticeImg {
   width: 100%;
   height: 60px;
 }
-main .notice a span {
+.lastSec .company .notice ul li a span {
   width: 100%;
   height: 40px;
   font-weight: bold;
 }
-main .company li.social {
+.lastSec .company .social {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: end;
   width: 300px;
 }
-main .goSocial {
+.lastSec .company .social .goSocial {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
   width: 150px;
 }
-main .goSocial a {
+.lastSec .company .social .goSocial div a {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
 }
-main .appDown {
+.lastSec .company .social .appDown {
   display: flex;
   justify-content: space-between;
 }
-main .appDown div {
+.lastSec .company .social .appDown div {
   width: 100%;
   height: 100%;
 }
-.footerNav {
+footer .footerNav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.footerNav ul {
+footer .footerNav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 600px;
   height: 50px;
-  border: 1px solid red;
 }
-
-.footerNav a {
+footer .footerNav ul li a {
   font-size: 14px;
 }
-
-.footerNav select {
+footer .footerNav select {
   width: 200px;
   height: 40px;
   outline: none;

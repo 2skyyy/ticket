@@ -6,7 +6,8 @@ body {
     /* 기본 text color */
 }
 
-.wrapper {}
+.wrapper {
+}
 
 .inner {
     width: 1200px;
@@ -437,12 +438,12 @@ main {
                         color: #f1f1f1;
                         background-color: rgb(0, 0, 0, 0.7);
                         
-                    
                         h3{
                             font-size: 18px;
                             font-weight: bold;
                             margin-bottom: 8px;
                         }
+
                         p{
                             font-size: 14px;
                             line-height: 1.2rem;
@@ -487,6 +488,7 @@ main {
                         width: 100%;
                         height: 310px;
                     }
+
                     .dDay{
                         display: flex;
                         justify-content: center;
@@ -508,6 +510,7 @@ main {
                             font-size: 25px;
                             font-weight: bold;
                         }
+
                         span:last-of-type{
                             font-size: 20px;
                         }
@@ -588,9 +591,10 @@ main {
                     font-size: 17px;
                 }
 
-                // .bold{
-                //     font-weight: bold;
-                // }
+                .clickNav{
+                    color: #EC7D2C;
+                    font-weight: bold;
+                }
             }
         }
 
@@ -600,15 +604,10 @@ main {
                 width: 1200px;
                 height: 430px;
 
-                // .show{
-                //     display: flex;
-                // }
-
-                ul {
+                .rankConUl {
                     position: absolute;
                     top: 0;
                     left: 0;
-                    display: none;
                     justify-content: space-between;
                     width: 100%;
                     height: 430px;
@@ -680,6 +679,7 @@ main {
                 }
 
                 .rankConMusical{
+                    display: flex;
                     .rankConImg1{
                         background: url(../img/rank_musical1.jpg) no-repeat center center / cover;
                     }
@@ -692,6 +692,8 @@ main {
                 } 
                 
                 .rankConConcert{
+                    display: none;
+
                     .rankConImg1{
                         background: url(../img/rank_concert1.jpg) no-repeat center center / cover;
                     }
@@ -704,6 +706,8 @@ main {
                 }
 
                 .rankConTheater{
+                    display: none;
+
                     .rankConImg1{
                         background: url(../img/rank_theater1.jpg) no-repeat center center / cover;
                     }
@@ -716,6 +720,8 @@ main {
                 }
 
                 .rankConClassic{
+                    display: none;
+
                     .rankConImg1{
                         background: url(../img/rank_classic1.jpg) no-repeat center center / cover;
                     }
@@ -728,6 +734,8 @@ main {
                 }
 
                 .rankConEx{
+                    display: none;
+
                     .rankConImg1{
                         background: url(../img/rank_ex1.jpg) no-repeat center center / cover;
                     }
@@ -744,17 +752,20 @@ main {
     }
     
     .interview {
+        height: auto;
         h2{}
 
         .interviewSlider {
             width: 100%;
-            height: 600px;
-            background: #ccc;
+            height: 450px;
+            background: #ff9a9a;
+            overflow: hidden;
 
             .interviewitem{
+                width: 400px;
+                height: 100%;
                 float: left;
-                width: 840px;
-                height: 100%; 
+                
 
                 img{
                     width: 100%;
@@ -762,6 +773,7 @@ main {
                     object-fit: cover;
                     }
             }
+
         }    
             
     }
@@ -909,154 +921,148 @@ main {
     
     .lastSec {
         width: 100%;
+
+        .company {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+            width: 100%;
+            height: 130px;
+            
+            li {
+                height: 100%;
+            }
+
+            .tel {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            width: 350px;
+
+                h3 {
+                    margin-bottom: 10px;
+                    font-size: 35px;
+                    font-weight: bold;
+                    color: orange;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+
+                span {
+                    font-size: 14px;
+                    color: #aaa;
+                }
+            }
+
+            .notice {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 650px;
+                height: 100%;
+                border-left: 1px solid #ccc;
+                border-right: 1px solid #ccc;
+            
+                ul {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 500px;
+
+                    li {
+                        width: 100px;
+                        height: auto;
+
+                        a {
+                            display: block;
+                            width: 100%;
+                            height: auto;
+                            text-align: center;
+
+                            .noticeImg {
+                                width: 100%;
+                                height: 60px;
+                            }
+                            
+                            span {
+                                width: 100%;
+                                height: 40px;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .social {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: end;
+                width: 300px;
+                
+                .goSocial {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 10px;
+                    width: 150px;
+
+                    div {
+                        a{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 100%;
+                            height: 100%;
+
+                            img {}
+                        }
+                    }
+                }
+
+                .appDown {
+                    display: flex;
+                    justify-content: space-between;
+
+                    div{
+                        width: 100%;
+                        height: 100%;
+                    }
+                    a{}
+                }
+            }
+        }
     }
-    
-    .company {
+
+footer{
+    .footerNav {
         display: flex;
         justify-content: space-between;
-        padding: 20px 0;
-        width: 100%;
-        height: 130px;
-    }
-    
-    .company>li {
-        height: 100%;
-    }
-    
-    .company li.tel {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: start;
-        width: 350px;
-    }
-    
-    .tel h3 {
-        margin-bottom: 10px;
-        font-size: 35px;
-        font-weight: bold;
-        color: orange;
-    }
-    
-    .tel p {
-        font-size: 14px;
-    }
-    
-    .tel span {
-        font-size: 14px;
-        color: #aaa;
-    }
-    
-    .company li.notice {
-        display: flex;
-        justify-content: center;
         align-items: center;
-        width: 650px;
-        height: 100%;
-        border-left: 1px solid #ccc;
-        border-right: 1px solid #ccc;
+
+        ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 600px;
+            height: 50px;
+
+            li{
+                a{
+                    font-size: 14px;
+                }
+            }
+        }
+
+        select {
+            width: 200px;
+            height: 40px;
+            outline: none;
+
+            option {}
+        }
     }
-    
-    .notice ul {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 500px;
-    }
-    
-    .notice li {
-        width: 100px;
-        height: auto;
-    }
-    
-    .notice a {
-        display: block;
-        width: 100%;
-        height: auto;
-        text-align: center;
-    }
-    
-    .noticeImg {
-        width: 100%;
-        height: 60px;
-    }
-    
-    .notice a span {
-        width: 100%;
-        height: 40px;
-        font-weight: bold;
-    }
-    
-    .company li.social {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: end;
-        width: 300px;
-    }
-    
-    .goSocial {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 10px;
-        width: 150px;
-    }
-    
-    .goSocial div {}
-    
-    .goSocial a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-    }
-    
-    .goSocial img {}
-    
-    
-    .appDown {
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .appDown div {
-        width: 100%;
-        height: 100%;
-    
-    }
-    
-    .appDown a {}
 }
-
-
-footer {}
-
-.footerNav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footerNav ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 600px;
-    height: 50px;
-    border: 1px solid red
-}
-
-.footerNav li {}
-
-.footerNav a {
-    font-size: 14px;
-}
-
-.footerNav select {
-    width: 200px;
-    height: 40px;
-    outline: none;
-}
-
-.footerNav option {}
