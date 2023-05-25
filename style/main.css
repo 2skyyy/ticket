@@ -92,7 +92,7 @@ a {
   display: block;
   width: 10px;
   height: 10px;
-  background: url(../img/delete.png) no-repeat center center/contain;
+  background: url("../img/delete.png") no-repeat center center/contain;
 }
 .popUp img {
   width: 100%;
@@ -260,7 +260,8 @@ main .mainSlider .s1Slider .s1item {
 main .mainSlider .s1Slider .s1item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main .mainSlider .s1Slider .slick-dots {
   position: absolute;
@@ -299,6 +300,17 @@ main .mainSlider .prevBtn {
 main .mainSlider .nextBtn {
   right: 50px;
 }
+main .hot .goTicketing {
+  width: 200px;
+  height: 40px;
+  margin: 10px auto 0;
+  font-size: 16px;
+  color: #f1f1f1;
+  background: #EC7D2C;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
 main .hot .hotCon {
   display: flex;
   justify-content: space-between;
@@ -311,12 +323,40 @@ main .hot .hotCon img {
   background: contain;
 }
 main .hot .hotCon .best1 {
+  position: relative;
   width: 420px;
   height: 700px;
+}
+main .hot .hotCon .best1 .best1Bg {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 610px;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+main .hot .hotCon .best1 .best1Bg .goTicketing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 40px;
+  background: #EC7D2C;
+  color: #f1f1f1;
+  border: none;
+  border-radius: 8px;
+}
+main .hot .hotCon .best1:hover .best1Bg {
+  display: block;
 }
 main .hot .hotCon .best1 img {
   width: 100%;
   height: 610PX;
+}
+main .hot .hotCon .best1:hover img {
+  transform: scale(1.1);
 }
 main .hot .hotCon .best1 .best1Txt {
   width: 100%;
@@ -344,31 +384,30 @@ main .hot .hotCon .best1 .best1Txt p {
   font-size: 14px;
   color: #aaa;
 }
-main .hot ul {
+main .hot .hotCon ul {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   row-gap: 20px;
   width: 760px;
 }
-main .hot ul li {
+main .hot .hotCon ul li {
   width: 240px;
   height: 340px;
   float: left;
 }
-main .hot ul li a {
+main .hot .hotCon ul li div {
   position: relative;
-  display: block;
   width: 100%;
   height: 100%;
   border: 1px solid #ddd;
   box-sizing: border-box;
   overflow: hidden;
 }
-main .hot ul li a img {
+main .hot .hotCon ul li div img {
   transition: 0.5s;
 }
-main .hot ul li a .bestTxt {
+main .hot .hotCon ul li div .bestTxt {
   display: none;
   position: absolute;
   width: 100%;
@@ -379,21 +418,21 @@ main .hot ul li a .bestTxt {
   color: #f1f1f1;
   background-color: rgba(0, 0, 0, 0.7);
 }
-main .hot ul li a .bestTxt h3 {
+main .hot .hotCon ul li div .bestTxt h3 {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 8px;
 }
-main .hot ul li a .bestTxt p {
+main .hot .hotCon ul li div .bestTxt p {
   font-size: 14px;
   line-height: 1.2rem;
 }
-main .hot ul li a:hover .bestTxt {
+main .hot .hotCon ul li div:hover .bestTxt {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-main .hot ul li a:hover img {
+main .hot .hotCon ul li div:hover img {
   transform: scale(1.1);
 }
 main .newCon ul {
@@ -465,7 +504,8 @@ main .ad .adSlider .aditem {
 main .ad .adSlider .aditem img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transform: translateY(-20px);
 }
 main .ad .adSlider .slick-dots {
@@ -652,8 +692,7 @@ main .interview .inner .next {
   transform: translateY(-50%);
   width: 50px;
   height: 50px;
-  background: #ccc;
-  border-radius: 50%;
+  font-size: 50px;
   cursor: pointer;
   z-index: 77;
 }
@@ -668,6 +707,7 @@ main .interview .interviewSliderWrap {
   width: 1200px;
   height: auto;
   margin: 0 auto;
+  overflow: hidden;
 }
 main .interview .interviewSliderWrap .interviewSlider {
   display: flex;
@@ -676,7 +716,6 @@ main .interview .interviewSliderWrap .interviewSlider {
   flex-wrap: wrap;
   height: 630px;
   margin: 0 auto;
-  background: pink;
 }
 main .interview .interviewSliderWrap .interviewSlider .interviewitem {
   flex: 1200px;
@@ -687,31 +726,31 @@ main .interview .interviewSliderWrap .interviewSlider .interviewitem {
 main .interview .interviewSliderWrap .interviewSlider .interviewitem img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
-
-.review {
+main .review {
   width: 100%;
   height: auto;
 }
-.review .reviewBoard {
+main .review .reviewBoard {
   width: 100%;
   height: auto;
   padding: 10px;
 }
-.review .reviewBoard #reviewSelect {
+main .review .reviewBoard #reviewSelect {
   width: 300px;
   height: 25px;
   margin-bottom: 10px;
 }
-.review .reviewBoard .inputBox {
+main .review .reviewBoard .inputBox {
   display: flex;
   width: 100%;
   height: auto;
   box-sizing: border-box;
   margin-bottom: 10px;
 }
-.review .reviewBoard .inputBox .inputText {
+main .review .reviewBoard .inputBox .inputText {
   display: block;
   width: 100%;
   height: 50px;
@@ -723,27 +762,27 @@ main .interview .interviewSliderWrap .interviewSlider .interviewitem img {
   overflow: hidden;
   outline: none;
 }
-.review .reviewBoard .inputBox .plusBtn {
+main .review .reviewBoard .inputBox .plusBtn {
   width: 60px;
   background: #fff;
   border: 1px solid #ccc;
   cursor: pointer;
 }
-.review .reviewBoard .listBox .listBoxUl {
+main .review .reviewBoard .listBox .listBoxUl {
   border-top: 1px solid #ccc;
 }
-.review .reviewBoard .listBox .listBoxUl .newLi {
+main .review .reviewBoard .listBox .listBoxUl .newLi {
   position: relative;
   padding: 10px;
   border-bottom: 1px solid #ccc;
 }
-.review .reviewBoard .listBox .listBoxUl .newLi .proflie {
+main .review .reviewBoard .listBox .listBoxUl .newLi .proflie {
   display: flex;
   align-items: center;
   width: 300px;
   height: 30px;
 }
-.review .reviewBoard .listBox .listBoxUl .newLi .proflie .pro {
+main .review .reviewBoard .listBox .listBoxUl .newLi .proflie .pro {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -754,51 +793,51 @@ main .interview .interviewSliderWrap .interviewSlider .interviewitem img {
   border-radius: 50%;
   border: 1px solid #bbb;
 }
-.review .reviewBoard .listBox .listBoxUl .newLi .proflie .nickName {
+main .review .reviewBoard .listBox .listBoxUl .newLi .proflie .nickName {
   float: left;
 }
-.review .reviewBoard .listBox .listBoxUl .newLi .likeBtn {
+main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn {
   position: absolute;
   top: 10px;
   right: 10px;
 }
-.review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .like,
-.review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .hate,
-.review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .clickBtn {
+main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .like,
+main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .hate,
+main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .clickBtn {
   width: 70px;
   height: 25px;
   border: none;
   border-radius: 3px;
   cursor: pointer;
 }
-.review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .like {
+main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .like {
   margin-right: 7px;
 }
-.review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .clickBtn {
+main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .clickBtn {
   background: #ff9a9a;
 }
-.review .reviewBoard .listBox .listBoxUl .newLi .revTxt {
+main .review .reviewBoard .listBox .listBoxUl .newLi .revTxt {
   width: 1000px;
   height: auto;
   padding-left: 35px;
   margin: 10px 0;
   box-sizing: border-box;
 }
-.review .reviewBoard .listBox .listBoxUl .newLi .revTxt .conName {
+main .review .reviewBoard .listBox .listBoxUl .newLi .revTxt .conName {
   margin-bottom: 10px;
   font-size: 12px;
 }
-.review .reviewBoard .listBox .listBoxUl .newLi .etc {
+main .review .reviewBoard .listBox .listBoxUl .newLi .etc {
   width: auto;
   height: auto;
   padding-left: 35px;
   box-sizing: border-box;
   font-size: 13px;
 }
-.review .reviewBoard .listBox .listBoxUl .newLi .etc .date {
+main .review .reviewBoard .listBox .listBoxUl .newLi .etc .date {
   margin-right: 10px;
 }
-.review .reviewBoard .listBox .listBoxUl .newLi .etc .declaration {
+main .review .reviewBoard .listBox .listBoxUl .newLi .etc .declaration {
   cursor: pointer;
 }
 
@@ -916,6 +955,4 @@ footer .footerNav select {
   width: 200px;
   height: 40px;
   outline: none;
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

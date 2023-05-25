@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+.ticketingWrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.ticketingWrap .wrap {
+  width: 800px;
+  height: 800px;
+  padding: 50px;
+  background: #f1f1f1;
+}
+.ticketingWrap .wrap .screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 170px;
+  margin-bottom: 30px;
+  font-size: 50px;
+  font-weight: bold;
+}
+.ticketingWrap .wrap .rever {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  row-gap: 5px;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+}
+.ticketingWrap .wrap .rever .newCol {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  -moz-column-gap: 3px;
+       column-gap: 3px;
+  width: 100%;
+  height: 36px;
+}
+.ticketingWrap .wrap .rever .newCol .newA {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.ticketingWrap .wrap .rever .newCol .newA:hover {
+  background: rgba(236, 125, 44, 0.7);
+}
+.ticketingWrap .showTicket {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 670px;
+  height: 370px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: bold;
+  background: url("../img/ticketFrame.png") no-repeat center center/cover;
+  border: 2px solid black;
+}
+.ticketingWrap .showTicket .ticketDel {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  top: 10px;
+  right: 10px;
+  font-size: 50px;
+  background: #ccc;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.ticketingWrap .showTicket h2 {
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+.ticketingWrap .showTicket .ticketDate {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.ticketingWrap .showTicket .ticketName {
+  font-size: 20px;
+  margin-bottom: 8px;
+}/*# sourceMappingURL=ticketing.css.map */

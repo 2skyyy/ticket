@@ -41,7 +41,7 @@ joinBtn.addEventListener('click', () => {
         const yourName = userName.value;
         localStorage.setItem('userName', yourName);
         
-        const mainPage = 'index.html';
-        location.href = mainPage; //회원가입 완료시 메인페이지 자동 로그인
+        const loginPage = 'login.html';
+        location.href = loginPage; //회원가입 완료시 메인페이지 자동 로그인
     }
 })

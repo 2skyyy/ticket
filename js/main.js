@@ -21,14 +21,22 @@ closebtn.addEventListener('click', (e)=>{
 //==========hearder start==========
 
 //스크롤 700px이상 내렸을 때 header 효과
-window.addEventListener('scroll', function () {
-    if (scrollY > 700) {
+let itemHeight = document.querySelector('.mainSlider').offsetHeight;
+const scEvent = function () {
+    if (scrollY > itemHeight) {
         header.style.background = "#fff";
         header.style.boxShadow ="0 0 1px 0"
     }else{
         header.style.background = "rgba(255, 255, 255, 0.2)";
         header.style.boxShadow ="none"
     }
+}
+window.addEventListener('scroll', ()=>{
+    scEvent();
+})
+//새로고침 했을 때도 적용되게
+window.addEventListener('DOMContentLoaded', ()=>{
+    scEvent();
 })
 
 //로그인 시 닉네임 노출
@@ -67,7 +75,28 @@ goSearch.addEventListener('click',()=>{
 
 //=====section mainSlider ..........
 
-//=====section hot ..........
+//=====section hot start=====
+
+const goTicketing = document.querySelectorAll('.goTicketing');
+
+goTicketing.forEach(i =>{
+    i.addEventListener('click', ()=>{
+        if(getName != null){
+            const goTicketingPage = 'ticketing.html';
+            location.href = goTicketingPage;
+        }else{
+            if(alert('로그인 후 이용 가능합니다.')){
+                const goLoginPage = 'login.html';
+                location.href = goLoginPage;
+            }
+            
+        }
+        
+    });
+})
+
+//=====section hot end=====
+
 
 //=====section new start=====
 
@@ -149,23 +178,38 @@ const interviewitem3 = document.querySelector('.interviewitem3');
 interviewSlider.style.width = `${interviewitem.length * 1200}px`;
 
 let num=0;
-const tr = () => {
-    num++;
+
+const trPrev = () => {
     interviewitem.forEach((i)=>{
-        if(num===interviewitem.length){
-            num=0;
+        if(num<0){
+            num=interviewitem.length-1;
         }
-        i.style.transform = `translate(-${num}00%)`;
+        i.style.transform = `translate(${-1200*(num)}px)`;
     })
 }
 
-setInterval(()=>{
-    tr();
-},1000)
+const trNext = () => {
+    interviewitem.forEach((i)=>{
+        
+        if(num===interviewitem.length){
+            num=0;
+        }
+        i.style.transform = `translate(-${1200*num}px)`;
+    })
+}
 
+// setInterval(()=>{
+//     trNext();
+// },1000)
 
 prev.addEventListener('click',()=>{
-    tr();
+    num--;
+    trPrev();
+})
+
+next.addEventListener('click',()=>{
+    num++;
+    trNext();
 })
 // let num=0;
 // prev.addEventListener('click', ()=>{
