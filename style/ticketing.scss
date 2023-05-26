@@ -27,40 +27,70 @@
             font-weight: bold;
         }
 
-        .rever{
+        .seatBox{
             display: flex;
-            flex-direction: column;
-            justify-content: start;
-            row-gap: 5px;
+            justify-content: center;
             width: 100%;
-            height: auto;
-            padding: 20px;
+            height: 500px;
+            border: 1px solid rebeccapurple;
 
-            .newCol{
+            .seatNum{
                 display: flex;
+                flex-direction: column;
                 justify-content: start;
-                align-items: center;
-                column-gap: 3px;
-                width: 100%;
-                height: 36px;
+                row-gap: 5px;
+                padding: 20px 0px 20px 20px;
+                width: 50px;
+                height: 500px;
 
-                .newA{
+                .newSpan{
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    float: left;
-                    width: 30px;
-                    height: 30px;
-                    border: 1px solid black;
-                    border-radius: 5px;
-                    cursor: pointer;
+                    width: 25px;
+                    height: 36px;
+                    font-size: 23px;
+                    font-weight: bold;
+                }
+            }
 
-                    &:hover{
-                        background: rgba(236, 125, 44, .7);
+            .seat{
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                row-gap: 5px;
+                width: 630px;
+                height: 500px;
+                padding: 20px 20px 20px 0;
+
+                .newCol{
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    column-gap: 3px;
+                    width: 100%;
+                    height: 36px;
+
+                    .newA{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        float: left;
+                        width: 30px;
+                        height: 30px;
+                        border: 1px solid black;
+                        border-radius: 5px;
+                        cursor: pointer;
+
+                        &:hover{
+                            background: rgba(236, 125, 44, .7);
+                        }
                     }
                 }
             }
         }
+
+        
     }
 
     .showTicket{

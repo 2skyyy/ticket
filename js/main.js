@@ -244,89 +244,80 @@ next.addEventListener('click',()=>{
 
 
 //=====section review start=====
-
+const listBoxUl = document.querySelector('.listBoxUl');
 const inputText = document.querySelector('.inputText');
 const plusBtn = document.querySelector('.plusBtn');
-const listBoxUl = document.querySelector('.listBoxUl');
 const reviewSelect = document.querySelector('#reviewSelect');
+const boxUlArr = [];
+const boxUlArr2 = [];
 
-const newN = () => {
+const setNewList = () => {
+    localStorage.setItem('newLiItem',JSON.stringify(boxUlArr));
+}
+// const getNewList = JSON.parse(localStorage.getItem('newLiItem'));
+
+function init() {
+    const getNewList = JSON.parse(localStorage.getItem('newLiItem'));
+    if(getNewList){
+        getNewList.forEach(a => plz(a));
+        boxUlArr = getNewList
+    }
+}
+init()
+
+const plz = (proemj, textContent) => {
     const newLi = document.createElement('li');
     newLi.classList.add('newLi');
+    newLi.innerHTML = `
+    <div class="proflie">
+        <a class="pro">${proRandom(proemj)}</a>
+        <span class="nickName">${getName}</span>
+    </div>
+    <div class="likeBtn">
+        <button class="like">좋아요</button>
+        <button class="hate">싫어요</button>
+    </div>
+    <div class="revTxt">
+        <div class="conName">관람 공연 : ${reviewSelect.options[reviewSelect.selectedIndex].text}</div>
+        <div class="conrev">${inputText.value}</div>
+    </div>
+    <div class="etc">
+        <span class="date">${date(textContent)}</span>
+        <span class="declaration">신고하기</span>
+    </div>`
+    inputText.value="";
+    listBoxUl.appendChild(newLi);
+    boxUlArr.push(newLi);
+    setNewList();
 
-    const proflie = document.createElement('div');
-    proflie.classList.add('proflie');
-    const pro = document.createElement('a');
-    pro.classList.add('pro');
-    const proAry = ["👻", "🐥", "👾", "🦊"]
-    pro.textContent = proAry[Math.floor(Math.random() * proAry.length)];
+    return (listBoxUl, newLi);
+}
 
-    const nickName = document.createElement('span');
-    nickName.classList.add('nickName');
-    nickName.textContent = getName;
+const proRandom = () => {
+    const proAry = ["👻", "🐥", "👾", "🦊"];
+    const proemj = proAry[Math.floor(Math.random() * proAry.length)];
+    return proemj;
+}
 
-    proflie.appendChild(pro);
-    proflie.appendChild(nickName);
-
-    const likeBtn = document.createElement('div');
-    likeBtn.classList.add('likeBtn');
-    const like = document.createElement('button');
-    like.classList.add('like');
-    like.textContent = "좋아요";
-
-    const hate = document.createElement('button');
-    hate.classList.add('hate');
-    hate.textContent = "싫어요";
-    like.addEventListener('click', () => {
-        like.classList.toggle('clickBtn');
-        hate.classList.remove('clickBtn');
-    })
-    hate.addEventListener('click', () => {
-        hate.classList.toggle('clickBtn');
-        like.classList.remove('clickBtn');
-    })
-    likeBtn.appendChild(like);
-    likeBtn.appendChild(hate);
-
-    const revTxt = document.createElement('div');
-    revTxt.classList.add('revTxt');
-
-    const conName = document.createElement('div');
-    conName.classList.add('conName');
-    conName.textContent = "관람 공연 : " + reviewSelect.options[reviewSelect.selectedIndex].text;
-    const conrev = document.createElement('div');
-    conrev.classList.add('conrev');
-    conrev.textContent = inputText.value;
-    inputText.value = "";
-    revTxt.appendChild(conName);
-    revTxt.appendChild(conrev);
-
-    const etc = document.createElement('div');
-    etc.classList.add('etc');
-    const date = document.createElement('span');
-    date.classList.add('date');
+const date = () => {
     let now = new Date();
     let year = now.getFullYear();
     let month = now.getMonth()+1;
     let day = now.getDate();
     let hour = now.getHours();
     let min = now.getMinutes();
-    date.textContent = (year + "." + month + "." + day + " " + hour + ":" + min);
-    const declaration = document.createElement('span');
-    declaration.classList.add('declaration');
-    declaration.textContent = "신고하기";
-    declaration.addEventListener('click', ()=>{
-        prompt("신고 사유를 적어주세요")
-    })
-    etc.appendChild(date);
-    etc.appendChild(declaration);
-
-    newLi.appendChild(proflie);
-    newLi.appendChild(likeBtn);
-    newLi.appendChild(revTxt);
-    newLi.appendChild(etc);
-    listBoxUl.appendChild(newLi);
+    textContent = (year + "." + month + "." + day + " " + hour + ":" + min);
+    return textContent;
 }
+
+//--------------안먹힘--------------
+const declaration = document.querySelectorAll('.declaration');
+declaration.forEach((i) => {
+    i.addEventListener('click', () => {
+        prompt('신고사유를 적어주세요')
+    })
+})
+//--------------안먹힘--------------
 
 const newList = () => {
     if(reviewSelect.options[reviewSelect.selectedIndex].value === ""){
@@ -337,8 +328,13 @@ const newList = () => {
 
     }
     if(inputText.value.trim() !== "" && reviewSelect.options[reviewSelect.selectedIndex].value != "" && getName != null) {
-        newN();
+        plz();
+        
     }
+}
+
+function onAdd(newLi){
+    boxUlArr.push(newLi);
 }
 
 plusBtn.addEventListener('click', () => {
@@ -358,5 +354,4 @@ const enter = () => {
 
 
 //==========main end==========
-
 

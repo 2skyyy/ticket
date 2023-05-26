@@ -26,16 +26,41 @@
   font-size: 50px;
   font-weight: bold;
 }
-.ticketingWrap .wrap .rever {
+.ticketingWrap .wrap .seatBox {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 500px;
+  border: 1px solid rebeccapurple;
+}
+.ticketingWrap .wrap .seatBox .seatNum {
   display: flex;
   flex-direction: column;
   justify-content: start;
   row-gap: 5px;
-  width: 100%;
-  height: auto;
-  padding: 20px;
+  padding: 20px 0px 20px 20px;
+  width: 50px;
+  height: 500px;
 }
-.ticketingWrap .wrap .rever .newCol {
+.ticketingWrap .wrap .seatBox .seatNum .newSpan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 36px;
+  font-size: 23px;
+  font-weight: bold;
+}
+.ticketingWrap .wrap .seatBox .seat {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  row-gap: 5px;
+  width: 630px;
+  height: 500px;
+  padding: 20px 20px 20px 0;
+}
+.ticketingWrap .wrap .seatBox .seat .newCol {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -44,7 +69,7 @@
   width: 100%;
   height: 36px;
 }
-.ticketingWrap .wrap .rever .newCol .newA {
+.ticketingWrap .wrap .seatBox .seat .newCol .newA {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,7 +80,7 @@
   border-radius: 5px;
   cursor: pointer;
 }
-.ticketingWrap .wrap .rever .newCol .newA:hover {
+.ticketingWrap .wrap .seatBox .seat .newCol .newA:hover {
   background: rgba(236, 125, 44, 0.7);
 }
 .ticketingWrap .showTicket {
