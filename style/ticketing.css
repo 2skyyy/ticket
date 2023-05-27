@@ -1,3 +1,4 @@
+@import './utill.css';
 * {
   box-sizing: border-box;
 }
@@ -11,9 +12,11 @@
   height: 100vh;
 }
 .ticketingWrap .wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   width: 800px;
-  height: 800px;
-  padding: 50px;
+  height: 650px;
   background: #f1f1f1;
 }
 .ticketingWrap .wrap .screen {
@@ -21,26 +24,28 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 170px;
-  margin-bottom: 30px;
+  height: 150px;
   font-size: 50px;
   font-weight: bold;
 }
 .ticketingWrap .wrap .seatBox {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 500px;
-  border: 1px solid rebeccapurple;
+  height: 400px;
 }
-.ticketingWrap .wrap .seatBox .seatNum {
+.ticketingWrap .wrap .seatBox .seatNum,
+.ticketingWrap .wrap .seatBox .seat {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   row-gap: 5px;
-  padding: 20px 0px 20px 20px;
-  width: 50px;
-  height: 500px;
+  width: 630px;
+  height: 100%;
+}
+.ticketingWrap .wrap .seatBox .seatNum {
+  width: 30px;
 }
 .ticketingWrap .wrap .seatBox .seatNum .newSpan {
   display: flex;
@@ -52,13 +57,7 @@
   font-weight: bold;
 }
 .ticketingWrap .wrap .seatBox .seat {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  row-gap: 5px;
-  width: 630px;
-  height: 500px;
-  padding: 20px 20px 20px 0;
+  width: 650px;
 }
 .ticketingWrap .wrap .seatBox .seat .newCol {
   display: flex;

@@ -248,17 +248,36 @@ next.addEventListener('click',()=>{
 //=====section interview end=====
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //=====section review start=====
 const listBoxUl = document.querySelector('.listBoxUl');
 const inputText = document.querySelector('.inputText');
 const plusBtn = document.querySelector('.plusBtn');
 const reviewSelect = document.querySelector('#reviewSelect');
 const boxUlArr = [];
-const boxUlArr2 = [];
 
-const setNewList = () => {
-    localStorage.setItem('newLiItem',JSON.stringify(boxUlArr));
-}
+
+const getNewList = localStorage.getItem('ReviewList');
+listBoxUl.innerHTML = getNewList;
+// const boxUlArray = getNewList;
+
+
+
 // const getNewList = JSON.parse(localStorage.getItem('newLiItem'));
 
 // function init() {
@@ -292,8 +311,8 @@ const plz = (proemj, textContent) => {
     </div>`
     inputText.value="";
     listBoxUl.appendChild(newLi);
-    boxUlArr.push(newLi);
-    setNewList();
+
+    JSON.stringify(localStorage.setItem('ReviewList', listBoxUl.innerHTML));
 
     return (listBoxUl, newLi);
 }
@@ -315,14 +334,36 @@ const date = () => {
     return textContent;
 }
 
-//--------------안먹힘--------------
+//--------------새로고침 안하면 안먹힘--------------
 const declaration = document.querySelectorAll('.declaration');
 declaration.forEach((i) => {
     i.addEventListener('click', () => {
         prompt('신고사유를 적어주세요')
     })
 })
-//--------------안먹힘--------------
+
+const like = document.querySelectorAll('.like');
+const hate = document.querySelectorAll('.hate');
+
+like.forEach((i,v) => {
+    i.addEventListener('click', (e) => {
+        e.preventDefault();
+        hate[v].classList.remove('clickBtn');
+        i.classList.toggle('clickBtn');
+        JSON.stringify(localStorage.setItem('ReviewList', listBoxUl.innerHTML));
+    })
+})
+
+hate.forEach((i,v) => {
+    i.addEventListener('click', (e) => {
+        e.preventDefault();
+        like[v].classList.remove('clickBtn');
+        i.classList.toggle('clickBtn');
+        JSON.stringify(localStorage.setItem('ReviewList', listBoxUl.innerHTML));
+    })
+})
+
+//--------------새로고침 안하면 안먹힘--------------
 
 const newList = () => {
     if(reviewSelect.options[reviewSelect.selectedIndex].value === ""){
@@ -330,11 +371,9 @@ const newList = () => {
     }
     if(getName == null){
         alert("로그인 후 이용해주세요.")
-
     }
     if(inputText.value.trim() !== "" && reviewSelect.options[reviewSelect.selectedIndex].value != "" && getName != null) {
         plz();
-        
     }
 }
 
