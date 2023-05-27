@@ -5,6 +5,11 @@ const popUp = document.querySelector('.popUp');
 const popCheckBox = document.querySelector('#popCheckBox');
 const closebtn = document.querySelector('.closebtn');
 
+//=====공통 start=====
+
+
+//=====공통 end=====
+
 //==========popUp start==========
 const popUpDelete = function(){
     popUp.style.display = "none";
@@ -256,14 +261,14 @@ const setNewList = () => {
 }
 // const getNewList = JSON.parse(localStorage.getItem('newLiItem'));
 
-function init() {
-    const getNewList = JSON.parse(localStorage.getItem('newLiItem'));
-    if(getNewList){
-        getNewList.forEach(a => plz(a));
-        boxUlArr = getNewList
-    }
-}
-init()
+// function init() {
+//     const getNewList = JSON.parse(localStorage.getItem('newLiItem'));
+//     if(getNewList){
+//         getNewList.forEach(a => plz(a));
+//         boxUlArr = getNewList
+//     }
+// }
+// init()
 
 const plz = (proemj, textContent) => {
     const newLi = document.createElement('li');
