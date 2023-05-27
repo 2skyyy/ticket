@@ -94,12 +94,9 @@ goTicketing.forEach(i =>{
                 const goLoginPage = 'login.html';
                 location.href = goLoginPage;
             }
-            
         }
-        
     });
 })
-
 //=====section hot end=====
 
 
@@ -195,7 +192,6 @@ const trPrev = () => {
 
 const trNext = () => {
     interviewitem.forEach((i)=>{
-        
         if(num===interviewitem.length){
             num=0;
         }
@@ -203,47 +199,18 @@ const trNext = () => {
     })
 }
 
-// setInterval(()=>{
-//     trNext();
-// },1000)
+setInterval(()=>{
+    trNext();
+},1000)
 
 prev.addEventListener('click',()=>{
     num--;
     trPrev();
 })
-
 next.addEventListener('click',()=>{
     num++;
     trNext();
 })
-// let num=0;
-// prev.addEventListener('click', ()=>{
-//     num++;
-//     interviewitem.forEach((i) => {
-//         if(num == 3){
-//             num = 0;
-//         }
-//         i.style.transform = `translate(-${num}00%)`;
-        
-//         console.log(i,num)
-//     })
-// })
-
-
-// const interviewitemAry = interviewitem.forEach((v)=>{
-//     setInterval(() => {
-//         v.style.transform = "translate(-100%)"
-//     }, 1000);
-// });
-// for(let i=0; i<interviewitemAry.length; i++){
-//     console.log(interviewitemAry.value)
-// }
-// const transform = () => {
-//     style.transform = "translate(-100%)";
-// }
-// interviewitem1.transform();
-// interviewitem1.style.transform = "translate(-100%)";
-// setInterval(transform,1000);
 
 //=====section interview end=====
 
@@ -271,27 +238,12 @@ const plusBtn = document.querySelector('.plusBtn');
 const reviewSelect = document.querySelector('#reviewSelect');
 const boxUlArr = [];
 
-
 const getNewList = localStorage.getItem('ReviewList');
 listBoxUl.innerHTML = getNewList;
-// const boxUlArray = getNewList;
-
-
-
-// const getNewList = JSON.parse(localStorage.getItem('newLiItem'));
-
-// function init() {
-//     const getNewList = JSON.parse(localStorage.getItem('newLiItem'));
-//     if(getNewList){
-//         getNewList.forEach(a => plz(a));
-//         boxUlArr = getNewList
-//     }
-// }
-// init()
 
 const plz = (proemj, textContent) => {
     const newLi = document.createElement('li');
-    newLi.classList.add('newLi');
+    
     newLi.innerHTML = `
     <div class="proflie">
         <a class="pro">${proRandom(proemj)}</a>
@@ -310,6 +262,7 @@ const plz = (proemj, textContent) => {
         <span class="declaration">신고하기</span>
     </div>`
     inputText.value="";
+    newLi.classList.add('newLi');
     listBoxUl.appendChild(newLi);
 
     JSON.stringify(localStorage.setItem('ReviewList', listBoxUl.innerHTML));

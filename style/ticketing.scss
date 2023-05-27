@@ -1,7 +1,9 @@
 @charset "UTF-8";
-@import './utill.css';
+@import './utill.scss';
 
-*{box-sizing: border-box;}
+*{
+    box-sizing: border-box;
+}
 
 .ticketingWrap{
     position: relative;
@@ -78,7 +80,7 @@
                         float: left;
                         width: 30px;
                         height: 30px;
-                        border: 1px solid black;
+                        border: 1px solid $block;
                         border-radius: 5px;
                         cursor: pointer;
 
@@ -105,7 +107,7 @@
         text-align: center;
         font-weight: bold;
         background: url('../img/ticketFrame.png') no-repeat center center / cover;
-        border: 2px solid black;
+        border: 2px solid $block;
         
         .ticketDel{
             position: absolute;
@@ -118,7 +120,7 @@
             right: 10px;
             font-size: 50px;
             background: #ccc;
-            border: 1px solid black;
+            border: 1px solid $block;
             border-radius: 5px;
             cursor: pointer;
         }
@@ -136,9 +138,6 @@
         .ticketName{
             font-size: 20px;
             margin-bottom: 8px
-        }
-
-        .ticketTxt{
         }
     }
 }

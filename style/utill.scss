@@ -1,15 +1,17 @@
 $mainColor : #EC7D2C;
-$block : #292929;
+$black : #292929;
 $white : #fff;
 $borderColor : #ccc;
+$darkGray : #aaa;
 
 //반응형 화면 크기
 $mobile_s: 350px;
 $mobile_m: 500px;
 $mobile_l: 650px;
-$mobile_xl: 800px;
+$mobile_xl: 860px;
 $tablet: 1023px;
-$desktop: 1024px;
+$desktop: 1200px;
+$pc: 1201px;
 
 //화면 크기 350px 이하
 @mixin mobile_s{
@@ -18,37 +20,47 @@ $desktop: 1024px;
   }
 }
 
-//화면 크기 351px ~ 500px
+//화면 크기 ~ 500px
 @mixin mobile_m{
-    @media (min-width: ($mobile+1))and(max-width: $mobile_m){
+    @media (max-width: $mobile_m){
       @content;
     }
   }
 
-  //화면 크기 501px ~ 650px
+  //화면 크기 ~ 650px
   @mixin mobile_l{
-    @media (min-width: ($mobile_m+1))and(max-width: $mobile_l){
+    @media (max-width: $mobile_l){
       @content;
     }
   }
 
-  //화면 크기 651px ~ 800px
+  //화면 크기 ~ 860px
   @mixin mobile_xl{
-    @media (min-width: ($mobile_l+1))and(max-width: $mobile_xl){
+    @media (max-width: $mobile_xl){
       @content;
     }
   }
 
-//화면 크기 801px ~ 1023px
+//화면 크기 ~ 1023px
 @mixin tablet{
-  @media (min-width: ($mobile_xl+1)) and (max-width: $tablet){
+  @media (max-width: $tablet){
     @content;
   }
 }
 
-//화면 크기 1024px 이상
+//화면 크기 ~ 1200px
 @mixin desktop{
-  @media (min-width: $desktop){
+  @media (max-width: $desktop){
     @content;
   }
 }
+
+//화면 크기 1201px 이상
+@mixin pc{
+  @media (min-width: $pc){
+    @content;
+  }
+}
+
+
+

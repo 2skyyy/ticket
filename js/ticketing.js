@@ -29,45 +29,42 @@ const getName = localStorage.getItem('userName');
 const getId = localStorage.getItem('joinIdInput');
 username.textContent = `${getName}(${getId})님`;
 const ticketTxt = document.querySelector('.ticketTxt');
-const soldOut = [];
-
+const soldOut = ['A-8', 'A-9', 'B-16', 'D-5', 'D-6', 'D-13', 'F-9', 'F-10', 'F-11', 'F-12', 'F-13', 'H-7', 'H-8', 'H-16', 'H-17'];
 const getSoldOut = localStorage.getItem("soldOut");
 
-
 const soldOutFun = () => {
-
     if(getSoldOut != null){
         const getSoldd = getSoldOut.split(',');
         getSoldd.forEach((j)=>{
             soldOut.push(j);
         })
     }
-        
+
     soldOut.forEach((i)=>{
         document.querySelector(`#${i}`).style.background = "gray"
     })
 }
 soldOutFun();
 
-// const getSoldout = localStorage.getItem("soldOut");
-
-// getSoldout.forEach((i) => {
-//     i.style.background = "gray"
-// })
-
 newA.forEach((i)=>{
     i.addEventListener('click', (e)=>{
         e.preventDefault();
-        if(soldOut.includes(i.id) == false){
-            if(confirm(`${i.parentElement.id}열 ${i.id}번 좌석을 예매하시겠습니까?`)){
-                showTicket.style.display ="flex";
-                ticketTxt.textContent = `${i.id} 좌석 예매 완료되었습니다.`;
-                i.style.background = "gray";
-                soldOut.push(i.id);
-                JSON.stringify(localStorage.setItem("soldOut", soldOut));
+        if(getId != null){
+            if(soldOut.includes(i.id) == false){
+                if(confirm(`${i.parentElement.id}열 ${i.id}번 좌석을 예매하시겠습니까?`)){
+                    showTicket.style.display ="flex";
+                    ticketTxt.textContent = `${i.id} 좌석 예매 완료되었습니다.`;
+                    i.style.background = "gray";
+                    soldOut.push(i.id);
+                    JSON.stringify(localStorage.setItem("soldOut", soldOut));
+                }
+            }else{
+                alert('이미 선택된 좌석입니다')
             }
         }else{
-            alert('이미 선택된 좌석입니다')
+            alert('로그인 후 이용 가능합니다.');
+            const goLoginPage = 'login.html';
+                location.href = goLoginPage;
         }
     })
 })
