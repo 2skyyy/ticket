@@ -4,6 +4,10 @@ body {
   color: #292929;
 }
 
+.wrapper {
+  width: 100%;
+}
+
 .inner {
   width: 1100px;
   height: auto;
@@ -54,6 +58,11 @@ body {
 .text h3 {
   margin-bottom: 5px;
   font-weight: bold;
+}
+@media (max-width: 650px) {
+  .text h3 {
+    margin-bottom: 3px;
+  }
 }
 .text p {
   font-size: 14px;
@@ -559,7 +568,7 @@ main .mainSlider .s1Slider .slick-dots li {
     margin: 0 8px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 650px) {
   main .mainSlider .s1Slider .slick-dots li {
     width: 10px;
     height: 10px;
@@ -581,11 +590,53 @@ main .mainSlider .nextBtn {
   transform: translateY(-50%);
   cursor: pointer;
 }
+@media (max-width: 1023px) {
+  main .mainSlider .prevBtn,
+  main .mainSlider .nextBtn {
+    font-size: 40px;
+  }
+}
+@media (max-width: 650px) {
+  main .mainSlider .prevBtn,
+  main .mainSlider .nextBtn {
+    font-size: 30px;
+  }
+}
 main .mainSlider .prevBtn {
   left: 50px;
 }
+@media (max-width: 1200px) {
+  main .mainSlider .prevBtn {
+    left: 30px;
+  }
+}
+@media (max-width: 1023px) {
+  main .mainSlider .prevBtn {
+    left: 20px;
+  }
+}
+@media (max-width: 650px) {
+  main .mainSlider .prevBtn {
+    left: 10px;
+  }
+}
 main .mainSlider .nextBtn {
   right: 50px;
+}
+@media (max-width: 1200px) {
+  main .mainSlider .nextBtn {
+    right: 30px;
+  }
+}
+@media (max-width: 1023px) {
+  main .mainSlider .nextBtn {
+    right: 20px;
+  }
+}
+@media (max-width: 650px) {
+  main .mainSlider .nextBtn {
+    right: 10px;
+  }
 }
 main .hot .goTicketing {
   width: 200px;
@@ -698,7 +749,7 @@ main .hot .hotCon .best1 .b1ImgBox {
 }
 @media (max-width: 860px) {
   main .hot .hotCon .best1 .b1ImgBox {
-    height: 310px;
+    height: 300px;
   }
 }
 @media (max-width: 650px) {
@@ -732,7 +783,7 @@ main .hot .hotCon .best1 .b1ImgBox .best1Bg {
 }
 @media (max-width: 860px) {
   main .hot .hotCon .best1 .b1ImgBox .best1Bg {
-    height: 310px;
+    height: 300px;
   }
 }
 @media (max-width: 650px) {
@@ -794,7 +845,7 @@ main .hot .hotCon .best1 .best1Txt {
 }
 @media (max-width: 860px) {
   main .hot .hotCon .best1 .best1Txt {
-    height: 65px;
+    height: 50px;
   }
 }
 @media (max-width: 650px) {
@@ -932,6 +983,7 @@ main .hot .hotCon ul li div .bestTxt {
   height: 100%;
   top: 0;
   left: 0;
+  padding: 10px;
   text-align: center;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.7);
@@ -988,21 +1040,51 @@ main .newCon ul {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 350px;
+  height: 330px;
 }
 @media (max-width: 1200px) {
   main .newCon ul {
-    height: 300px;
+    height: 280px;
   }
 }
 @media (max-width: 1023px) {
   main .newCon ul {
-    height: 250px;
+    height: 245px;
+  }
+}
+@media (max-width: 860px) {
+  main .newCon ul {
+    height: 240px;
+  }
+}
+@media (max-width: 650px) {
+  main .newCon ul {
+    height: 485px;
+    flex-wrap: wrap;
+    row-gap: 5px;
   }
 }
 main .newCon ul li {
   width: 204px;
   height: 100%;
+}
+main .newCon ul li:nth-of-type(6) {
+  display: none;
+}
+@media (max-width: 650px) {
+  main .newCon ul li:nth-of-type(6) {
+    display: block;
+  }
+}
+@media (max-width: 860px) {
+  main .newCon ul li:nth-of-type(5) {
+    display: none;
+  }
+}
+@media (max-width: 650px) {
+  main .newCon ul li:nth-of-type(5) {
+    display: block;
+  }
 }
 @media (max-width: 1200px) {
   main .newCon ul li {
@@ -1012,6 +1094,17 @@ main .newCon ul li {
 @media (max-width: 1023px) {
   main .newCon ul li {
     width: 152px;
+  }
+}
+@media (max-width: 860px) {
+  main .newCon ul li {
+    width: 146.25px;
+  }
+}
+@media (max-width: 650px) {
+  main .newCon ul li {
+    width: 153.33px;
+    height: 240px;
   }
 }
 main .newCon ul li a {
@@ -1026,16 +1119,21 @@ main .newCon ul li a .newImg {
 }
 main .newCon ul li a .newImg img {
   width: 100%;
-  height: 270px;
+  height: 260px;
 }
 @media (max-width: 1200px) {
   main .newCon ul li a .newImg img {
-    height: 230px;
+    height: 220px;
   }
 }
 @media (max-width: 1023px) {
   main .newCon ul li a .newImg img {
     height: 190px;
+  }
+}
+@media (max-width: 860px) {
+  main .newCon ul li a .newImg img {
+    height: 185px;
   }
 }
 main .newCon ul li a .newImg .dDay {
@@ -1064,6 +1162,12 @@ main .newCon ul li a .newImg .dDay {
     height: 75px;
   }
 }
+@media (max-width: 860px) {
+  main .newCon ul li a .newImg .dDay {
+    height: 70px;
+    border: 2px solid #EC7D2C;
+  }
+}
 main .newCon ul li a .newImg .dDay span:first-of-type {
   color: #EC7D2C;
   font-size: 25px;
@@ -1079,6 +1183,11 @@ main .newCon ul li a .newImg .dDay span:first-of-type {
     font-size: 21px;
   }
 }
+@media (max-width: 860px) {
+  main .newCon ul li a .newImg .dDay span:first-of-type {
+    font-size: 19px;
+  }
+}
 main .newCon ul li a .newImg .dDay span:last-of-type {
   font-size: 20px;
 }
@@ -1092,19 +1201,24 @@ main .newCon ul li a .newImg .dDay span:last-of-type {
     font-size: 17px;
   }
 }
+@media (max-width: 860px) {
+  main .newCon ul li a .newImg .dDay span:last-of-type {
+    font-size: 16px;
+  }
+}
 main .newCon ul li a .text {
   width: 100%;
-  height: 80px;
+  height: 70px;
 }
 @media (max-width: 1200px) {
   main .newCon ul li a .text {
-    height: 70px;
+    height: 60px;
     font-size: 15px;
   }
 }
 @media (max-width: 1023px) {
   main .newCon ul li a .text {
-    height: 60px;
+    height: 55px;
     font-size: 14px;
   }
 }
@@ -1132,9 +1246,49 @@ main .ad .adSlider {
   padding: 0;
   box-sizing: border-box;
 }
+@media (max-width: 1200px) {
+  main .ad .adSlider {
+    height: 350px;
+  }
+}
+@media (max-width: 1023px) {
+  main .ad .adSlider {
+    height: 300px;
+  }
+}
+@media (max-width: 860px) {
+  main .ad .adSlider {
+    height: 250px;
+  }
+}
+@media (max-width: 650px) {
+  main .ad .adSlider {
+    height: 200px;
+  }
+}
 main .ad .adSlider .aditem {
   position: relative;
   height: 400px;
+}
+@media (max-width: 1200px) {
+  main .ad .adSlider .aditem {
+    height: 350px;
+  }
+}
+@media (max-width: 1023px) {
+  main .ad .adSlider .aditem {
+    height: 300px;
+  }
+}
+@media (max-width: 860px) {
+  main .ad .adSlider .aditem {
+    height: 250px;
+  }
+}
+@media (max-width: 650px) {
+  main .ad .adSlider .aditem {
+    height: 200px;
+  }
 }
 main .ad .adSlider .aditem img {
   width: 100%;
@@ -1158,6 +1312,18 @@ main .ad .adSlider .slick-dots li {
   margin: 0 7px;
   cursor: pointer;
   border-radius: 50%;
+}
+@media (max-width: 860px) {
+  main .ad .adSlider .slick-dots li {
+    width: 8px;
+    height: 8px;
+  }
+}
+@media (max-width: 650px) {
+  main .ad .adSlider .slick-dots li {
+    width: 7px;
+    height: 7px;
+  }
 }
 main .ad .adSlider .slick-dots li button {
   display: none;

@@ -124,17 +124,17 @@ setInterval(() =>{
         mins.push(Math.ceil((gaps[j] % (1000 * 60 * 60)) / (1000 * 60))-1);
         secs.push(Math.ceil((gaps[j] % (1000 * 60)) / 1000)-1);
 
-        if(hours[j] >= 24){
+        if(hours[j] > 24){
             hours[j] = hours[j]-24;
             days[j] =days[j]+1;
         }
-        if(hours[j] <= 10){
+        if(hours[j] < 10){
             hours[j] = '0'+ hours[j]
         }
-        if(mins[j] <= 10){
+        if(mins[j] < 10){
             mins[j] = '0'+ mins[j]
         }
-        if(secs[j] <= 10){
+        if(secs[j] < 10){
             secs[j] = '0'+ secs[j]
         }
         document.querySelector(`.dDay${j+1}`).innerHTML = "<span>D-" + days[j] + "</span><span>" + hours[j] + " : " + mins[j] + ": " + secs[j] + "</span>";
