@@ -27,7 +27,7 @@ body {
         width: 470px;
     }
     @include mobile_m{
-        width: 100%;
+        width: 95%;
     }
 }
 
@@ -55,6 +55,9 @@ body {
         @include mobile_l{
             margin-bottom: 3px;
         }
+        @include mobile_m{
+            margin-bottom: 2px;
+        }
     }
 
     p {
@@ -65,6 +68,10 @@ body {
 
 section {
     padding: 30px 0;
+
+    @include mobile_m{
+        padding: 20px 0;
+    }
 }
 
 h2 {
@@ -76,8 +83,12 @@ h2 {
     @include mobile_xl{
         font-size: 35px;
     }
-    @include mobile_xl{
+    @include mobile_l{
         font-size: 30px;
+    }
+    @include mobile_m{
+        font-size: 25px;
+        padding: 20px 0;
     }
 }
 
@@ -99,6 +110,11 @@ a {
     @include mobile_xl{
         width: 160px;
         height: 40px;
+    }
+    @include mobile_m{
+        width: 140px;
+        height: 35px;
+        font-size: 13px;
     }
 
     // @keyframes moreBtn{
@@ -493,6 +509,9 @@ main {
         @include mobile_l{
             height: 350px;
         }
+        @include mobile_m{
+            height: 300px;
+        }
 
         .s1Slider {
             width: 100%;
@@ -512,6 +531,9 @@ main {
                 }
                 @include mobile_l{
                     height: 350px;
+                }
+                @include mobile_m{
+                    height: 300px;
                 }
 
                 img {
@@ -655,6 +677,9 @@ main {
             @include mobile_l{
                 height: 520px;
             }
+            @include mobile_m{
+                height: auto;
+            }
 
             img {
                 width: 100%;
@@ -683,6 +708,10 @@ main {
                     width: 215px;
                     height: 520px;
                 }
+                @include mobile_m{
+                    flex: 33%;
+                    height: auto;
+                }
                 
                 .b1ImgBox {
                     width: 100%;
@@ -700,6 +729,9 @@ main {
                     }
                     @include mobile_l{
                         height: 345px;
+                    }
+                    @include mobile_m{
+                        height: 49.5%;
                     }
 
                     img {
@@ -729,6 +761,9 @@ main {
                         @include mobile_l{
                             height: 345px;
                         }
+                        @include mobile_m{
+                            height: 49.5%;
+                        }
 
                         .goTicketing {
                             position: absolute;
@@ -752,8 +787,6 @@ main {
                                 font-size: 15px;
                             }
                         }
-
-
                     }
 
                     &:hover img {
@@ -787,6 +820,9 @@ main {
                     }
                     @include mobile_l{
                         height: 175px;
+                    }
+                    @include mobile_m{
+                        display: none;
                     }
 
                     h3,
@@ -862,7 +898,10 @@ main {
                 @include mobile_l{
                     width: 250px;
                     height: 520px;
-                    
+                }
+                @include mobile_m{
+                    flex: 66%;
+                    height: auto;
                 }
 
                 li {
@@ -885,6 +924,14 @@ main {
                     @include mobile_l{
                         width: 122.5px;
                         height: 170px;
+                    }
+                    @include mobile_m{
+                        flex: 49.5%;
+
+                        &:nth-of-type(5),
+                        &:nth-of-type(6){
+                            display: none;
+                        }
                     }
 
                     div {
@@ -979,6 +1026,9 @@ main {
             flex-wrap: wrap;
             row-gap: 5px;
         }
+        @include mobile_m{
+            height: auto;
+        }
 
         li {
             width: 204px;
@@ -1014,6 +1064,10 @@ main {
                 width: 153.33px;
                 height: 240px;
             }
+            @include mobile_m{
+                width: 33%;
+                height: auto;
+            }
 
 
             a {
@@ -1038,6 +1092,9 @@ main {
                         }
                         @include mobile_xl{
                             height: 185px;
+                        }
+                        @include mobile_m{
+                            height: 140px;
                         }
                     }
 
@@ -1083,6 +1140,9 @@ main {
                             @include mobile_xl{
                                 font-size: 19px;
                             }
+                            @include mobile_m{
+                                font-size: 16px;
+                            }
                         }
 
                         span:last-of-type {
@@ -1096,6 +1156,9 @@ main {
                             }
                             @include mobile_xl{
                                 font-size: 16px;
+                            }
+                            @include mobile_m{
+                                font-size: 14px;
                             }
                         }
                     }
@@ -1113,6 +1176,15 @@ main {
                         height: 55px;
                         font-size: 14px;
                     }
+                    @include mobile_m{
+                        height: 40px;
+                    }
+
+                    h3{
+                        @include mobile_m{
+                            font-size: 13px;
+                        }
+                    }
 
                     p {
                         color: $mainColor;
@@ -1123,6 +1195,7 @@ main {
                         @include tablet{
                             font-size: 12px;
                         }
+                        
                     }
                 }
             }
