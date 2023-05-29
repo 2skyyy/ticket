@@ -109,6 +109,7 @@ setInterval(() =>{
         new Date("February 03, 2024, 17:00:00").getTime(),
         new Date("February 05, 2024, 19:00:00").getTime(),
         new Date("May 25, 2024, 20:00:00").getTime()
+        //new Date("December 20, 2023, 10:00:00").getTime()
     ]
     const today = new Date().getTime();
     const gaps = [];
@@ -140,7 +141,6 @@ setInterval(() =>{
         document.querySelector(`.dDay${j+1}`).innerHTML = "<span>D-" + days[j] + "</span><span>" + hours[j] + " : " + mins[j] + ": " + secs[j] + "</span>";
     }
 }, 1000);
-
 //=====section new end=====
 
 //=====section rank start=====

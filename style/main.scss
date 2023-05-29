@@ -1119,7 +1119,6 @@ main {
                             height: 70px;
                             border: 2px solid $mainColor;
                         }
-                        
 
                         span:first-of-type {
                             color: $mainColor;
@@ -1826,29 +1825,60 @@ main {
 
             .inputBox {
                 display: flex;
+                justify-content: space-between;
                 width: 100%;
                 height: auto;
-                box-sizing: border-box;
                 margin-bottom: 10px;
 
                 .inputText {
                     display: block;
-                    width: 100%;
+                    width: 94%;
                     height: 50px;
                     max-height: 60px;
-                    margin-right: 10px;
                     padding: 0 10px;
                     border: 1px solid $borderColor;
-                    box-sizing: border-box;
                     overflow: hidden;
                     outline: none;
+
+                    @include desktop{
+                        width: 93%;
+                    }
+                    @include tablet{
+                        width: 91%;
+                    }
+                    @include mobile_xl{
+                        width: 89%;
+                    }
+                    @include mobile_l{
+                        width: 87%;
+                    }
+                    @include mobile_s{
+                        width: 85%;
+                    }
                 }
 
                 .plusBtn {
-                    width: 60px;
+                    width: 5%;
                     background: $white;
                     border: 1px solid $borderColor;
                     cursor: pointer;
+                    
+                    @include desktop{
+                        width: 6%;
+                    }
+                    @include tablet{
+                        width: 8%;
+                    }
+                    @include mobile_xl{
+                        width: 10%;
+                    }
+                    @include mobile_l{
+                        width: 12%;
+                    }
+                    @include mobile_s{
+                        width: 14%;
+                        font-size: 12px;
+                    }
                 }
             }
 
@@ -1867,8 +1897,6 @@ main {
                             align-items: center;
                             width: 200px;
                             height: auto;
-
-                            
 
                             .pro {
                                 display: flex;
@@ -1893,7 +1921,6 @@ main {
                                     font-size: 14px;
                                 }
                             }
-
 
                             .nickName {
                                 float: left;
@@ -1964,7 +1991,6 @@ main {
                             padding-left: 25px;
                             margin: 10px 0;
                             box-sizing: border-box;
-                            background-color: pink;
 
                             .conName {
                                 margin-bottom: 8px;
@@ -2279,8 +2305,6 @@ main {
     }
 
 }
-
-
 
 footer {
     .footerNav {

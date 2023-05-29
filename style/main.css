@@ -2082,28 +2082,77 @@ main .review .reviewBoard #reviewSelect {
 }
 main .review .reviewBoard .inputBox {
   display: flex;
+  justify-content: space-between;
   width: 100%;
   height: auto;
-  box-sizing: border-box;
   margin-bottom: 10px;
 }
 main .review .reviewBoard .inputBox .inputText {
   display: block;
-  width: 100%;
+  width: 94%;
   height: 50px;
   max-height: 60px;
-  margin-right: 10px;
   padding: 0 10px;
   border: 1px solid #ccc;
-  box-sizing: border-box;
   overflow: hidden;
   outline: none;
 }
+@media (max-width: 1200px) {
+  main .review .reviewBoard .inputBox .inputText {
+    width: 93%;
+  }
+}
+@media (max-width: 1023px) {
+  main .review .reviewBoard .inputBox .inputText {
+    width: 91%;
+  }
+}
+@media (max-width: 860px) {
+  main .review .reviewBoard .inputBox .inputText {
+    width: 89%;
+  }
+}
+@media (max-width: 650px) {
+  main .review .reviewBoard .inputBox .inputText {
+    width: 87%;
+  }
+}
+@media (max-width: 400px) {
+  main .review .reviewBoard .inputBox .inputText {
+    width: 85%;
+  }
+}
 main .review .reviewBoard .inputBox .plusBtn {
-  width: 60px;
+  width: 5%;
   background: #fff;
   border: 1px solid #ccc;
   cursor: pointer;
+}
+@media (max-width: 1200px) {
+  main .review .reviewBoard .inputBox .plusBtn {
+    width: 6%;
+  }
+}
+@media (max-width: 1023px) {
+  main .review .reviewBoard .inputBox .plusBtn {
+    width: 8%;
+  }
+}
+@media (max-width: 860px) {
+  main .review .reviewBoard .inputBox .plusBtn {
+    width: 10%;
+  }
+}
+@media (max-width: 650px) {
+  main .review .reviewBoard .inputBox .plusBtn {
+    width: 12%;
+  }
+}
+@media (max-width: 400px) {
+  main .review .reviewBoard .inputBox .plusBtn {
+    width: 14%;
+    font-size: 12px;
+  }
 }
 main .review .reviewBoard .listBox .listBoxUl {
   border-top: 1px solid #ccc;
@@ -2226,7 +2275,6 @@ main .review .reviewBoard .listBox .listBoxUl .newLi .revTxt {
   padding-left: 25px;
   margin: 10px 0;
   box-sizing: border-box;
-  background-color: pink;
 }
 main .review .reviewBoard .listBox .listBoxUl .newLi .revTxt .conName {
   margin-bottom: 8px;
