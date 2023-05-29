@@ -1443,6 +1443,7 @@ main .ad .adSlider .slick-dots .slick-active {
 main .rank .rankNav {
   display: flex;
   justify-content: center;
+  width: 100%;
   margin-bottom: 20px;
 }
 main .rank .rankNav li a {
@@ -1452,13 +1453,60 @@ main .rank .rankNav li a {
   font-size: 18px;
   font-weight: bold;
 }
+@media (max-width: 860px) {
+  main .rank .rankNav li a {
+    font-size: 17px;
+  }
+}
+@media (max-width: 650px) {
+  main .rank .rankNav li a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 500px) {
+  main .rank .rankNav li a {
+    padding: 8px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 350px) {
+  main .rank .rankNav li a {
+    padding: 5px;
+    font-size: 14px;
+  }
+}
 main .rank .rankNav li .clickNav {
   color: #EC7D2C;
 }
 main .rank .rankCon .rankAll {
   position: relative;
-  width: 1200px;
+  width: 100%;
   height: 430px;
+}
+@media (max-width: 1200px) {
+  main .rank .rankCon .rankAll {
+    height: 374px;
+  }
+}
+@media (max-width: 1023px) {
+  main .rank .rankCon .rankAll {
+    height: 317px;
+  }
+}
+@media (max-width: 860px) {
+  main .rank .rankCon .rankAll {
+    height: 240px;
+  }
+}
+@media (max-width: 650px) {
+  main .rank .rankCon .rankAll {
+    height: 186px;
+  }
+}
+@media (max-width: 500px) {
+  main .rank .rankCon .rankAll {
+    height: 170px;
+  }
 }
 main .rank .rankCon .rankAll .rankConUl {
   position: absolute;
@@ -1466,11 +1514,61 @@ main .rank .rankCon .rankAll .rankConUl {
   left: 0;
   justify-content: space-between;
   width: 100%;
-  height: 430px;
+  height: 100%;
+}
+@media (max-width: 1200px) {
+  main .rank .rankCon .rankAll .rankConUl {
+    height: 374px;
+  }
+}
+@media (max-width: 1023px) {
+  main .rank .rankCon .rankAll .rankConUl {
+    height: 317px;
+  }
+}
+@media (max-width: 860px) {
+  main .rank .rankCon .rankAll .rankConUl {
+    height: 240px;
+  }
+}
+@media (max-width: 650px) {
+  main .rank .rankCon .rankAll .rankConUl {
+    height: 186px;
+  }
+}
+@media (max-width: 500px) {
+  main .rank .rankCon .rankAll .rankConUl {
+    height: 170px;
+  }
 }
 main .rank .rankCon .rankAll .rankConUl .rankLi {
-  width: 386px;
+  width: 353px;
   height: 100%;
+}
+@media (max-width: 1200px) {
+  main .rank .rankCon .rankAll .rankConUl .rankLi {
+    width: 307px;
+  }
+}
+@media (max-width: 1023px) {
+  main .rank .rankCon .rankAll .rankConUl .rankLi {
+    width: 260px;
+  }
+}
+@media (max-width: 860px) {
+  main .rank .rankCon .rankAll .rankConUl .rankLi {
+    width: 197px;
+  }
+}
+@media (max-width: 650px) {
+  main .rank .rankCon .rankAll .rankConUl .rankLi {
+    width: 153px;
+  }
+}
+@media (max-width: 500px) {
+  main .rank .rankCon .rankAll .rankConUl .rankLi {
+    width: 33%;
+  }
 }
 main .rank .rankCon .rankAll .rankConUl .rankLi a {
   position: relative;
@@ -1483,8 +1581,33 @@ main .rank .rankCon .rankAll .rankConUl .rankLi a {
 main .rank .rankCon .rankAll .rankConUl .rankLi a .rankConImg {
   position: relative;
   width: 100%;
-  height: 350PX;
+  height: 353px;
   overflow: hidden;
+}
+@media (max-width: 1200px) {
+  main .rank .rankCon .rankAll .rankConUl .rankLi a .rankConImg {
+    height: 307px;
+  }
+}
+@media (max-width: 1023px) {
+  main .rank .rankCon .rankAll .rankConUl .rankLi a .rankConImg {
+    height: 260px;
+  }
+}
+@media (max-width: 860px) {
+  main .rank .rankCon .rankAll .rankConUl .rankLi a .rankConImg {
+    height: 197px;
+  }
+}
+@media (max-width: 650px) {
+  main .rank .rankCon .rankAll .rankConUl .rankLi a .rankConImg {
+    height: 146px;
+  }
+}
+@media (max-width: 500px) {
+  main .rank .rankCon .rankAll .rankConUl .rankLi a .rankConImg {
+    height: 130px;
+  }
 }
 main .rank .rankCon .rankAll .rankConUl .rankLi a .rankConImg img {
   position: absolute;
@@ -1493,6 +1616,81 @@ main .rank .rankCon .rankAll .rankConUl .rankLi a .rankConImg img {
   transform: translate(-50%, -50%);
   width: 200px;
   height: 280px;
+}
+@media (max-width: 1200px) {
+  main .rank .rankCon .rankAll .rankConUl .rankLi a .rankConImg img {
+    width: 175px;
+    height: 243px;
+  }
+}
+@media (max-width: 1023px) {
+  main .rank .rankCon .rankAll .rankConUl .rankLi a .rankConImg img {
+    width: 147px;
+    height: 206px;
+  }
+}
+@media (max-width: 860px) {
+  main .rank .rankCon .rankAll .rankConUl .rankLi a .rankConImg img {
+    width: 111px;
+    height: 156px;
+  }
+}
+@media (max-width: 650px) {
+  main .rank .rankCon .rankAll .rankConUl .rankLi a .rankConImg img {
+    width: 85px;
+    height: 115px;
+  }
+}
+@media (max-width: 500px) {
+  main .rank .rankCon .rankAll .rankConUl .rankLi a .rankConImg img {
+    width: 57%;
+    height: 80%;
+  }
+}
+main .rank .rankCon .rankAll .rankConUl .rankLi a .rankConImg .rankNum {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 15px;
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  background: #EC7D2C;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+@media (max-width: 1200px) {
+  main .rank .rankCon .rankAll .rankConUl .rankLi a .rankConImg .rankNum {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 1023px) {
+  main .rank .rankCon .rankAll .rankConUl .rankLi a .rankConImg .rankNum {
+    left: 10px;
+    bottom: 10px;
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 860px) {
+  main .rank .rankCon .rankAll .rankConUl .rankLi a .rankConImg .rankNum {
+    width: 35px;
+    height: 35px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 650px) {
+  main .rank .rankCon .rankAll .rankConUl .rankLi a .rankConImg .rankNum {
+    left: 7px;
+    bottom: 7px;
+    width: 32px;
+    height: 32px;
+  }
 }
 main .rank .rankCon .rankAll .rankConUl .rankLi a .rankConImg1,
 main .rank .rankCon .rankAll .rankConUl .rankLi a .rankConImg2,
@@ -1505,19 +1703,59 @@ main .rank .rankCon .rankAll .rankConUl .rankLi a .rankConImg3 {
   height: 110%;
   filter: blur(7px) brightness(70%);
 }
-main .rank .rankCon .rankAll .rankConUl .rankLi a .rankNum {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  bottom: 60px;
-  left: 15px;
-  width: 50px;
-  height: 50px;
-  background: #EC7D2C;
-  color: #fff;
-  font-size: 20px;
-  font-weight: bold;
+main .rank .rankCon .rankAll .rankConUl .rankLi a .text {
+  height: 77px;
+}
+@media (max-width: 1200px) {
+  main .rank .rankCon .rankAll .rankConUl .rankLi a .text {
+    height: 67px;
+  }
+}
+@media (max-width: 1023px) {
+  main .rank .rankCon .rankAll .rankConUl .rankLi a .text {
+    height: 57px;
+  }
+}
+@media (max-width: 860px) {
+  main .rank .rankCon .rankAll .rankConUl .rankLi a .text {
+    height: 43px;
+  }
+}
+@media (max-width: 650px) {
+  main .rank .rankCon .rankAll .rankConUl .rankLi a .text {
+    height: 40px;
+  }
+}
+@media (max-width: 1023px) {
+  main .rank .rankCon .rankAll .rankConUl .rankLi a .text h3 {
+    font-size: 15px;
+  }
+}
+@media (max-width: 860px) {
+  main .rank .rankCon .rankAll .rankConUl .rankLi a .text h3 {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 500px) {
+  main .rank .rankCon .rankAll .rankConUl .rankLi a .text h3 {
+    font-size: 13px;
+  }
+}
+@media (max-width: 1023px) {
+  main .rank .rankCon .rankAll .rankConUl .rankLi a .text p {
+    font-size: 13px;
+  }
+}
+@media (max-width: 860px) {
+  main .rank .rankCon .rankAll .rankConUl .rankLi a .text p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 500px) {
+  main .rank .rankCon .rankAll .rankConUl .rankLi a .text p {
+    font-size: 10px;
+  }
 }
 main .rank .rankCon .rankAll .rankConUl .rankLi a:hover .rankConImg1,
 main .rank .rankCon .rankAll .rankConUl .rankLi a:hover .rankConImg2,
@@ -1614,7 +1852,7 @@ main .interview .inner .next {
 }
 main .interview .interviewSliderWrap {
   position: relative;
-  width: 1200px;
+  width: 100%;
   height: auto;
   margin: 0 auto;
   overflow: hidden;
@@ -1628,7 +1866,7 @@ main .interview .interviewSliderWrap .interviewSlider {
   margin: 0 auto;
 }
 main .interview .interviewSliderWrap .interviewSlider .interviewitem {
-  flex: 1200px;
+  flex: 1100px;
   height: 100%;
   transition: 0.5s;
   cursor: pointer;
@@ -1727,7 +1965,7 @@ main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .clickBtn {
   background: #EC7D2C;
 }
 main .review .reviewBoard .listBox .listBoxUl .newLi .revTxt {
-  width: 1000px;
+  width: 900px;
   height: auto;
   padding-left: 35px;
   margin: 10px 0;
@@ -1768,7 +2006,7 @@ main .lastSec .company .tel {
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  width: 350px;
+  flex: 3;
 }
 main .lastSec .company .tel h3 {
   margin-bottom: 10px;
@@ -1787,7 +2025,7 @@ main .lastSec .company .notice {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 650px;
+  flex: 5;
   height: 100%;
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
@@ -1822,7 +2060,7 @@ main .lastSec .company .social {
   flex-direction: column;
   justify-content: center;
   align-items: end;
-  width: 300px;
+  flex: 2;
 }
 main .lastSec .company .social .goSocial {
   display: flex;

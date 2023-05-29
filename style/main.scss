@@ -116,28 +116,6 @@ a {
         height: 35px;
         font-size: 13px;
     }
-
-    // @keyframes moreBtn{
-    //     0%{
-    //         background: #fff;
-    //     }
-    //     20%{
-    //         background: linear-gradient(45deg, #fff, #fff, #EC7D2C);
-
-    //     }
-    //     50%{
-    //         background: linear-gradient(45deg, #fff, #EC7D2C);
-    //     }
-    //     100%{
-    //         background: #EC7D2C;
-    //     }
-    // }
-
-    // &:hover{
-    //     animation: moreBtn 1s 1;
-
-    // }
-
 }
 
 .popUp {
@@ -1292,6 +1270,7 @@ main {
         .rankNav {
             display: flex;
             justify-content: center;
+            width: 100%;
             margin-bottom: 20px;
 
             li {
@@ -1301,6 +1280,21 @@ main {
                     padding: 10px;
                     font-size: 18px;
                     font-weight: bold;
+
+                    @include mobile_xl{
+                        font-size: 17px;
+                    }
+                    @include mobile_l{
+                        font-size: 16px;
+                    }
+                    @include mobile_m{
+                        padding: 8px;
+                        font-size: 15px;
+                    }
+                    @include mobile_s{
+                        padding: 5px;
+                        font-size: 14px;
+                    }
                 }
 
                 .clickNav {
@@ -1312,8 +1306,24 @@ main {
         .rankCon {
             .rankAll {
                 position: relative;
-                width: 1200px;
+                width: 100%;
                 height: 430px;
+
+                @include desktop{
+                    height: 374px;
+                  }
+                  @include tablet{
+                    height: 317px;
+                  }
+                  @include mobile_xl{
+                    height: 240px;
+                  }
+                  @include mobile_l{
+                    height: 186px;
+                  }
+                  @include mobile_m{
+                    height: 170px;
+                  }
 
                 .rankConUl {
                     position: absolute;
@@ -1321,11 +1331,43 @@ main {
                     left: 0;
                     justify-content: space-between;
                     width: 100%;
-                    height: 430px;
+                    height: 100%;
+
+                    @include desktop{
+                        height: 374px;
+                      }
+                      @include tablet{
+                        height: 317px;
+                      }
+                      @include mobile_xl{
+                        height: 240px;
+                      }
+                      @include mobile_l{
+                        height: 186px;
+                      }
+                      @include mobile_m{
+                        height: 170px;
+                      }
 
                     .rankLi {
-                        width: 386px;
+                        width: 353px;
                         height: 100%;
+
+                        @include desktop{
+                            width: 307px;
+                        }
+                        @include tablet{
+                            width: 260px;
+                        }
+                        @include mobile_xl{
+                            width: 197px;
+                        }
+                        @include mobile_l{
+                            width: 153px;
+                        }
+                        @include mobile_m{
+                            width: 33%;
+                        }
 
                         a {
                             position: relative;
@@ -1338,8 +1380,24 @@ main {
                             .rankConImg {
                                 position: relative;
                                 width: 100%;
-                                height: 350PX;
+                                height: 353px;
                                 overflow: hidden;
+
+                                @include desktop{
+                                    height: 307px;
+                                }
+                                @include tablet{
+                                    height: 260px;
+                                }
+                                @include mobile_xl{
+                                    height: 197px;
+                                }
+                                @include mobile_l{
+                                    height: 146px;
+                                }
+                                @include mobile_m{
+                                    height: 130px;
+                                }
 
                                 img {
                                     position: absolute;
@@ -1348,6 +1406,66 @@ main {
                                     transform: translate(-50%, -50%);
                                     width: 200px;
                                     height: 280px;
+
+                                    @include desktop{
+                                        width: 175px;
+                                        height: 243px;
+                                    }
+                                    @include tablet{
+                                        width: 147px;
+                                        height: 206px;
+                                    }
+                                    @include mobile_xl{
+                                        width: 111px;
+                                        height: 156px;
+                                    }
+                                    @include mobile_l{
+                                        width: 85px;
+                                        height: 115px;
+                                    }
+                                    @include mobile_m{
+                                        width: 57%;
+                                        height: 80%;
+                                    }
+                                }
+
+                                .rankNum {
+                                    position: absolute;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    bottom: 15px;
+                                    left: 15px;
+                                    width: 50px;
+                                    height: 50px;
+                                    background: $mainColor;
+                                    color: $white;
+                                    font-size: 20px;
+                                    font-weight: bold;
+    
+                                    @include desktop{
+                                        width: 45px;
+                                        height: 45px;
+                                        font-size: 18px;
+                                    }
+                                    @include tablet{
+                                        left: 10px;
+                                        bottom: 10px;
+                                        width: 38px;
+                                        height: 38px;
+                                        font-size: 16px;
+                                    }
+                                    @include mobile_xl{
+                                        width: 35px;
+                                        height: 35px;
+                                        font-size: 15px;
+                                    }
+                                    @include mobile_l{
+                                        left: 7px;
+                                        bottom: 7px;
+                                        width: 32px;
+                                        height: 32px;
+                                    }
                                 }
                             }
 
@@ -1363,19 +1481,49 @@ main {
                                 filter: blur(7px) brightness(70%);
                             }
 
-                            .rankNum {
-                                position: absolute;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                bottom: 60px;
-                                left: 15px;
-                                width: 50px;
-                                height: 50px;
-                                background: $mainColor;
-                                color: $white;
-                                font-size: 20px;
-                                font-weight: bold;
+
+
+                            .text{
+                                height: 77px;
+
+                                @include desktop{
+                                height: 67px;
+                                }
+                                @include tablet{
+                                    height: 57px;
+                                }
+                                @include mobile_xl{
+                                    height: 43px;
+                                }
+                                @include mobile_l{
+                                    height: 40px;
+                                }
+
+                                h3 {
+                                    @include tablet{
+                                        font-size: 15px;
+                                    }
+                                    @include mobile_xl{
+                                        font-size: 14px;
+                                        margin-bottom: 0;
+                                    }
+                                    @include mobile_m{
+                                        font-size: 13px;
+                                    }
+                                }
+                            
+                                p {
+                                    @include tablet{
+                                        font-size: 13px;
+                                    }
+                                    @include mobile_xl{
+                                        font-size: 12px;
+                                    }
+                                    @include mobile_m{
+                                        font-size: 10px;
+                                    }
+                                }
+
                             }
                         }
 
@@ -1505,7 +1653,7 @@ main {
 
         .interviewSliderWrap {
             position: relative;
-            width: 1200px;
+            width: 100%;
             height: auto;
             margin: 0 auto;
             overflow: hidden;
@@ -1519,7 +1667,7 @@ main {
                 margin: 0 auto;
 
                 .interviewitem {
-                    flex: 1200px;
+                    flex: 1100px;
                     height: 100%;
                     transition: .5s;
                     cursor: pointer;
@@ -1635,7 +1783,7 @@ main {
                         }
 
                         .revTxt {
-                            width: 1000px;
+                            width: 900px;
                             height: auto;
                             padding-left: 35px;
                             margin: 10px 0;
@@ -1688,7 +1836,7 @@ main {
                 flex-direction: column;
                 justify-content: center;
                 align-items: start;
-                width: 350px;
+                flex: 3;
 
                 h3 {
                     margin-bottom: 10px;
@@ -1711,7 +1859,7 @@ main {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 650px;
+                flex: 5;
                 height: 100%;
                 border-left: 1px solid $borderColor;
                 border-right: 1px solid $borderColor;
@@ -1752,7 +1900,7 @@ main {
                 flex-direction: column;
                 justify-content: center;
                 align-items: end;
-                width: 300px;
+                flex: 2;
 
                 .goSocial {
                     display: flex;
@@ -1783,6 +1931,7 @@ main {
             }
         }
     }
+
 }
 
 

@@ -20,42 +20,42 @@ $pc: 1201px;
   }
 }
 
-//화면 크기 ~ 500px
+//화면 크기 ~ 500px , inner 95% , gap 1%
 @mixin mobile_m{
     @media (max-width: $mobile_m){
       @content;
     }
   }
 
-  //화면 크기 ~ 650px
+  //화면 크기 ~ 650px , inner 470 , gap 5
   @mixin mobile_l{
     @media (max-width: $mobile_l){
       @content;
     }
   }
 
-  //화면 크기 ~ 860px
+  //화면 크기 ~ 860px , inner 600 , gap 5
   @mixin mobile_xl{
     @media (max-width: $mobile_xl){
       @content;
     }
   }
 
-//화면 크기 ~ 1023px
+//화면 크기 ~ 1023px  , inner 800, gap 10
 @mixin tablet{
   @media (max-width: $tablet){
     @content;
   }
 }
 
-//화면 크기 ~ 1200px
+//화면 크기 ~ 1200px , inner 950, gap 15
 @mixin desktop{
   @media (max-width: $desktop){
     @content;
   }
 }
 
-//화면 크기 1201px 이상
+//화면 크기 1201px 이상 , gap 20
 @mixin pc{
   @media (min-width: $pc){
     @content;
@@ -64,3 +64,21 @@ $pc: 1201px;
 
 
 
+
+
+
+// @include desktop{
+//   height: 374px;
+// }
+// @include tablet{
+//   height: 317px;
+// }
+// @include mobile_xl{
+//   height: 240px;
+// }
+// @include mobile_l{
+//   height: 186px;
+// }
+// @include mobile_m{
+//   height: 16%;
+// }

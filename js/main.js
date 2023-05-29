@@ -147,6 +147,8 @@ setInterval(() =>{
 
 const rankNavItem = document.querySelectorAll('.rankNavItem');
 const rankConUl = document.querySelectorAll('.rankConUl');
+
+
 rankNavItem.forEach((item,value)=>{
     item.addEventListener('click', (e)=>{
         e.preventDefault();
@@ -159,11 +161,12 @@ rankNavItem.forEach((item,value)=>{
         rankConUl.forEach((i,v) =>{
             if(value===v){
                 item.classList.add('clickNav');
-                i.style.display ="flex"
+                i.style.display ="flex";
             }
         })
     })
 })
+
 
 //=====section rank end=====
 
