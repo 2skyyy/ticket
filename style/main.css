@@ -127,11 +127,27 @@ a {
     height: 40px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 650px) {
   .more {
     width: 140px;
     height: 35px;
     font-size: 13px;
+    margin: 25px auto 0;
+  }
+}
+@media (max-width: 500px) {
+  .more {
+    width: 120px;
+    height: 30px;
+    font-size: 12px;
+    margin: 20px auto 0;
+  }
+}
+@media (max-width: 500px) {
+  .more {
+    width: 100px;
+    height: 25px;
+    font-size: 11px;
   }
 }
 
@@ -240,7 +256,7 @@ a {
     height: 70px;
   }
 }
-@media (max-width: 350px) {
+@media (max-width: 400px) {
   #header {
     height: 65px;
   }
@@ -279,7 +295,7 @@ a {
     display: block;
   }
 }
-@media (max-width: 350px) {
+@media (max-width: 400px) {
   #header .innerHeader .hideLogo {
     width: 75px;
     height: 30px;
@@ -1469,7 +1485,7 @@ main .rank .rankNav li a {
     font-size: 15px;
   }
 }
-@media (max-width: 350px) {
+@media (max-width: 400px) {
   main .rank .rankNav li a {
     padding: 5px;
     font-size: 14px;
@@ -1829,6 +1845,42 @@ main .interview {
 }
 main .interview .inner {
   position: relative;
+  width: 1000px;
+}
+@media (max-width: 1200px) {
+  main .interview .inner {
+    width: 850px;
+  }
+}
+@media (max-width: 1023px) {
+  main .interview .inner {
+    width: 700px;
+  }
+}
+@media (max-width: 860px) {
+  main .interview .inner {
+    width: 500px;
+  }
+}
+@media (max-width: 650px) {
+  main .interview .inner {
+    width: 370px;
+  }
+}
+@media (max-width: 500px) {
+  main .interview .inner {
+    width: 300px;
+  }
+}
+@media (max-width: 400px) {
+  main .interview .inner {
+    width: 270px;
+  }
+}
+@media (max-width: 350px) {
+  main .interview .inner {
+    width: 80vw;
+  }
 }
 main .interview .inner .prev,
 main .interview .inner .next {
@@ -1840,15 +1892,65 @@ main .interview .inner .next {
   transform: translateY(-50%);
   width: 50px;
   height: 50px;
-  font-size: 50px;
+  font-size: 40px;
   cursor: pointer;
   z-index: 22;
 }
+@media (max-width: 650px) {
+  main .interview .inner .prev,
+  main .interview .inner .next {
+    font-size: 35px;
+  }
+}
+@media (max-width: 500px) {
+  main .interview .inner .prev,
+  main .interview .inner .next {
+    font-size: 32px;
+  }
+}
+@media (max-width: 400px) {
+  main .interview .inner .prev,
+  main .interview .inner .next {
+    width: 33px;
+    height: 40px;
+    font-size: 30px;
+  }
+}
+@media (max-width: 350px) {
+  main .interview .inner .prev,
+  main .interview .inner .next {
+    width: 30px;
+    height: 30px;
+    background: #eee;
+    font-size: 25px;
+    border-radius: 50%;
+  }
+}
 main .interview .inner .prev {
-  left: -70px;
+  left: -50px;
+}
+@media (max-width: 400px) {
+  main .interview .inner .prev {
+    left: -40px;
+  }
+}
+@media (max-width: 350px) {
+  main .interview .inner .prev {
+    left: -15px;
+  }
 }
 main .interview .inner .next {
-  right: -70px;
+  right: -50px;
+}
+@media (max-width: 400px) {
+  main .interview .inner .next {
+    right: -40px;
+  }
+}
+@media (max-width: 350px) {
+  main .interview .inner .next {
+    right: -15px;
+  }
 }
 main .interview .interviewSliderWrap {
   position: relative;
@@ -1862,18 +1964,83 @@ main .interview .interviewSliderWrap .interviewSlider {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  height: 630px;
+  height: 573px;
   margin: 0 auto;
 }
+@media (max-width: 1200px) {
+  main .interview .interviewSliderWrap .interviewSlider {
+    height: 487px;
+  }
+}
+@media (max-width: 1023px) {
+  main .interview .interviewSliderWrap .interviewSlider {
+    height: 401px;
+  }
+}
+@media (max-width: 860px) {
+  main .interview .interviewSliderWrap .interviewSlider {
+    height: 286px;
+  }
+}
+@media (max-width: 650px) {
+  main .interview .interviewSliderWrap .interviewSlider {
+    height: 212px;
+  }
+}
+@media (max-width: 500px) {
+  main .interview .interviewSliderWrap .interviewSlider {
+    height: 172px;
+  }
+}
+@media (max-width: 400px) {
+  main .interview .interviewSliderWrap .interviewSlider {
+    height: 155px;
+  }
+}
 main .interview .interviewSliderWrap .interviewSlider .interviewitem {
-  flex: 1100px;
+  flex: 1000px;
   height: 100%;
   transition: 0.5s;
   cursor: pointer;
 }
+@media (max-width: 1200px) {
+  main .interview .interviewSliderWrap .interviewSlider .interviewitem {
+    flex: 850px;
+  }
+}
+@media (max-width: 1023px) {
+  main .interview .interviewSliderWrap .interviewSlider .interviewitem {
+    flex: 700px;
+  }
+}
+@media (max-width: 860px) {
+  main .interview .interviewSliderWrap .interviewSlider .interviewitem {
+    flex: 500px;
+  }
+}
+@media (max-width: 650px) {
+  main .interview .interviewSliderWrap .interviewSlider .interviewitem {
+    flex: 370px;
+  }
+}
+@media (max-width: 500px) {
+  main .interview .interviewSliderWrap .interviewSlider .interviewitem {
+    flex: 300px;
+  }
+}
+@media (max-width: 400px) {
+  main .interview .interviewSliderWrap .interviewSlider .interviewitem {
+    flex: 270px;
+  }
+}
+@media (max-width: 350px) {
+  main .interview .interviewSliderWrap .interviewSlider .interviewitem {
+    flex: 80vw;
+  }
+}
 main .interview .interviewSliderWrap .interviewSlider .interviewitem img {
-  width: 100%;
-  height: 100%;
+  width: inherit;
+  height: inherit;
   -o-object-fit: contain;
      object-fit: contain;
 }

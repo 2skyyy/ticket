@@ -5,7 +5,8 @@ $borderColor : #ccc;
 $darkGray : #aaa;
 
 //반응형 화면 크기
-$mobile_s: 350px;
+$mobile_xs: 350px;
+$mobile_s: 400px;
 $mobile_m: 500px;
 $mobile_l: 650px;
 $mobile_xl: 860px;
@@ -14,6 +15,13 @@ $desktop: 1200px;
 $pc: 1201px;
 
 //화면 크기 350px 이하
+@mixin mobile_xs{
+  @media (max-width: $mobile_xs){
+    @content;
+  }
+}
+
+//화면 크기 ~400px
 @mixin mobile_s{
   @media (max-width: $mobile_s){
     @content;
@@ -66,19 +74,3 @@ $pc: 1201px;
 
 
 
-
-// @include desktop{
-//   height: 374px;
-// }
-// @include tablet{
-//   height: 317px;
-// }
-// @include mobile_xl{
-//   height: 240px;
-// }
-// @include mobile_l{
-//   height: 186px;
-// }
-// @include mobile_m{
-//   height: 16%;
-// }

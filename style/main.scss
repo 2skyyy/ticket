@@ -111,10 +111,22 @@ a {
         width: 160px;
         height: 40px;
     }
-    @include mobile_m{
+    @include mobile_l{
         width: 140px;
         height: 35px;
         font-size: 13px;
+        margin: 25px auto 0;
+    }
+    @include mobile_m{
+        width: 120px;
+        height: 30px;
+        font-size: 12px;
+        margin: 20px auto 0;
+    }
+    @include mobile_m{
+        width: 100px;
+        height: 25px;
+        font-size: 11px;
     }
 }
 
@@ -1626,6 +1638,30 @@ main {
 
         .inner {
             position: relative;
+            width: 1000px;
+
+            @include desktop{
+                width: 850px;
+            }
+            @include tablet{
+                width: 700px;
+            }
+            @include mobile_xl{
+                width: 500px;
+            }
+            @include mobile_l{
+                width: 370px;   
+            }
+            @include mobile_m{
+                width: 300px; 
+            }
+            @include mobile_s{
+                width: 270px; //그대로
+            }
+            @include mobile_xs{
+                width: 80vw;
+            }
+            
 
             .prev,
             .next {
@@ -1637,17 +1673,49 @@ main {
                 transform: translateY(-50%);
                 width: 50px;
                 height: 50px;
-                font-size: 50px;
+                font-size: 40px;
                 cursor: pointer;
                 z-index: 22;
+
+                @include mobile_l{
+                    font-size: 35px;
+                }
+                @include mobile_m{
+                    font-size: 32px;
+                }
+                @include mobile_s{
+                    width: 33px;
+                    height: 40px;
+                    font-size: 30px;
+                }
+                @include mobile_xs{
+                    width: 30px;
+                    height: 30px;
+                    background: #eee;
+                    font-size: 25px;
+                    border-radius: 50%;
+                }
             }
 
             .prev {
-                left: -70px;
+                left: -50px;
+
+                @include mobile_s{
+                    left: -40px;
+                }
+                @include mobile_xs{
+                    left: -15px;
+                }
             }
 
             .next {
-                right: -70px;
+                right: -50px;
+                @include mobile_s{
+                    right: -40px;
+                }
+                @include mobile_xs{
+                    right: -15px;
+                }
             }
         }
 
@@ -1663,18 +1731,59 @@ main {
                 flex-direction: row;
                 justify-content: center;
                 flex-wrap: wrap;
-                height: 630px;
+                height: 573px;
                 margin: 0 auto;
 
+                @include desktop{
+                    height: 487px;
+                }
+                @include tablet{
+                    height: 401px;
+                }
+                @include mobile_xl{
+                    height: 286px;
+                }
+                @include mobile_l{
+                    height: 212px;
+                }
+                @include mobile_m{
+                    height: 172px;
+                }
+                @include mobile_s{
+                    height: 155px; //그대로
+                }
+
                 .interviewitem {
-                    flex: 1100px;
+                    flex: 1000px;
                     height: 100%;
                     transition: .5s;
                     cursor: pointer;
 
+                    @include desktop{
+                        flex: 850px;
+                    }
+                    @include tablet{
+                        flex: 700px;
+                    }
+                    @include mobile_xl{
+                        flex: 500px;
+                    }
+                    @include mobile_l{
+                        flex: 370px;    
+                    }
+                    @include mobile_m{
+                        flex: 300px;
+                    }
+                    @include mobile_s{
+                        flex: 270px; //그대로
+                    }
+                    @include mobile_xs{
+                        flex: 80vw;
+                    }
+
                     img {
-                        width: 100%;
-                        height: 100%;
+                        width: inherit;
+                        height: inherit;
                         object-fit: contain;
                     }
                 }
