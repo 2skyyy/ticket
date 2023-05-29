@@ -4,6 +4,10 @@ body {
   color: #292929;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .wrapper {
   width: 100%;
 }
@@ -2058,6 +2062,24 @@ main .review .reviewBoard #reviewSelect {
   height: 25px;
   margin-bottom: 10px;
 }
+@media (max-width: 860px) {
+  main .review .reviewBoard #reviewSelect {
+    width: 250px;
+    height: 23px;
+  }
+}
+@media (max-width: 500px) {
+  main .review .reviewBoard #reviewSelect {
+    width: 70%;
+    height: 21px;
+    margin-bottom: 7px;
+  }
+}
+@media (max-width: 400px) {
+  main .review .reviewBoard #reviewSelect {
+    width: 80%;
+  }
+}
 main .review .reviewBoard .inputBox {
   display: flex;
   width: 100%;
@@ -2094,8 +2116,8 @@ main .review .reviewBoard .listBox .listBoxUl .newLi {
 main .review .reviewBoard .listBox .listBoxUl .newLi .proflie {
   display: flex;
   align-items: center;
-  width: 300px;
-  height: 30px;
+  width: 200px;
+  height: auto;
 }
 main .review .reviewBoard .listBox .listBoxUl .newLi .proflie .pro {
   display: flex;
@@ -2108,13 +2130,44 @@ main .review .reviewBoard .listBox .listBoxUl .newLi .proflie .pro {
   border-radius: 50%;
   border: 1px solid #ccc;
 }
+@media (max-width: 650px) {
+  main .review .reviewBoard .listBox .listBoxUl .newLi .proflie .pro {
+    width: 23px;
+    height: 23px;
+    margin-right: 7px;
+  }
+}
+@media (max-width: 500px) {
+  main .review .reviewBoard .listBox .listBoxUl .newLi .proflie .pro {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    font-size: 14px;
+  }
+}
 main .review .reviewBoard .listBox .listBoxUl .newLi .proflie .nickName {
   float: left;
+}
+@media (max-width: 860px) {
+  main .review .reviewBoard .listBox .listBoxUl .newLi .proflie .nickName {
+    font-size: 15px;
+  }
+}
+@media (max-width: 650px) {
+  main .review .reviewBoard .listBox .listBoxUl .newLi .proflie .nickName {
+    font-size: 14px;
+  }
 }
 main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn {
   position: absolute;
   top: 10px;
   right: 10px;
+}
+@media (max-width: 500px) {
+  main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn {
+    top: 5px;
+    right: 5px;
+  }
 }
 main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .like,
 main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .hate,
@@ -2125,22 +2178,79 @@ main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .clickBtn {
   border-radius: 3px;
   cursor: pointer;
 }
+@media (max-width: 860px) {
+  main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .like,
+  main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .hate,
+  main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .clickBtn {
+    width: 65px;
+    height: 23px;
+  }
+}
+@media (max-width: 650px) {
+  main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .like,
+  main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .hate,
+  main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .clickBtn {
+    width: 57px;
+    height: 20px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 500px) {
+  main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .like,
+  main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .hate,
+  main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .clickBtn {
+    width: 50px;
+    height: 18px;
+    font-size: 12px;
+  }
+}
 main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .like {
   margin-right: 7px;
+}
+@media (max-width: 860px) {
+  main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .like {
+    margin-right: 4px;
+  }
+}
+@media (max-width: 500px) {
+  main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .like {
+    margin-right: 2px;
+  }
 }
 main .review .reviewBoard .listBox .listBoxUl .newLi .likeBtn .clickBtn {
   background: #EC7D2C;
 }
 main .review .reviewBoard .listBox .listBoxUl .newLi .revTxt {
-  width: 900px;
+  width: 90%;
   height: auto;
-  padding-left: 35px;
+  padding-left: 25px;
   margin: 10px 0;
   box-sizing: border-box;
+  background-color: pink;
 }
 main .review .reviewBoard .listBox .listBoxUl .newLi .revTxt .conName {
-  margin-bottom: 10px;
-  font-size: 12px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+@media (max-width: 860px) {
+  main .review .reviewBoard .listBox .listBoxUl .newLi .revTxt .conName {
+    font-size: 12px;
+  }
+}
+@media (max-width: 650px) {
+  main .review .reviewBoard .listBox .listBoxUl .newLi .revTxt .conName {
+    margin-bottom: 6px;
+  }
+}
+@media (max-width: 500px) {
+  main .review .reviewBoard .listBox .listBoxUl .newLi .revTxt .conName {
+    margin-bottom: 4px;
+  }
+}
+@media (max-width: 860px) {
+  main .review .reviewBoard .listBox .listBoxUl .newLi .revTxt .conrev {
+    font-size: 14px;
+  }
 }
 main .review .reviewBoard .listBox .listBoxUl .newLi .etc {
   width: auto;
@@ -2149,8 +2259,28 @@ main .review .reviewBoard .listBox .listBoxUl .newLi .etc {
   box-sizing: border-box;
   font-size: 13px;
 }
+@media (max-width: 650px) {
+  main .review .reviewBoard .listBox .listBoxUl .newLi .etc {
+    font-size: 11px;
+  }
+}
+@media (max-width: 500px) {
+  main .review .reviewBoard .listBox .listBoxUl .newLi .etc {
+    font-size: 9px;
+  }
+}
 main .review .reviewBoard .listBox .listBoxUl .newLi .etc .date {
   margin-right: 10px;
+}
+@media (max-width: 860px) {
+  main .review .reviewBoard .listBox .listBoxUl .newLi .etc .date {
+    margin-right: 7px;
+  }
+}
+@media (max-width: 650px) {
+  main .review .reviewBoard .listBox .listBoxUl .newLi .etc .date {
+    margin-right: 5px;
+  }
 }
 main .review .reviewBoard .listBox .listBoxUl .newLi .etc .declaration {
   cursor: pointer;
@@ -2198,7 +2328,7 @@ main .lastSec .company .tel {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 2.9;
+  flex: 3.5;
 }
 main .lastSec .company .tel h3 {
   margin-bottom: 8px;
@@ -2235,7 +2365,6 @@ main .lastSec .company .tel h3 {
 }
 @media (max-width: 400px) {
   main .lastSec .company .tel h3 {
-    font-size: 12px;
     margin-bottom: 2px;
   }
 }
@@ -2257,6 +2386,11 @@ main .lastSec .company .tel p {
     font-size: 10px;
   }
 }
+@media (max-width: 400px) {
+  main .lastSec .company .tel p {
+    font-size: 7px;
+  }
+}
 main .lastSec .company .tel span {
   font-size: 13px;
   color: #aaa;
@@ -2276,11 +2410,16 @@ main .lastSec .company .tel span {
     font-size: 9px;
   }
 }
+@media (max-width: 400px) {
+  main .lastSec .company .tel span {
+    font-size: 6px;
+  }
+}
 main .lastSec .company .notice {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 4.4;
+  flex: 3.5;
   height: 100%;
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
@@ -2325,6 +2464,11 @@ main .lastSec .company .notice ul li a .noticeImg {
     height: 23px;
   }
 }
+@media (max-width: 400px) {
+  main .lastSec .company .notice ul li a .noticeImg {
+    height: 19px;
+  }
+}
 main .lastSec .company .notice ul li a .noticeImg img {
   height: inherit;
   -o-object-fit: contain;
@@ -2353,12 +2497,17 @@ main .lastSec .company .notice ul li a span {
     font-size: 9px;
   }
 }
+@media (max-width: 400px) {
+  main .lastSec .company .notice ul li a span {
+    font-size: 7px;
+  }
+}
 main .lastSec .company .social {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 2.7;
+  flex: 3;
 }
 main .lastSec .company .social .goSocial {
   display: flex;
@@ -2392,6 +2541,11 @@ main .lastSec .company .social .goSocial {
     height: 23px;
   }
 }
+@media (max-width: 400px) {
+  main .lastSec .company .social .goSocial {
+    height: 20px;
+  }
+}
 main .lastSec .company .social .goSocial div a {
   display: flex;
   justify-content: center;
@@ -2407,6 +2561,7 @@ main .lastSec .company .social .goSocial div a img {
 main .lastSec .company .social .appDown {
   display: flex;
   justify-content: space-between;
+  height: auto;
 }
 @media (max-width: 650px) {
   main .lastSec .company .social .appDown {

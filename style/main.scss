@@ -5,6 +5,11 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: $black;
 }
+
+*{
+    box-sizing: border-box;
+}
+
 .wrapper{
     width: 100%;
 }
@@ -1799,11 +1804,24 @@ main {
             width: 100%;
             height: auto;
             padding: 10px;
-
+            
             #reviewSelect {
                 width: 300px;
                 height: 25px;
                 margin-bottom: 10px;
+
+                @include mobile_xl{
+                    width: 250px;
+                    height: 23px;
+                }
+                @include mobile_m{
+                    width: 70%;
+                    height: 21px;
+                    margin-bottom: 7px;
+                }
+                @include mobile_s{
+                    width: 80%;
+                }
             }
 
             .inputBox {
@@ -1847,8 +1865,10 @@ main {
                         .proflie {
                             display: flex;
                             align-items: center;
-                            width: 300px;
-                            height: 30px;
+                            width: 200px;
+                            height: auto;
+
+                            
 
                             .pro {
                                 display: flex;
@@ -1860,10 +1880,30 @@ main {
                                 margin-right: 10px;
                                 border-radius: 50%;
                                 border: 1px solid $borderColor;
+                            
+                                @include mobile_l{
+                                    width: 23px;
+                                    height: 23px;
+                                    margin-right: 7px;
+                                }
+                                @include mobile_m{
+                                    width: 20px;
+                                    height: 20px;
+                                    margin-right: 5px;
+                                    font-size: 14px;
+                                }
                             }
+
 
                             .nickName {
                                 float: left;
+
+                                @include mobile_xl{
+                                    font-size: 15px;
+                                }
+                                @include mobile_l{
+                                    font-size: 14px;
+                                }
                             }
                         }
 
@@ -1871,6 +1911,11 @@ main {
                             position: absolute;
                             top: 10px;
                             right: 10px;
+
+                            @include mobile_m{
+                                top: 5px;
+                                right: 5px;
+                            }
 
                             .like,
                             .hate,
@@ -1880,10 +1925,32 @@ main {
                                 border: none;
                                 border-radius: 3px;
                                 cursor: pointer;
+
+                                @include mobile_xl{
+                                    width: 65px;
+                                    height: 23px;
+                                }
+                                @include mobile_l{
+                                    width: 57px;
+                                    height: 20px;
+                                    font-size: 13px;
+                                }
+                                @include mobile_m{
+                                    width: 50px;
+                                    height: 18px;
+                                    font-size: 12px;
+                                }
                             }
 
                             .like {
                                 margin-right: 7px;
+
+                                @include mobile_xl{
+                                    margin-right: 4px;
+                                }
+                                @include mobile_m{
+                                    margin-right: 2px;
+                                }
                             }
 
                             .clickBtn {
@@ -1892,15 +1959,32 @@ main {
                         }
 
                         .revTxt {
-                            width: 900px;
+                            width: 90%;
                             height: auto;
-                            padding-left: 35px;
+                            padding-left: 25px;
                             margin: 10px 0;
                             box-sizing: border-box;
+                            background-color: pink;
 
                             .conName {
-                                margin-bottom: 10px;
-                                font-size: 12px;
+                                margin-bottom: 8px;
+                                font-size: 14px;
+
+                                @include mobile_xl{
+                                    font-size: 12px;
+                                }
+                                @include mobile_l{
+                                    margin-bottom: 6px;
+                                }
+                                @include mobile_m{
+                                    margin-bottom: 4px;
+                                }
+                            }
+                            
+                            .conrev{
+                                @include mobile_xl{
+                                    font-size: 14px;
+                                }
                             }
                         }
 
@@ -1911,8 +1995,22 @@ main {
                             box-sizing: border-box;
                             font-size: 13px;
 
+                            @include mobile_l{
+                                font-size: 11px;
+                            }
+                            @include mobile_m{
+                                font-size: 9px;
+                            }
+
                             .date {
                                 margin-right: 10px;
+
+                                @include mobile_xl{
+                                    margin-right: 7px;
+                                }
+                                @include mobile_l{
+                                    margin-right: 5px;
+                                }
                             }
 
                             .declaration {
@@ -1961,7 +2059,7 @@ main {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                flex: 2.9;
+                flex: 3.5;
 
                 h3 {
                     margin-bottom: 8px;
@@ -1987,7 +2085,6 @@ main {
                         margin-bottom: 3px;
                     }
                     @include mobile_s{
-                        font-size: 12px;
                         margin-bottom: 2px;
                     }
                 }
@@ -2004,6 +2101,9 @@ main {
                     @include mobile_m{
                         font-size: 10px;
                     }
+                    @include mobile_s{
+                        font-size: 7px;
+                    }
                 }
 
                 span {
@@ -2019,6 +2119,9 @@ main {
                     @include mobile_m{
                         font-size: 9px;
                     }
+                    @include mobile_s{
+                        font-size: 6px;
+                    }
                 }
             }
 
@@ -2026,7 +2129,7 @@ main {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                flex: 4.4;
+                flex: 3.5;
                 height: 100%;
                 border-left: 1px solid $borderColor;
                 border-right: 1px solid $borderColor;
@@ -2063,6 +2166,9 @@ main {
                                 @include mobile_m{
                                     height: 23px;
                                 }
+                                @include mobile_s{
+                                    height: 19px;
+                                }
 
                                 img{
                                     height: inherit;
@@ -2085,6 +2191,9 @@ main {
                                 @include mobile_m{
                                     font-size: 9px;
                                 }
+                                @include mobile_s{
+                                    font-size: 7px;
+                                }
                             }
                         }
                     }
@@ -2096,7 +2205,7 @@ main {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                flex: 2.7;
+                flex: 3;
 
                 .goSocial {
                     display: flex;
@@ -2122,6 +2231,9 @@ main {
                         width: 90%;
                         height: 23px;
                     }
+                    @include mobile_s{
+                        height: 20px;
+                    }
                     
 
                     div {
@@ -2143,6 +2255,7 @@ main {
                 .appDown {
                     display: flex;
                     justify-content: space-between;
+                    height: auto;
 
                     @include mobile_l{
                         width: 95%;
