@@ -63,14 +63,5 @@ $pc: 1201px;
   }
 }
 
-//화면 크기 1201px 이상 , gap 20
-@mixin pc{
-  @media (min-width: $pc){
-    @content;
-  }
-}
-
-
-
 
 
