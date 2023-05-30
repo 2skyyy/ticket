@@ -7,10 +7,33 @@
 }
 .wrapper .joinBox {
   width: 400px;
-  height: 700px;
-  padding: 50px;
+  height: auto;
+  padding: 40px;
   border: 1px solid #ccc;
   border-radius: 10px;
+}
+@media (max-width: 860px) {
+  .wrapper .joinBox {
+    width: 380px;
+  }
+}
+@media (max-width: 650px) {
+  .wrapper .joinBox {
+    width: 350px;
+    padding: 35px;
+  }
+}
+@media (max-width: 500px) {
+  .wrapper .joinBox {
+    width: 300px;
+    padding: 30px;
+  }
+}
+@media (max-width: 400px) {
+  .wrapper .joinBox {
+    width: 280px;
+    padding: 20px;
+  }
 }
 .wrapper .joinBox h2 {
   padding: 10px 0;
@@ -18,8 +41,39 @@
   font-size: 50px;
   font-weight: bold;
 }
+@media (max-width: 860px) {
+  .wrapper .joinBox h2 {
+    font-size: 45px;
+  }
+}
+@media (max-width: 650px) {
+  .wrapper .joinBox h2 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .wrapper .joinBox h2 {
+    font-size: 37px;
+  }
+}
+@media (max-width: 400px) {
+  .wrapper .joinBox h2 {
+    padding: 8px 0;
+    font-size: 33px;
+  }
+}
 .wrapper .joinBox .user {
   padding: 20px 0;
+}
+@media (max-width: 650px) {
+  .wrapper .joinBox .user {
+    padding: 15px 0;
+  }
+}
+@media (max-width: 400px) {
+  .wrapper .joinBox .user {
+    padding: 12px 0;
+  }
 }
 .wrapper .joinBox .user .joinId,
 .wrapper .joinBox .user .joinpw,
@@ -34,6 +88,14 @@
   display: block;
   font-size: 14px;
 }
+@media (max-width: 400px) {
+  .wrapper .joinBox .user .joinId span,
+  .wrapper .joinBox .user .joinpw span,
+  .wrapper .joinBox .user .joinpw2 span,
+  .wrapper .joinBox .user .name span {
+    font-size: 12px;
+  }
+}
 .wrapper .joinBox .user .joinId input,
 .wrapper .joinBox .user .joinpw input,
 .wrapper .joinBox .user .joinpw2 input,
@@ -46,6 +108,35 @@
   border-bottom: 1px solid #ccc;
   outline: none;
   font-size: 17px;
+}
+@media (max-width: 860px) {
+  .wrapper .joinBox .user .joinId input,
+  .wrapper .joinBox .user .joinpw input,
+  .wrapper .joinBox .user .joinpw2 input,
+  .wrapper .joinBox .user .name input {
+    height: 40px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 650px) {
+  .wrapper .joinBox .user .joinId input,
+  .wrapper .joinBox .user .joinpw input,
+  .wrapper .joinBox .user .joinpw2 input,
+  .wrapper .joinBox .user .name input {
+    height: 37px;
+    padding: 0 7px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 400px) {
+  .wrapper .joinBox .user .joinId input,
+  .wrapper .joinBox .user .joinpw input,
+  .wrapper .joinBox .user .joinpw2 input,
+  .wrapper .joinBox .user .name input {
+    height: 35px;
+    padding: 0 5px;
+    font-size: 12px;
+  }
 }
 .wrapper .joinBox .user .joinId .errorJoinId,
 .wrapper .joinBox .user .joinId .errorJoinPw,
@@ -77,4 +168,18 @@
   border-radius: 10px;
   font-size: 20px;
   background: #ccc;
+}
+@media (max-width: 650px) {
+  .wrapper .joinBox button {
+    height: 45px;
+    margin: 10px 0;
+    font-size: 17px;
+  }
+}
+@media (max-width: 400px) {
+  .wrapper .joinBox button {
+    height: 40px;
+    margin: 8px 0;
+    font-size: 15px;
+  }
 }/*# sourceMappingURL=join.css.map */

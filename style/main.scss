@@ -294,7 +294,6 @@ a {
         }
     }
 
-
     .leftHeader {
         position: relative;
         display: flex;
@@ -328,7 +327,6 @@ a {
             width: 25px;
             height: 23px;       
         }
-
 
         span {
             display: block;
@@ -395,14 +393,15 @@ a {
             font-weight: bold;
 
             @include desktop{
-                font-size: 18px;
+                padding: 8px;
+                font-size: 17px;
             }
             @include tablet{
-                font-size: 17px;
+                font-size: 16px;
             }
             @include mobile_l{
                 padding: 7px;
-                font-size: 16px;
+                font-size: 15px;
             }
         }
     }
@@ -1064,7 +1063,6 @@ main {
                 height: auto;
             }
 
-
             a {
                 display: block;
                 width: 100%;
@@ -1327,19 +1325,19 @@ main {
 
                 @include desktop{
                     height: 374px;
-                  }
-                  @include tablet{
-                    height: 317px;
-                  }
-                  @include mobile_xl{
-                    height: 240px;
-                  }
-                  @include mobile_l{
-                    height: 186px;
-                  }
-                  @include mobile_m{
-                    height: 170px;
-                  }
+                }
+                @include tablet{
+                height: 317px;
+                }
+                @include mobile_xl{
+                height: 240px;
+                }
+                @include mobile_l{
+                height: 186px;
+                }
+                @include mobile_m{
+                height: 170px;
+                }
 
                 .rankConUl {
                     position: absolute;
@@ -1351,19 +1349,19 @@ main {
 
                     @include desktop{
                         height: 374px;
-                      }
-                      @include tablet{
-                        height: 317px;
-                      }
-                      @include mobile_xl{
-                        height: 240px;
-                      }
-                      @include mobile_l{
-                        height: 186px;
-                      }
-                      @include mobile_m{
-                        height: 170px;
-                      }
+                    }
+                    @include tablet{
+                    height: 317px;
+                    }
+                    @include mobile_xl{
+                    height: 240px;
+                    }
+                    @include mobile_l{
+                    height: 186px;
+                    }
+                    @include mobile_m{
+                    height: 170px;
+                    }
 
                     .rankLi {
                         width: 353px;
@@ -1496,8 +1494,6 @@ main {
                                 height: 110%;
                                 filter: blur(7px) brightness(70%);
                             }
-
-
 
                             .text{
                                 height: 77px;
@@ -1660,7 +1656,7 @@ main {
                 width: 300px; 
             }
             @include mobile_s{
-                width: 270px; //그대로
+                width: 270px;
             }
             @include mobile_xs{
                 width: 80vw;
@@ -2167,7 +2163,7 @@ main {
                     width: 100%;
 
                     li {
-                       flex: 1;
+                        flex: 1;
                         height: auto;
 
                         a {
@@ -2303,7 +2299,6 @@ main {
             }
         }
     }
-
 }
 
 footer {
@@ -2312,6 +2307,11 @@ footer {
         justify-content: space-between;
         align-items: center;
 
+        @include mobile_m{
+            flex-direction: column;
+            align-items: end;
+        }
+
         ul {
             display: flex;
             justify-content: space-between;
@@ -2319,9 +2319,39 @@ footer {
             width: 600px;
             height: 50px;
 
+            @include desktop{
+                width: 500px;
+            }
+            @include tablet{
+                width: 450px;
+            }
+            @include mobile_xl{
+                width: 400px;
+                height: 40px;
+            }
+            @include mobile_l{
+                width: 350px;
+            }
+            @include mobile_m{
+                width: 100%;
+            }
+
             li {
                 a {
                     font-size: 14px;
+
+                    @include tablet{
+                        font-size: 12px;
+                    }
+                    @include mobile_xl{
+                        font-size: 10px;
+                    }
+                    @include mobile_l{
+                        font-size: 7px;
+                    }
+                    @include mobile_s{
+                        font-size: 6px;
+                    }
                 }
             }
         }
@@ -2330,6 +2360,28 @@ footer {
             width: 200px;
             height: 40px;
             outline: none;
+
+            @include desktop{
+                width: 160px;
+                height: 32px;
+            }
+            @include tablet{
+                width: 140px;
+                height: 28px;
+                font-size: 12px;
+            }
+            @include mobile_xl{
+                width: 120px;
+                height: 24px;
+                font-size: 11px;
+            }
+            @include mobile_l{
+                width: 90px;
+                height: 18px;
+            }
+            @include mobile_m{
+                text-align: end;
+            }
         }
     }
 }

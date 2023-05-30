@@ -430,18 +430,19 @@ a {
 }
 @media (max-width: 1200px) {
   #header nav a {
-    font-size: 18px;
+    padding: 8px;
+    font-size: 17px;
   }
 }
 @media (max-width: 1023px) {
   #header nav a {
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 @media (max-width: 650px) {
   #header nav a {
     padding: 7px;
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 #header .rightHeader {
@@ -2632,6 +2633,12 @@ footer .footerNav {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 500px) {
+  footer .footerNav {
+    flex-direction: column;
+    align-items: end;
+  }
+}
 footer .footerNav ul {
   display: flex;
   justify-content: space-between;
@@ -2639,11 +2646,88 @@ footer .footerNav ul {
   width: 600px;
   height: 50px;
 }
+@media (max-width: 1200px) {
+  footer .footerNav ul {
+    width: 500px;
+  }
+}
+@media (max-width: 1023px) {
+  footer .footerNav ul {
+    width: 450px;
+  }
+}
+@media (max-width: 860px) {
+  footer .footerNav ul {
+    width: 400px;
+    height: 40px;
+  }
+}
+@media (max-width: 650px) {
+  footer .footerNav ul {
+    width: 350px;
+  }
+}
+@media (max-width: 500px) {
+  footer .footerNav ul {
+    width: 100%;
+  }
+}
 footer .footerNav ul li a {
   font-size: 14px;
+}
+@media (max-width: 1023px) {
+  footer .footerNav ul li a {
+    font-size: 12px;
+  }
+}
+@media (max-width: 860px) {
+  footer .footerNav ul li a {
+    font-size: 10px;
+  }
+}
+@media (max-width: 650px) {
+  footer .footerNav ul li a {
+    font-size: 7px;
+  }
+}
+@media (max-width: 400px) {
+  footer .footerNav ul li a {
+    font-size: 6px;
+  }
 }
 footer .footerNav select {
   width: 200px;
   height: 40px;
   outline: none;
+}
+@media (max-width: 1200px) {
+  footer .footerNav select {
+    width: 160px;
+    height: 32px;
+  }
+}
+@media (max-width: 1023px) {
+  footer .footerNav select {
+    width: 140px;
+    height: 28px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 860px) {
+  footer .footerNav select {
+    width: 120px;
+    height: 24px;
+    font-size: 11px;
+  }
+}
+@media (max-width: 650px) {
+  footer .footerNav select {
+    width: 90px;
+    height: 18px;
+  }
+}
+@media (max-width: 500px) {
+  footer .footerNav select {
+    text-align: end;
+  }
 }/*# sourceMappingURL=main.css.map */
