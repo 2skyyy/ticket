@@ -18,8 +18,25 @@
         flex-direction: column;
         justify-content: space-evenly;
         width: 800px;
-        height: 650px;
+        height: auto;
+        padding-bottom: 20px;
         background: #f1f1f1;
+
+        @include desktop{
+            width: 650px;
+        }
+        @include mobile_xl{
+            width: 550px;
+        }
+        @include mobile_l{
+            width: 450px;
+        }
+        @include mobile_m{
+            width: 350px;
+        }
+        @include mobile_s{
+            width: 280px;
+        }
         
         .screen{
             display: flex;
@@ -29,6 +46,26 @@
             height: 150px;
             font-size: 50px;
             font-weight: bold;
+
+            @include desktop{
+                height: 122px;
+                font-size: 45px;
+            }
+            @include mobile_xl{
+                height: 110px;
+                font-size: 35px;
+            }
+            @include mobile_l{
+                height: 95px;
+            }
+            @include mobile_m{
+                height: 70px;
+                font-size: 28px;
+            }
+            @include mobile_s{
+                height: 60px;
+                font-size: 25px;
+            }
         }
 
         .seatBox{
@@ -38,18 +75,53 @@
             width: 100%;
             height: 400px;
 
+            @include desktop{
+                height: 325px;
+            }
+            @include mobile_xl{
+                height: 308px;
+            }
+            @include mobile_l{
+                height: 280px;
+            }
+            @include mobile_m{
+                height: 200px;
+            }
+            @include mobile_s{
+                height: 150px;
+            }
+
             .seatNum,
             .seat{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 row-gap: 5px;
-                width: 630px;
                 height: 100%;
+
+                @include mobile_xl{
+                    row-gap: 3px;
+                }
+                @include mobile_l{
+                    row-gap: 2px;
+                }
             }
 
             .seatNum{
                 width: 30px;
+
+                @include mobile_xl{
+                    width: 27px;
+                }
+                @include mobile_l{
+                    width: 25px;
+                }
+                @include mobile_m{
+                    width: 20px;
+                }
+                @include mobile_s{
+                    width: 18px;
+                }
 
                 .newSpan{
                     display: flex;
@@ -59,11 +131,45 @@
                     height: 36px;
                     font-size: 23px;
                     font-weight: bold;
+
+                    @include mobile_xl{
+                        font-size: 20px;
+                    }
+                    @include mobile_l{
+                        width: 23px;
+                        height: 36.25px;
+                        font-size: 17px;
+                    }
+                    @include mobile_m{
+                        width: 19px;
+                        height: 25px;
+                    }
+                    @include mobile_s{
+                        width: 16px;
+                        height: 18.75px;
+                        font-size: 13px;
+                    }
                 }
             }
 
             .seat{
                 width: 650px;
+
+                @include desktop{
+                    width: 528px;
+                }
+                @include mobile_xl{
+                    width: 480px;
+                }
+                @include mobile_l{
+                    width: 400px;
+                }
+                @include mobile_m{
+                    width: 300px;
+                }
+                @include mobile_s{
+                    width: 250px;
+                }
 
                 .newCol{
                     display: flex;
@@ -73,6 +179,13 @@
                     width: 100%;
                     height: 36px;
 
+                    @include desktop{
+                        column-gap: 2px;
+                    }
+                    @include mobile_m{
+                        column-gap: 1px;
+                    }
+
                     .newA{
                         display: flex;
                         justify-content: center;
@@ -80,9 +193,36 @@
                         float: left;
                         width: 30px;
                         height: 30px;
-                        border: 1px solid $block;
+                        border: 1px solid $black;
                         border-radius: 5px;
                         cursor: pointer;
+
+                        @include desktop{
+                            width: 27px;
+                            height: 27px;
+                        }
+                        @include mobile_xl{
+                            width: 25px;
+                            height: 25px;
+                            font-size: 14px;
+                            border-radius: 4px;
+                        }
+                        @include mobile_l{
+                            width: 18px;
+                            height: 21px;
+                            font-size: 12px;
+                        }
+                        @include mobile_m{
+                            width: 14px;
+                            height: 17px;
+                            border-radius: 3px;
+                            font-size: 10px;
+                        }
+                        @include mobile_s{
+                            width: 11px;
+                            height: 15px;
+                            font-size: 7px;
+                        }
 
                         &:hover{
                             background: rgba(236, 125, 44, .7);
@@ -107,7 +247,7 @@
         text-align: center;
         font-weight: bold;
         background: url('../img/ticketFrame.png') no-repeat center center / cover;
-        border: 2px solid $block;
+        border: 2px solid $black;
         
         .ticketDel{
             position: absolute;
@@ -120,7 +260,7 @@
             right: 10px;
             font-size: 50px;
             background: #ccc;
-            border: 1px solid $block;
+            border: 1px solid $black;
             border-radius: 5px;
             cursor: pointer;
         }
